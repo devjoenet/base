@@ -9,12 +9,14 @@
       "files": ["*.blade.php"],
       "options": {
         "tabWidth": 2,
-        "extraLiners": "",
+        "singleAttributePerLine": false,
+        "bracketSameLine": true,
         "indentInnerHtml": true,
         "parser": "blade",
         "sortTailwindcssClasses": true,
-        "wrapAttributes": "force",
-        "wrapAttributesMinAttrs": 3
+        "sortHtmlAttributes": "vuejs",
+        "wrapAttributes": "auto",
+        "wrapAttributesMinAttrs": 10
       }
     }
   ]

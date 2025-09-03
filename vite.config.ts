@@ -1,6 +1,7 @@
 import vue from "@vitejs/plugin-vue";
 import laravel from "laravel-vite-plugin";
-import tailwindcss from "@tailwindcss/vite";
+// import tailwindcss from "@tailwindcss/vite";
+import ui from "@nuxt/ui/vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -9,7 +10,10 @@ export default defineConfig({
       input: ["resources/js/app.ts"],
       refresh: true,
     }),
-    tailwindcss(),
+    //tailwindcss(),
+    ui({
+      inertia: true,
+    }),
     vue({
       template: {
         transformAssetUrls: {
