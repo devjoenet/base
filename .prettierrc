@@ -13,8 +13,8 @@
         "indentInnerHtml": true,
         "parser": "blade",
         "sortTailwindcssClasses": true,
-        "wrapAttributes": "force",
-        "wrapAttributesMinAttrs": 3
+        "wrapAttributes": "preserve",
+        "wrapAttributesMinAttrs": 5
       }
     }
   ]
