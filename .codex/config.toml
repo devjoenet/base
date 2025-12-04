@@ -1,8 +1,6 @@
+project_doc_max_bytes = 6000000
+
 [mcp_servers.laravel-boost]
 command = "php"
 args = ["artisan", "boost:mcp", "--no-interaction"]
 transport = "stdio"
-
-[mcp_servers.NextjsTailwindAssistant]
-transport = "http"
-url = "https://server.smithery.ai/@CaullenOmdahl/nextjs-react-tailwind-assistant/mcp"

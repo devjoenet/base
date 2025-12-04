@@ -4,6 +4,7 @@
         "gemini"
     ],
     "editors": [
+        "codex",
         "vscode"
     ],
     "guidelines": [
