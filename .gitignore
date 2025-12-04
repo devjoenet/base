@@ -5,6 +5,9 @@
 .env.production
 .phpactor.json
 .phpunit.result.cache
+/resources/js/actions
+/resources/js/routes
+/resources/js/wayfinder
 /.fleet
 /.idea
 /.nova
