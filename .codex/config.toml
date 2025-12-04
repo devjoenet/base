@@ -2,3 +2,9 @@
 command = "php"
 args = ["artisan", "boost:mcp", "--no-interaction"]
 transport = "stdio"
+
+[mcp_servers.context7]
+command = "npx"
+args = ["@upstash/context7-mcp@1.0.31"]
+transport = "stdio"
+env_key = "CONTEXT7_API_KEY"
