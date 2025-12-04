@@ -1,14 +1,5 @@
 {
-    "agents": [
-        "codex",
-        "gemini"
-    ],
-    "editors": [
-        "codex",
-        "vscode"
-    ],
-    "guidelines": [
-        "laravel/fortify"
-    ],
-    "herd_mcp": true
+  "agents": ["codex", "gemini"],
+  "editors": ["codex", "vscode"],
+  "guidelines": ["laravel/fortify"]
 }
