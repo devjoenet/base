@@ -28,13 +28,7 @@
     },
   );
 
-  const baseClasses = computed(() =>
-    cn(
-      "block px-3 py-1 text-sm/6 text-gray-900 transition-colors duration-75 dark:text-white",
-      props.inset ? "pl-10" : "",
-      props.class,
-    ),
-  );
+  const baseClasses = computed(() => cn("block px-3 py-1 text-sm/6 text-gray-900 transition-colors duration-75 dark:text-white", props.inset ? "pl-10" : "", props.class));
 </script>
 
 <template>
@@ -46,12 +40,14 @@
       :disabled="props.as === 'button' ? props.disabled : undefined"
       data-slot="menu-item"
       :class="cn(baseClasses, active ? props.activeClass : '')"
-      @click="(event: MouseEvent) => {
-        emit('select', event);
-        if (props.closeOnSelect) {
-          close();
+      @click="
+        (event: MouseEvent) => {
+          emit('select', event);
+          if (props.closeOnSelect) {
+            close();
+          }
         }
-      }"
+      "
     >
       <slot :active="active" :close="close" :disabled="disabled" />
     </component>
