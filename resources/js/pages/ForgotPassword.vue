@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import AuthLayout from "@/layouts/AuthLayout.vue";
-import { password } from "@/routes";
-import passwordRoutes from "@/routes/password";
-import { Head, Link, useForm } from "@inertiajs/vue3";
+  import AuthLayout from "@/layouts/AuthLayout.vue";
+  import { password } from "@/routes";
+  import passwordRoutes from "@/routes/password";
+  import { Head, Link, useForm } from "@inertiajs/vue3";
 
-const props = defineProps<{
-  status?: string;
-}>();
+  const props = defineProps<{
+    status?: string;
+  }>();
 
-const form = useForm({
-  email: "",
-});
-
-const submit = () => {
-  form.post(passwordRoutes.email.url(), {
-    onFinish: () => form.reset(),
+  const form = useForm({
+    email: "",
   });
-};
+
+  const submit = () => {
+    form.post(passwordRoutes.email.url(), {
+      onFinish: () => form.reset(),
+    });
+  };
 </script>
 
 <template>
@@ -47,9 +47,7 @@ const submit = () => {
 
           <div class="flex items-center justify-between text-sm text-gray-700 dark:text-gray-300">
             <p v-if="status" class="text-emerald-600 dark:text-emerald-400">{{ status }}</p>
-            <Link :href="password.request()" class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
-              Need a different email?
-            </Link>
+            <Link :href="password.request()" class="text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"> Need a different email? </Link>
           </div>
 
           <button

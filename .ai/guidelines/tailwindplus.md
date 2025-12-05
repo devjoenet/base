@@ -1,19 +1,15 @@
-@php
-/\*_ @var \Laravel\Boost\Install\GuidelineAssist $assist _/
-@endphp
-
 ---
-
 layout: page
 title: Tailwind Plus Vue Components
-
 ---
+
+@php /* _@var \Laravel\Boost\Install\GuidelineAssist $assist_ / @endphp
 
 # Tailwind Plus Vue Component Library
 
 This document contains a machine-readable index of all Vue components from the Tailwind Plus UI kit, extracted from the raw JSON source. Use this data for quick reference or LLM training.
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Constrained three column**
 
@@ -71,7 +67,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Constrained with sticky columns**
 
@@ -122,7 +118,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width secondary column on right**
 
@@ -337,7 +333,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width three-column**
 
@@ -552,7 +548,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width with narrow sidebar**
 
@@ -666,7 +662,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width with narrow sidebar and header**
 
@@ -835,7 +831,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Brand sidebar with header**
 
@@ -1055,7 +1051,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark sidebar with header**
 
@@ -1269,7 +1265,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Sidebar with header**
 
@@ -1525,7 +1521,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple brand sidebar**
 
@@ -1698,7 +1694,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple dark sidebar**
 
@@ -1857,7 +1853,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple sidebar**
 
@@ -2068,7 +2064,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With constrained content area**
 
@@ -2326,7 +2322,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With off-white background**
 
@@ -2533,7 +2529,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Brand nav with overlap**
 
@@ -2702,7 +2698,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Branded nav with compact lighter page header**
 
@@ -2855,7 +2851,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Branded nav with lighter page header**
 
@@ -3008,7 +3004,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **On subtle background**
 
@@ -3171,7 +3167,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two-row navigation with overlap**
 
@@ -3367,7 +3363,7 @@ This document contains a machine-readable index of all Vue components from the T
     </main>
     <footer>
       <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 sm:text-left dark:border-gray-700 dark:text-gray-400"><span class="block sm:inline">&copy; 2021 Your Company, Inc.</span> <span class="block sm:inline">All rights reserved.</span></div>
+        <div class="border-t border-gray-200 py-8 text-center text-sm text-gray-500 sm:text-left dark:border-gray-700 dark:text-gray-400"><span class="block sm:inline">© 2021 Your Company, Inc.</span> <span class="block sm:inline">All rights reserved.</span></div>
       </div>
     </footer>
   </div>
@@ -3401,7 +3397,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With bottom border**
 
@@ -3564,7 +3560,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With compact lighter page header**
 
@@ -3717,7 +3713,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With lighter page header**
 
@@ -3870,7 +3866,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With overlap**
 
@@ -4029,7 +4025,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Borderless side-by-side**
 
@@ -4216,7 +4212,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Borderless stacked**
 
@@ -4392,7 +4388,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Day view**
 
@@ -4770,7 +4766,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Double**
 
@@ -4944,7 +4940,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Month view**
 
@@ -5240,7 +5236,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small with meetings**
 
@@ -5451,7 +5447,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Week view**
 
@@ -5756,7 +5752,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Year view**
 
@@ -6479,7 +6475,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Left-aligned**
 
@@ -6557,7 +6553,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Left-aligned in card**
 
@@ -6635,7 +6631,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Left-aligned striped**
 
@@ -6713,7 +6709,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Left-aligned with inline actions**
 
@@ -6819,7 +6815,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with hidden labels**
 
@@ -6864,7 +6860,7 @@ This document contains a machine-readable index of all Vue components from the T
         </div>
       </dl>
       <div class="mt-6 border-t border-gray-900/5 px-6 py-6 dark:border-white/5">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-300">Download receipt <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-300">Download receipt <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -6875,7 +6871,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two-column**
 
@@ -6953,7 +6949,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -6986,7 +6982,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple in cards**
 
@@ -7014,7 +7010,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With brand icon**
 
@@ -7066,7 +7062,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With shared borders**
 
@@ -7110,7 +7106,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With trending**
 
@@ -7137,7 +7133,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Avatar group stacked bottom to top**
 
@@ -7216,7 +7212,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Avatar group stacked top to bottom**
 
@@ -7295,7 +7291,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular avatars**
 
@@ -7311,7 +7307,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular avatars with bottom notification**
 
@@ -7351,7 +7347,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular avatars with placeholder icon**
 
@@ -7391,7 +7387,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular avatars with placeholder initials**
 
@@ -7421,7 +7417,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular avatars with top notification**
 
@@ -7461,7 +7457,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Rounded avatars**
 
@@ -7477,7 +7473,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Rounded avatars with bottom notification**
 
@@ -7529,7 +7525,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Rounded avatars with top notification**
 
@@ -7569,7 +7565,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With text**
 
@@ -7595,7 +7591,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat**
 
@@ -7614,7 +7610,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat pill**
 
@@ -7633,7 +7629,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat pill with dot**
 
@@ -7692,7 +7688,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat with dot**
 
@@ -7751,7 +7747,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat with remove button**
 
@@ -7842,7 +7838,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Pill with border**
 
@@ -7861,7 +7857,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Pill with border and dot**
 
@@ -7914,7 +7910,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small flat**
 
@@ -7933,7 +7929,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small flat pill**
 
@@ -7952,7 +7948,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small flat pill with dot**
 
@@ -8011,7 +8007,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small flat with dot**
 
@@ -8070,7 +8066,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small pill with border**
 
@@ -8089,7 +8085,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small with border**
 
@@ -8108,7 +8104,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With border**
 
@@ -8127,7 +8123,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With border and dot**
 
@@ -8180,7 +8176,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With border and remove button**
 
@@ -8271,7 +8267,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Basic**
 
@@ -8293,7 +8289,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Icon only**
 
@@ -8318,7 +8314,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With checkbox and dropdown**
 
@@ -8362,7 +8358,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With dropdown**
 
@@ -8411,7 +8407,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With stat**
 
@@ -8435,7 +8431,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Buttons with leading icon**
 
@@ -8471,7 +8467,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Buttons with trailing icon**
 
@@ -8507,7 +8503,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circular buttons**
 
@@ -8540,7 +8536,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Primary buttons**
 
@@ -8581,7 +8577,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Rounded primary buttons**
 
@@ -8622,7 +8618,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Rounded secondary buttons**
 
@@ -8638,7 +8634,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Secondary buttons**
 
@@ -8654,7 +8650,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Soft buttons**
 
@@ -8670,7 +8666,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -8722,7 +8718,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With dividers**
 
@@ -8787,7 +8783,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icons**
 
@@ -8873,7 +8869,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With minimal menu icon**
 
@@ -8923,7 +8919,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With simple header**
 
@@ -8981,7 +8977,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With accent border**
 
@@ -9010,7 +9006,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions**
 
@@ -9054,7 +9050,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With description**
 
@@ -9082,7 +9078,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With dismiss button**
 
@@ -9118,7 +9114,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With link on right**
 
@@ -9136,7 +9132,7 @@ This document contains a machine-readable index of all Vue components from the T
         <p class="mt-3 text-sm md:mt-0 md:ml-6">
           <a href="#" class="font-medium whitespace-nowrap text-blue-700 hover:text-blue-600 dark:text-blue-300 dark:hover:text-blue-200">
             Details
-            <span aria-hidden="true"> &rarr;</span>
+            <span aria-hidden="true"> →</span>
           </a>
         </p>
       </div>
@@ -9149,7 +9145,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With list**
 
@@ -9180,7 +9176,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -9211,7 +9207,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With dashed border**
 
@@ -9233,7 +9229,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With recommendations**
 
@@ -9319,7 +9315,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With recommendations grid**
 
@@ -9440,7 +9436,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With starting points**
 
@@ -9462,7 +9458,7 @@ This document contains a machine-readable index of all Vue components from the T
               <a href="#" class="focus:outline-hidden">
                 <span class="absolute inset-0" aria-hidden="true"></span>
                 <span>{{ item.title }}</span>
-                <span aria-hidden="true"> &rarr;</span>
+                <span aria-hidden="true"> →</span>
               </a>
             </h3>
             <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{{ item.description }}</p>
@@ -9473,7 +9469,7 @@ This document contains a machine-readable index of all Vue components from the T
     <div class="mt-4 flex">
       <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
         Or start from an empty project
-        <span aria-hidden="true"> &rarr;</span>
+        <span aria-hidden="true"> →</span>
       </a>
     </div>
   </div>
@@ -9523,7 +9519,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With templates**
 
@@ -9560,7 +9556,7 @@ This document contains a machine-readable index of all Vue components from the T
     <div class="mt-6 flex">
       <a href="#" class="text-sm font-medium text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
         Or start from an empty project
-        <span aria-hidden="true"> &rarr;</span>
+        <span aria-hidden="true"> →</span>
       </a>
     </div>
   </div>
@@ -9596,7 +9592,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -9623,7 +9619,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple well**
 
@@ -9647,7 +9643,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With button at top right**
 
@@ -9678,7 +9674,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With button on right**
 
@@ -9707,7 +9703,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With input**
 
@@ -9744,7 +9740,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With link**
 
@@ -9761,7 +9757,7 @@ This document contains a machine-readable index of all Vue components from the T
       <div class="mt-3 text-sm/6">
         <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
           Learn more about our CI features
-          <span aria-hidden="true"> &rarr;</span>
+          <span aria-hidden="true"> →</span>
         </a>
       </div>
     </div>
@@ -9769,7 +9765,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With toggle**
 
@@ -9798,7 +9794,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With well**
 
@@ -9824,7 +9820,7 @@ This document contains a machine-readable index of all Vue components from the T
               <div class="text-sm font-medium text-gray-900 dark:text-white">Ending with 4242</div>
               <div class="mt-1 text-sm text-gray-600 sm:flex sm:items-center dark:text-gray-400">
                 <div>Expires 12/20</div>
-                <span class="hidden sm:mx-2 sm:inline" aria-hidden="true">&middot;</span>
+                <span class="hidden sm:mx-2 sm:inline" aria-hidden="true">·</span>
                 <div class="mt-1 sm:mt-0">Last updated on 22 Aug 2017</div>
               </div>
             </div>
@@ -9841,7 +9837,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with checkbox on right**
 
@@ -9921,7 +9917,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with description**
 
@@ -10001,7 +9997,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with inline description**
 
@@ -10084,7 +10080,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple list with heading**
 
@@ -10130,7 +10126,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -10201,7 +10197,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image**
 
@@ -10285,7 +10281,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With secondary text**
 
@@ -10361,7 +10357,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With status indicator**
 
@@ -10439,7 +10435,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Labels on left**
 
@@ -10778,7 +10774,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked**
 
@@ -11098,7 +11094,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two-column**
 
@@ -11424,7 +11420,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two-column with cards**
 
@@ -11779,7 +11775,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with add-on**
 
@@ -11803,7 +11799,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with corner hint**
 
@@ -11830,7 +11826,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with disabled state**
 
@@ -11855,7 +11851,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with gray background and bottom border**
 
@@ -11873,7 +11869,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with hidden label**
 
@@ -11894,7 +11890,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with inline add-on**
 
@@ -11914,7 +11910,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with inline leading add-on and trailing dropdown**
 
@@ -11953,7 +11949,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with inline leading and trailing add-ons**
 
@@ -11981,7 +11977,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with inline leading dropdown**
 
@@ -12026,7 +12022,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with inset label**
 
@@ -12041,7 +12037,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with keyboard shortcut**
 
@@ -12065,7 +12061,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with label**
 
@@ -12088,7 +12084,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with label and help text**
 
@@ -12113,7 +12109,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with leading icon**
 
@@ -12141,7 +12137,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with leading icon and trailing button**
 
@@ -12178,7 +12174,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with overlapping label**
 
@@ -12199,7 +12195,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with pill shape**
 
@@ -12222,7 +12218,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with trailing icon**
 
@@ -12250,7 +12246,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Input with validation error**
 
@@ -12282,7 +12278,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Inputs with inset labels and shared borders**
 
@@ -12307,7 +12303,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Inputs with shared borders**
 
@@ -12389,7 +12385,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Cards**
 
@@ -12435,7 +12431,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Color picker**
 
@@ -12471,7 +12467,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with description**
 
@@ -12510,7 +12506,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with descriptions in panel**
 
@@ -12554,7 +12550,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with inline description**
 
@@ -12594,7 +12590,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **List with radio on right**
 
@@ -12635,7 +12631,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple inline list**
 
@@ -12670,7 +12666,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple list**
 
@@ -12705,7 +12701,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple list with radio on right**
 
@@ -12746,7 +12742,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple table**
 
@@ -12797,7 +12793,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Small cards**
 
@@ -12836,7 +12832,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked cards**
 
@@ -12860,7 +12856,7 @@ This document contains a machine-readable index of all Vue components from the T
             <span class="text-gray-500 dark:text-gray-400">
               <span class="block sm:inline">{{ plan.ram }} / {{ plan.cpus }}</span>
               {{ " " }}
-              <span class="hidden sm:mx-1 sm:inline" aria-hidden="true">&middot;</span>
+              <span class="hidden sm:mx-1 sm:inline" aria-hidden="true">·</span>
               {{ " " }}
               <span class="block sm:inline">{{ plan.disk }}</span>
             </span>
@@ -12885,7 +12881,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Branded with supported text**
 
@@ -12952,7 +12948,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Custom with avatar**
 
@@ -13056,7 +13052,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Custom with check on left**
 
@@ -13114,7 +13110,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Custom with status indicator**
 
@@ -13181,7 +13177,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple custom**
 
@@ -13239,7 +13235,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple native**
 
@@ -13267,7 +13263,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With secondary text**
 
@@ -13331,7 +13327,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -13409,7 +13405,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple card**
 
@@ -13545,7 +13541,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple no labels**
 
@@ -13640,7 +13636,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split screen**
 
@@ -13785,7 +13781,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -13807,7 +13803,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatar and actions**
 
@@ -13927,7 +13923,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With preview button**
 
@@ -14020,7 +14016,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With title and pill actions**
 
@@ -14186,7 +14182,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With underline and actions**
 
@@ -14292,7 +14288,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Short toggle**
 
@@ -14308,7 +14304,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple toggle**
 
@@ -14325,7 +14321,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Toggle with icon**
 
@@ -14353,7 +14349,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With left label and description**
 
@@ -14376,7 +14372,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With right label**
 
@@ -14401,7 +14397,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -14415,7 +14411,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With action**
 
@@ -14441,7 +14437,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatar and actions**
 
@@ -14493,7 +14489,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatar, meta, and dropdown**
 
@@ -14569,7 +14565,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With description**
 
@@ -14584,7 +14580,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With description and action**
 
@@ -14611,7 +14607,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with avatar and stats**
 
@@ -14664,7 +14660,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions**
 
@@ -14691,7 +14687,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions and breadcrumbs**
 
@@ -14753,7 +14749,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatar and actions**
 
@@ -14796,7 +14792,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With banner image**
 
@@ -14862,7 +14858,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With filters and action**
 
@@ -14894,7 +14890,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With logo, meta and actions**
 
@@ -14956,7 +14952,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With meta and actions**
 
@@ -14978,7 +14974,7 @@ This document contains a machine-readable index of all Vue components from the T
         </div>
         <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
           <CurrencyDollarIcon class="mr-1.5 size-5 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true" />
-          $120k &ndash; $140k
+          $120k – $140k
         </div>
         <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
           <CalendarIcon class="mr-1.5 size-5 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true" />
@@ -15046,7 +15042,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With meta, actions, and breadcrumbs**
 
@@ -15083,7 +15079,7 @@ This document contains a machine-readable index of all Vue components from the T
         </div>
         <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
           <CurrencyDollarIcon class="mr-1.5 size-5 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true" />
-          $120k &ndash; $140k
+          $120k – $140k
         </div>
         <div class="mt-2 flex items-center text-sm text-gray-500 dark:text-gray-400">
           <CalendarIcon class="mr-1.5 size-5 shrink-0 text-gray-400 dark:text-gray-500" aria-hidden="true" />
@@ -15151,7 +15147,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -15165,7 +15161,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With action**
 
@@ -15187,7 +15183,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions**
 
@@ -15212,7 +15208,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions and tabs**
 
@@ -15278,7 +15274,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With badge and dropdown**
 
@@ -15343,7 +15339,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With description**
 
@@ -15358,7 +15354,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With inline tabs**
 
@@ -15396,7 +15392,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With input group**
 
@@ -15434,7 +15430,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With label**
 
@@ -15451,7 +15447,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With tabs**
 
@@ -15504,7 +15500,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Basic card**
 
@@ -15520,7 +15516,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with footer**
 
@@ -15540,7 +15536,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with gray body**
 
@@ -15560,7 +15556,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with gray footer**
 
@@ -15580,7 +15576,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with header**
 
@@ -15600,7 +15596,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with header and footer**
 
@@ -15624,7 +15620,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card, edge-to-edge on mobile**
 
@@ -15641,7 +15637,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Well**
 
@@ -15657,7 +15653,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Well on gray**
 
@@ -15673,7 +15669,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Well, edge-to-edge on mobile**
 
@@ -15690,7 +15686,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Constrained to breakpoint with padded content**
 
@@ -15704,7 +15700,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Constrained with padded content**
 
@@ -15718,7 +15714,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width on mobile, constrained to breakpoint with padded content above mobile**
 
@@ -15732,7 +15728,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width on mobile, constrained with padded content above**
 
@@ -15746,7 +15742,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow constrained with padded content**
 
@@ -15763,7 +15759,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With button**
 
@@ -15791,7 +15787,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icon**
 
@@ -15815,7 +15811,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With label**
 
@@ -15833,7 +15829,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With label on left**
 
@@ -15850,7 +15846,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With title**
 
@@ -15868,7 +15864,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With title and button**
 
@@ -15896,7 +15892,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With title on left**
 
@@ -15913,7 +15909,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With toolbar**
 
@@ -15952,7 +15948,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with dividers**
 
@@ -15974,7 +15970,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card with dividers, full-width on mobile**
 
@@ -15996,7 +15992,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Flat card with dividers**
 
@@ -16018,7 +16014,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Separate cards**
 
@@ -16038,7 +16034,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Separate cards, full-width on mobile**
 
@@ -16058,7 +16054,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with dividers**
 
@@ -16078,7 +16074,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with dividers, full-width on mobile**
 
@@ -16098,7 +16094,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Aligned to bottom**
 
@@ -16120,7 +16116,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Aligned to center**
 
@@ -16142,7 +16138,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Basic**
 
@@ -16164,7 +16160,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Basic responsive**
 
@@ -16186,7 +16182,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Media on right**
 
@@ -16208,7 +16204,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Nested**
 
@@ -16253,7 +16249,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stretched to fit**
 
@@ -16275,7 +16271,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Wide responsive**
 
@@ -16297,7 +16293,7 @@ This document contains a machine-readable index of all Vue components from the T
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with icons**
 
@@ -16391,7 +16387,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With comments**
 
@@ -16542,7 +16538,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With multiple item types**
 
@@ -16675,7 +16671,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Actions with shared borders**
 
@@ -16769,7 +16765,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Contact cards**
 
@@ -16883,7 +16879,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Contact cards with small portraits**
 
@@ -16979,7 +16975,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Horizontal link cards**
 
@@ -17037,7 +17033,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Images with details**
 
@@ -17105,7 +17101,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Logos cards with description list**
 
@@ -17195,7 +17191,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple cards**
 
@@ -17237,7 +17233,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width with links**
 
@@ -17340,7 +17336,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width with constrained content**
 
@@ -17447,7 +17443,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **In card with links**
 
@@ -17550,7 +17546,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow**
 
@@ -17605,7 +17601,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with actions**
 
@@ -17676,7 +17672,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with badges**
 
@@ -17771,7 +17767,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with small avatars**
 
@@ -17855,7 +17851,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with sticky headings**
 
@@ -18065,7 +18061,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Narrow with truncated content**
 
@@ -18129,7 +18125,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -18214,7 +18210,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two columns with links**
 
@@ -18317,7 +18313,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With badges, button, and actions menu**
 
@@ -18440,7 +18436,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With inline links and actions menu**
 
@@ -18568,7 +18564,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With inline links and avatar group**
 
@@ -18772,7 +18768,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With links**
 
@@ -18875,7 +18871,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width**
 
@@ -18945,7 +18941,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width with avatars**
 
@@ -19110,7 +19106,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width with constrained content**
 
@@ -19188,7 +19184,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -19258,7 +19254,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple in card**
 
@@ -19330,7 +19326,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatars and multi-line content**
 
@@ -19457,7 +19453,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With border**
 
@@ -19574,7 +19570,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With checkboxes**
 
@@ -19705,7 +19701,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With condensed content**
 
@@ -19847,7 +19843,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With grouped rows**
 
@@ -19940,7 +19936,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With hidden columns on mobile**
 
@@ -20006,7 +20002,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With hidden headings**
 
@@ -20142,7 +20138,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With sortable headings**
 
@@ -20242,7 +20238,7 @@ This document contains a machine-readable index of all Vue components from the T
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With stacked columns on mobile**
 
@@ -20311,7 +20307,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With sticky header**
 
@@ -20395,7 +20391,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With striped rows**
 
@@ -20465,7 +20461,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With summary rows**
 
@@ -20575,7 +20571,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With uppercase headings**
 
@@ -20645,7 +20641,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With vertical lines**
 
@@ -20707,7 +20703,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Contained**
 
@@ -20747,7 +20743,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width bar**
 
@@ -20787,7 +20783,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with chevrons**
 
@@ -20825,7 +20821,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with slashes**
 
@@ -20865,7 +20861,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Semi-transparent with icons**
 
@@ -20973,7 +20969,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -21046,7 +21042,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with padding**
 
@@ -21119,7 +21115,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With footer**
 
@@ -21200,7 +21196,7 @@ const people = [
                     'mx-1 flex size-5 items-center justify-center rounded-sm border bg-white font-semibold sm:mx-2 dark:bg-gray-800',
                     rawQuery.startsWith('>') ? 'border-indigo-600 text-indigo-600 dark:border-indigo-500 dark:text-indigo-500' : 'border-gray-400 text-gray-900 dark:border-white/10 dark:text-white',
                   ]"
-                  >&gt;</kbd
+                  >></kbd
                 >
                 for users, and
                 <kbd
@@ -21255,7 +21251,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With groups**
 
@@ -21351,7 +21347,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icons**
 
@@ -21457,7 +21453,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With images and descriptions**
 
@@ -21552,7 +21548,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With preview**
 
@@ -21684,7 +21680,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark with centered search and secondary links**
 
@@ -21823,7 +21819,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark with quick action**
 
@@ -21962,7 +21958,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark with search**
 
@@ -22089,7 +22085,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -22217,7 +22213,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple dark**
 
@@ -22332,7 +22328,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple dark with menu button on left**
 
@@ -22438,7 +22434,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with menu button on left**
 
@@ -22541,7 +22537,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With centered search and secondary links**
 
@@ -22684,7 +22680,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With quick action**
 
@@ -22833,7 +22829,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With search**
 
@@ -22973,7 +22969,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With search in column layout**
 
@@ -23121,7 +23117,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Card footer with page buttons**
 
@@ -23192,7 +23188,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered page numbers**
 
@@ -23231,7 +23227,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple card footer**
 
@@ -23273,7 +23269,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Bullets**
 
@@ -23313,7 +23309,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Bullets and text**
 
@@ -23366,7 +23362,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circles**
 
@@ -23422,7 +23418,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Circles with text**
 
@@ -23498,7 +23494,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Panels**
 
@@ -23555,7 +23551,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Panels with border**
 
@@ -23636,7 +23632,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Progress bar**
 
@@ -23662,7 +23658,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -23699,7 +23695,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Brand**
 
@@ -23776,7 +23772,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark**
 
@@ -23843,7 +23839,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Light**
 
@@ -23932,7 +23928,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With expandable sections**
 
@@ -24013,7 +24009,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With secondary navigation**
 
@@ -24110,7 +24106,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Bar with underline**
 
@@ -24163,7 +24159,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width tabs with underline**
 
@@ -24214,7 +24210,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -24259,7 +24255,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs in pills**
 
@@ -24305,7 +24301,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs in pills on gray**
 
@@ -24351,7 +24347,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs in pills with brand color**
 
@@ -24397,7 +24393,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs with underline**
 
@@ -24448,7 +24444,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs with underline and badges**
 
@@ -24504,7 +24500,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Tabs with underline and icons**
 
@@ -24558,7 +24554,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **On gray**
 
@@ -24633,7 +24629,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -24666,7 +24662,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With badges**
 
@@ -24706,7 +24702,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icons**
 
@@ -24743,7 +24739,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icons and badges**
 
@@ -24786,7 +24782,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With secondary navigation**
 
@@ -24861,7 +24857,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Contact list example**
 
@@ -25119,7 +25115,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Create project form example**
 
@@ -25351,7 +25347,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Empty**
 
@@ -25414,7 +25410,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **File details example**
 
@@ -25599,7 +25595,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **User profile example**
 
@@ -25751,7 +25747,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Wide create project form example**
 
@@ -26000,7 +25996,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Wide empty**
 
@@ -26063,7 +26059,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Wide horizontal user profile example**
 
@@ -26220,7 +26216,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background overlay**
 
@@ -26285,7 +26281,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With branded header**
 
@@ -26351,7 +26347,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With close button on outside**
 
@@ -26420,7 +26416,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With sticky footer**
 
@@ -26500,7 +26496,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered with single action**
 
@@ -26566,7 +26562,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered with wide buttons**
 
@@ -26640,7 +26636,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple alert**
 
@@ -26710,7 +26706,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple alert with left-aligned buttons**
 
@@ -26778,7 +26774,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with dismiss button**
 
@@ -26853,7 +26849,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with gray footer**
 
@@ -26925,7 +26921,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Condensed**
 
@@ -26979,7 +26975,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -27032,7 +27028,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With actions below**
 
@@ -27089,7 +27085,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With avatar**
 
@@ -27147,7 +27143,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With buttons below**
 
@@ -27217,7 +27213,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With split buttons**
 
@@ -27279,7 +27275,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Sidebar**
 
@@ -27702,7 +27698,7 @@ const people = [
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked**
 
@@ -27858,7 +27854,7 @@ const people = [
               </div>
             </dl>
             <div class="mt-6 border-t border-gray-900/5 px-6 py-6 dark:border-white/10">
-              <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Download receipt <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Download receipt <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
@@ -28125,7 +28121,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Sidebar**
 
@@ -28605,7 +28601,7 @@ const people = [
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked**
 
@@ -28941,7 +28937,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Sidebar**
 
@@ -29385,7 +29381,7 @@ const people = [
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked**
 
@@ -29595,7 +29591,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Bottom aligned**
 
@@ -29611,8 +29607,8 @@ const people = [
     <div class="flex items-center gap-x-6 bg-gray-900 px-6 py-2.5 sm:px-3.5 sm:before:flex-1 dark:bg-gray-800 dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:top-0 dark:after:h-px dark:after:bg-white/10">
       <p class="text-sm/6 text-white">
         <a href="#">
-          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true"
-            >&rarr;</span
+          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true"
+            >→</span
           >
         </a>
       </p>
@@ -29631,7 +29627,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Floating at bottom**
 
@@ -29647,8 +29643,8 @@ const people = [
     <div class="pointer-events-auto flex items-center justify-between gap-x-6 bg-gray-900 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pr-3.5 sm:pl-4 dark:bg-gray-800 dark:inset-ring dark:inset-ring-white/10">
       <p class="text-sm/6 text-white">
         <a href="#">
-          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true"
-            >&rarr;</span
+          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true"
+            >→</span
           >
         </a>
       </p>
@@ -29665,7 +29661,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Floating at bottom centered**
 
@@ -29681,8 +29677,8 @@ const people = [
     <div class="pointer-events-auto flex items-center justify-between gap-x-6 bg-gray-900 px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pr-3.5 sm:pl-4 dark:bg-gray-800 dark:inset-ring dark:inset-ring-white/10">
       <p class="text-sm/6 text-white">
         <a href="#">
-          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true"
-            >&rarr;</span
+          <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true"
+            >→</span
           >
         </a>
       </p>
@@ -29699,7 +29695,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Left-aligned**
 
@@ -29710,7 +29706,7 @@ const people = [
   <div class="relative flex items-center justify-between gap-x-6 bg-gray-900 px-6 py-2.5 sm:pr-3.5 lg:pl-8 dark:bg-gray-800 dark:after:pointer-events-none dark:after:absolute dark:after:inset-x-0 dark:after:bottom-0 dark:after:h-px dark:after:bg-white/10">
     <p class="text-sm/6 text-white">
       <a href="#">
-        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true">&rarr;</span>
+        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true">→</span>
       </a>
     </p>
     <button type="button" class="-m-3 flex-none p-3 focus-visible:-outline-offset-4">
@@ -29725,7 +29721,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **On brand**
 
@@ -29736,7 +29732,7 @@ const people = [
   <div class="flex items-center gap-x-6 bg-indigo-600 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
     <p class="text-sm/6 text-white">
       <a href="#">
-        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true">&rarr;</span>
+        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true">→</span>
       </a>
     </p>
     <div class="flex flex-1 justify-end">
@@ -29753,7 +29749,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **On dark**
 
@@ -29764,7 +29760,7 @@ const people = [
   <div class="relative flex items-center gap-x-6 bg-gray-900 px-6 py-2.5 after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10 sm:px-3.5 sm:before:flex-1 dark:bg-gray-800">
     <p class="text-sm/6 text-white">
       <a href="#">
-        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true">&rarr;</span>
+        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true">→</span>
       </a>
     </p>
     <div class="flex flex-1 justify-end">
@@ -29781,7 +29777,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Privacy notice centered**
 
@@ -29809,7 +29805,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Privacy notice full width**
 
@@ -29835,7 +29831,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Privacy notice left-aligned**
 
@@ -29863,7 +29859,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Privacy notice right-aligned**
 
@@ -29891,7 +29887,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background glow**
 
@@ -29914,7 +29910,7 @@ const people = [
     </div>
     <p class="text-sm/6 text-gray-900 dark:text-gray-100">
       <a href="#" class="hover:text-gray-600 dark:hover:text-white">
-        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next&nbsp;<span aria-hidden="true">&rarr;</span>
+        <strong class="font-semibold">GeneriCon 2023</strong><svg viewBox="0 0 2 2" class="mx-2 inline size-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>Join us in Denver from June 7 – 9 to see what’s coming next <span aria-hidden="true">→</span>
       </a>
     </p>
     <div class="flex flex-1 justify-end">
@@ -29931,7 +29927,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With button**
 
@@ -29959,7 +29955,7 @@ const people = [
       <a
         href="#"
         class="flex-none rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-xs hover:bg-gray-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 dark:bg-white/10 dark:inset-ring-white/20 dark:hover:bg-white/15 dark:focus-visible:outline-white"
-        >Register now <span aria-hidden="true">&rarr;</span></a
+        >Register now <span aria-hidden="true">→</span></a
       >
     </div>
     <div class="flex flex-1 justify-end">
@@ -29976,7 +29972,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With link**
 
@@ -29998,7 +29994,7 @@ const people = [
       ></div>
     </div>
     <p class="text-sm/6 text-gray-900 dark:text-gray-100">
-      GeneriCon 2023 is on June 7 – 9 in Denver. <a href="#" class="font-semibold whitespace-nowrap text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-300">Get your ticket&nbsp;<span aria-hidden="true">&rarr;</span></a>
+      GeneriCon 2023 is on June 7 – 9 in Denver. <a href="#" class="font-semibold whitespace-nowrap text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-300">Get your ticket <span aria-hidden="true">→</span></a>
     </p>
     <div class="flex flex-1 justify-end">
       <button type="button" class="-m-3 p-3 focus-visible:-outline-offset-4">
@@ -30014,7 +30010,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width**
 
@@ -30099,7 +30095,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full-width two-columns**
 
@@ -30219,7 +30215,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -30258,7 +30254,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with descriptions**
 
@@ -30306,7 +30302,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked with footer actions**
 
@@ -30368,7 +30364,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stacked with footer list**
 
@@ -30402,7 +30398,7 @@ const people = [
           <div class="bg-gray-50 p-8 dark:bg-gray-800/50">
             <div class="flex justify-between">
               <h3 class="text-sm/6 font-semibold text-gray-500 dark:text-gray-400">Recent posts</h3>
-              <a href="#" class="text-sm/6 font-semibold text-indigo-600 dark:text-indigo-400">See all <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="text-sm/6 font-semibold text-indigo-600 dark:text-indigo-400">See all <span aria-hidden="true">→</span></a>
             </div>
             <ul role="list" class="mt-6 space-y-6">
               <li v-for="post in recentPosts" :key="post.id" class="relative">
@@ -30444,7 +30440,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two-column**
 
@@ -30519,7 +30515,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Constrained**
 
@@ -30546,7 +30542,7 @@ const people = [
         <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -30594,7 +30590,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width**
 
@@ -30621,7 +30617,7 @@ const people = [
         <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -30669,7 +30665,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **On brand background**
 
@@ -30696,7 +30692,7 @@ const people = [
         <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-white">{{ item.name }}</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -30744,7 +30740,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With call-to-action**
 
@@ -30829,7 +30825,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With centered logo**
 
@@ -30856,7 +30852,7 @@ const people = [
         <img class="h-8 w-auto not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" />
       </a>
       <div class="flex flex-1 justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -30875,7 +30871,7 @@ const people = [
             <img class="h-8 w-auto not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" />
           </a>
           <div class="flex flex-1 justify-end">
-            <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="mt-6 space-y-2">
@@ -30901,7 +30897,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With full width flyout menu**
 
@@ -30968,7 +30964,7 @@ const people = [
         <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Company</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31050,7 +31046,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With icons in mobile menu**
 
@@ -31129,7 +31125,7 @@ const people = [
         </Popover>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31209,7 +31205,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With left-aligned nav**
 
@@ -31236,7 +31232,7 @@ const people = [
         </button>
       </div>
       <div class="hidden lg:flex">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31284,7 +31280,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With multiple flyout menus**
 
@@ -31357,7 +31353,7 @@ const people = [
         </Popover>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31441,7 +31437,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With right-aligned nav**
 
@@ -31464,7 +31460,7 @@ const people = [
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31512,7 +31508,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With stacked flyout menu**
 
@@ -31573,7 +31569,7 @@ const people = [
         <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Company</a>
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
       </div>
     </nav>
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31640,7 +31636,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -31667,14 +31663,14 @@ const people = [
           class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
           >Go back home</a
         >
-        <a href="#" class="text-sm font-semibold text-gray-900 dark:text-white">Contact support <span aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="text-sm font-semibold text-gray-900 dark:text-white">Contact support <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </main>
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -31704,7 +31700,7 @@ const people = [
         <h1 class="mt-4 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl dark:text-white">Page not found</h1>
         <p class="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400">Sorry, we couldn’t find the page you’re looking for.</p>
         <div class="mt-10">
-          <a href="#" class="text-sm/7 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">&larr;</span> Back to home</a>
+          <a href="#" class="text-sm/7 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">←</span> Back to home</a>
         </div>
       </div>
     </main>
@@ -31727,7 +31723,7 @@ const people = [
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background image**
 
@@ -31751,14 +31747,14 @@ const people = [
       <h1 class="mt-4 text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">Page not found</h1>
       <p class="mt-6 text-lg font-medium text-pretty text-white/70 sm:text-xl/8">Sorry, we couldn’t find the page you’re looking for.</p>
       <div class="mt-10 flex justify-center">
-        <a href="#" class="text-sm/7 font-semibold text-white hover:text-white/90"><span aria-hidden="true">&larr;</span> Back to home</a>
+        <a href="#" class="text-sm/7 font-semibold text-white hover:text-white/90"><span aria-hidden="true">←</span> Back to home</a>
       </div>
     </div>
   </main>
 </template>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With navbar and footer**
 
@@ -31794,7 +31790,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -31830,7 +31826,7 @@ const people = [
       <h1 class="mt-4 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-6xl dark:text-white">Page not found</h1>
       <p class="mt-6 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400">Sorry, we couldn’t find the page you’re looking for.</p>
       <div class="mt-10">
-        <a href="#" class="text-sm/7 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">&larr;</span> Back to home</a>
+        <a href="#" class="text-sm/7 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">←</span> Back to home</a>
       </div>
     </main>
 
@@ -31926,7 +31922,7 @@ const people = [
 </script>
 ````
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With popular pages**
 
@@ -31965,13 +31961,13 @@ const people = [
           </li>
         </ul>
         <div class="mt-10 flex justify-center">
-          <a href="#" class="text-sm/6 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">&larr;</span> Back to home</a>
+          <a href="#" class="text-sm/6 font-semibold text-indigo-600 dark:text-indigo-400"><span aria-hidden="true">←</span> Back to home</a>
         </div>
       </div>
     </main>
     <footer class="border-t border-gray-100 py-6 sm:py-10 dark:border-white/10">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-center gap-8 px-6 sm:flex-row lg:px-8">
-        <p class="text-sm/7 text-gray-400 dark:text-gray-500">&copy; Your Company, Inc. All rights reserved.</p>
+        <p class="text-sm/7 text-gray-400 dark:text-gray-500">© Your Company, Inc. All rights reserved.</p>
         <div class="hidden sm:block sm:h-7 sm:w-px sm:flex-none sm:bg-gray-200 dark:sm:bg-gray-700"></div>
         <div class="flex gap-x-4">
           <a v-for="(item, itemIdx) in social" :key="itemIdx" :href="item.href" class="text-gray-400 hover:text-gray-500 dark:text-gray-500 dark:hover:text-gray-400">
@@ -32050,7 +32046,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image tiles**
 
@@ -32079,7 +32075,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -32340,7 +32336,7 @@ const people = [
             <component :is="item.icon" class="size-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-10 text-center text-sm/6 text-gray-600 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-10 text-center text-sm/6 text-gray-600 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </footer>
   </div>
@@ -32576,7 +32572,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With timeline and stats**
 
@@ -32605,7 +32601,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -32813,7 +32809,7 @@ const people = [
               </li>
             </ul>
             <div class="mt-8 flex border-t border-gray-100 pt-8 dark:border-gray-800">
-              <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">View all openings <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">View all openings <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </div>
@@ -32894,7 +32890,7 @@ const people = [
               <component :is="item.icon" class="size-6" aria-hidden="true" />
             </a>
           </div>
-          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -33064,7 +33060,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With two column description**
 
@@ -33093,7 +33089,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -33233,7 +33229,7 @@ const people = [
               <div class="mt-10 flex">
                 <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-300 dark:text-indigo-400 dark:hover:text-indigo-300">
                   See our job postings
-                  <span aria-hidden="true">&rarr;</span>
+                  <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>
@@ -33302,7 +33298,7 @@ const people = [
         </div>
       </div>
       <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 dark:border-white/10">
-        <p class="text-sm/6 text-gray-600 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="text-sm/6 text-gray-600 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </footer>
   </div>
@@ -33509,7 +33505,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background image hero and pricing section**
 
@@ -33538,7 +33534,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -33592,7 +33588,7 @@ const people = [
           <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div class="hidden sm:mb-8 sm:flex sm:justify-center">
               <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-                Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a>
               </div>
             </div>
             <div class="text-center">
@@ -33954,7 +33950,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With large screenshot and testimonial**
 
@@ -33983,7 +33979,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -34074,7 +34070,7 @@ const people = [
         <div class="mt-16 flex justify-center">
           <p class="relative rounded-full bg-white/25 px-4 py-1.5 text-sm/6 text-gray-600 inset-ring inset-ring-gray-900/10 dark:bg-gray-800/25 dark:text-gray-400 dark:inset-ring-white/10">
             <span class="hidden md:inline">Transistor saves up to $40,000 per year, per employee by working with us.</span>
-            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> Read our case study <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> Read our case study <span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -34405,7 +34401,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With mobile screenshot and testimonials grid**
 
@@ -34434,7 +34430,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -34788,7 +34784,7 @@ const people = [
               <component :is="item.icon" class="size-6" aria-hidden="true" />
             </a>
           </div>
-          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -35047,7 +35043,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With screenshots and stats**
 
@@ -35078,8 +35074,8 @@ const people = [
         </div>
         <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
           <div class="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
-            <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company" />
-            <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+            <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+            <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
             <div class="mt-24 sm:mt-32 lg:mt-16">
               <a href="#" class="inline-flex space-x-6">
                 <span class="rounded-full bg-indigo-50 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">What's new</span>
@@ -35193,7 +35189,7 @@ const people = [
       <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
           <h2 class="text-base/8 font-semibold text-indigo-600 dark:text-indigo-400">Our track record</h2>
-          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">Trusted by thousands of creators&nbsp;worldwide</p>
+          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">Trusted by thousands of creators worldwide</p>
           <p class="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.</p>
         </div>
         <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-gray-900 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 dark:text-white">
@@ -35247,7 +35243,7 @@ const people = [
             <component :is="item.icon" class="size-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </footer>
   </div>
@@ -35415,7 +35411,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With comparison table**
 
@@ -35443,7 +35439,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -35740,7 +35736,7 @@ const people = [
           </div>
         </div>
         <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 dark:border-white/10">
-          <p class="text-sm/6 text-gray-600 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+          <p class="text-sm/6 text-gray-600 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -35948,7 +35944,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With four tiers**
 
@@ -35976,7 +35972,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -36088,7 +36084,7 @@ const people = [
         <div class="mt-16 flex justify-center">
           <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm/6 text-gray-600 inset-ring inset-ring-gray-900/5 dark:bg-gray-800/75 dark:text-gray-400 dark:inset-ring-white/10">
             <span class="hidden md:inline">Transistor saves up to $40,000 per year, per employee by working with us.</span>
-            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> See our case study <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> See our case study <span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -36306,7 +36302,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With three tiers and testimonials**
 
@@ -36335,7 +36331,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -36559,7 +36555,7 @@ const people = [
               <component :is="item.icon" class="size-6" aria-hidden="true" />
             </a>
           </div>
-          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+          <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -36738,7 +36734,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three column bento grid**
 
@@ -36823,7 +36819,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two row bento grid**
 
@@ -36886,7 +36882,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two row bento grid with three column second row**
 
@@ -36970,7 +36966,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Single-column**
 
@@ -37068,7 +37064,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Single-column with images**
 
@@ -37177,7 +37173,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three-column**
 
@@ -37275,7 +37271,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three-column with background images**
 
@@ -37364,7 +37360,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three-column with images**
 
@@ -37471,7 +37467,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With featured post**
 
@@ -37487,7 +37483,7 @@ const people = [
         <p class="mt-4 text-lg/8 text-gray-600 dark:text-gray-400">{{ featuredPost.description }}</p>
         <div class="mt-4 flex flex-col justify-between gap-6 sm:mt-8 sm:flex-row-reverse sm:gap-8 lg:mt-4 lg:flex-col">
           <div class="flex">
-            <a :href="featuredPost.href" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" aria-describedby="featured-post">Continue reading <span aria-hidden="true">&rarr;</span></a>
+            <a :href="featuredPost.href" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300" aria-describedby="featured-post">Continue reading <span aria-hidden="true">→</span></a>
           </div>
           <div class="flex lg:border-t lg:border-gray-900/10 lg:pt-8 dark:lg:border-white/10">
             <a :href="featuredPost.author.href" class="flex gap-x-2.5 text-sm/6 font-semibold text-gray-900 dark:text-white">
@@ -37568,7 +37564,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With photo and list**
 
@@ -37615,7 +37611,7 @@ const people = [
             </li>
           </ul>
           <div class="mt-8 flex border-t border-gray-100 pt-8 dark:border-gray-800">
-            <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">View all openings <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">View all openings <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -37653,7 +37649,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered on dark panel**
 
@@ -37695,7 +37691,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Dark panel with app screenshot**
 
@@ -37742,7 +37738,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered**
 
@@ -37769,7 +37765,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered on brand**
 
@@ -37795,7 +37791,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered with gradient**
 
@@ -37831,7 +37827,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple justified**
 
@@ -37863,7 +37859,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple justified on subtle brand**
 
@@ -37895,7 +37891,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple stacked**
 
@@ -37919,7 +37915,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -37960,7 +37956,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two columns with photo**
 
@@ -37989,7 +37985,7 @@ const people = [
             <div class="mt-10 flex">
               <a href="#" class="text-sm/6 font-semibold text-indigo-600 hover:text-indigo-300 dark:text-indigo-400 dark:hover:text-indigo-300">
                 See our job postings
-                <span aria-hidden="true">&rarr;</span>
+                <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -38012,7 +38008,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image tiles**
 
@@ -38033,7 +38029,7 @@ const people = [
               class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
             >
               Join our team
-              <span aria-hidden="true">&rarr;</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
@@ -38075,7 +38071,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered**
 
@@ -38218,7 +38214,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Side-by-side grid**
 
@@ -38331,7 +38327,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered**
 
@@ -38353,7 +38349,7 @@ const people = [
           <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Sales support</h3>
           <p class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">Ut cursus est ut amet. Lobortis eget egestas leo vitae eget porttitor risus blandit. Nunc a in lorem vel iaculis porttitor.</p>
           <p class="mt-4 text-sm/6 font-semibold">
-            <a href="#" class="text-indigo-600 dark:text-indigo-400">Contact us <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-indigo-600 dark:text-indigo-400">Contact us <span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -38365,7 +38361,7 @@ const people = [
           <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Bug reports</h3>
           <p class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">Expedita qui non ut quia ipsum voluptatum ipsam pariatur. Culpa vitae ipsum minus eius vero quo quibusdam.</p>
           <p class="mt-4 text-sm/6 font-semibold">
-            <a href="#" class="text-indigo-600 dark:text-indigo-400">Report a bug <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-indigo-600 dark:text-indigo-400">Report a bug <span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -38377,7 +38373,7 @@ const people = [
           <h3 class="text-base/7 font-semibold text-gray-900 dark:text-white">Technical support</h3>
           <p class="mt-2 text-base/7 text-gray-600 dark:text-gray-400">Sint aut modi porro consequatur architecto commodi qui consequatur. Dignissimos adipisci minima.</p>
           <p class="mt-4 text-sm/6 font-semibold">
-            <a href="#" class="text-indigo-600 dark:text-indigo-400">Join our Discord <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-indigo-600 dark:text-indigo-400">Join our Discord <span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -38390,7 +38386,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple four-column**
 
@@ -38439,7 +38435,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -38604,7 +38600,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with pattern**
 
@@ -38745,7 +38741,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With testimonial**
 
@@ -38861,7 +38857,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered**
 
@@ -38937,7 +38933,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -39003,7 +38999,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two columns with screenshot**
 
@@ -39054,7 +39050,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image titles**
 
@@ -39125,7 +39121,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With sticky product screenshot**
 
@@ -39202,7 +39198,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With testimonial**
 
@@ -39287,7 +39283,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With testimonial and stats**
 
@@ -39352,7 +39348,7 @@ const people = [
             </div>
           </dl>
           <div class="mt-10 flex">
-            <a href="#" class="text-base/7 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">Learn more about our company <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-base/7 font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">Learn more about our company <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -39370,7 +39366,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered accordion**
 
@@ -39436,7 +39432,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Offset with supporting text**
 
@@ -39488,7 +39484,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Side-by-side**
 
@@ -39547,7 +39543,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three columns**
 
@@ -39610,7 +39606,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three columns with centered introduction**
 
@@ -39675,7 +39671,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two columns**
 
@@ -39738,7 +39734,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two columns with centered introduction**
 
@@ -39803,7 +39799,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered 2x2 grid**
 
@@ -39863,7 +39859,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Contained in panel**
 
@@ -39935,7 +39931,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Offset 2x2 grid**
 
@@ -39991,7 +39987,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Offset with feature list**
 
@@ -40043,7 +40039,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -40097,7 +40093,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple 3x2 grid**
 
@@ -40164,7 +40160,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple three column with large icons**
 
@@ -40226,7 +40222,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple three column with small icons**
 
@@ -40287,7 +40283,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With code example panel**
 
@@ -40362,7 +40358,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With large bordered screenshot**
 
@@ -40383,7 +40379,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With large screenshot**
 
@@ -40461,7 +40457,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With product screenshot**
 
@@ -40525,7 +40521,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With product screenshot on left**
 
@@ -40585,7 +40581,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With product screenshot panel**
 
@@ -40651,7 +40647,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With testimonial**
 
@@ -40692,7 +40688,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **4-column simple**
 
@@ -40777,7 +40773,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **4-column with call-to-action**
 
@@ -40850,7 +40846,7 @@ const people = [
             <component :is="item.icon" class="size-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -40957,7 +40953,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **4-column with company mission**
 
@@ -41019,7 +41015,7 @@ const people = [
         </div>
       </div>
       <div class="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24 dark:border-white/10">
-        <p class="text-sm/6 text-gray-600 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="text-sm/6 text-gray-600 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -41126,7 +41122,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **4-column with newsletter**
 
@@ -41207,7 +41203,7 @@ const people = [
             <component :is="item.icon" class="size-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -41314,7 +41310,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **4-column with newsletter below**
 
@@ -41399,7 +41395,7 @@ const people = [
             <component :is="item.icon" class="size-6" aria-hidden="true" />
           </a>
         </div>
-        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+        <p class="mt-8 text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -41506,7 +41502,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered**
 
@@ -41525,7 +41521,7 @@ const people = [
           <component :is="item.icon" class="size-6" aria-hidden="true" />
         </a>
       </div>
-      <p class="mt-10 text-center text-sm/6 text-gray-600 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+      <p class="mt-10 text-center text-sm/6 text-gray-600 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -41616,7 +41612,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with social links**
 
@@ -41632,7 +41628,7 @@ const people = [
           <component :is="item.icon" class="size-6" aria-hidden="true" />
         </a>
       </div>
-      <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">&copy; 2024 Your Company, Inc. All rights reserved.</p>
+      <p class="mt-8 text-center text-sm/6 text-gray-600 md:order-1 md:mt-0 dark:text-gray-400">© 2024 Your Company, Inc. All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -41713,7 +41709,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered**
 
@@ -41730,7 +41726,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered with background image**
 
@@ -41769,7 +41765,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered with eyebrow**
 
@@ -41787,7 +41783,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -41806,7 +41802,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with background image**
 
@@ -41847,7 +41843,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with eyebrow**
 
@@ -41867,7 +41863,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With cards**
 
@@ -41939,7 +41935,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With stats**
 
@@ -41977,7 +41973,7 @@ const people = [
       </div>
       <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base/7 font-semibold text-gray-900 sm:grid-cols-2 md:flex lg:gap-x-10 dark:text-white">
-          <a v-for="link in links" :key="link.name" :href="link.href">{{ link.name }} <span aria-hidden="true">&rarr;</span></a>
+          <a v-for="link in links" :key="link.name" :href="link.href">{{ link.name }} <span aria-hidden="true">→</span></a>
         </div>
         <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
           <div v-for="stat in stats" :key="stat.name" class="flex flex-col-reverse gap-1">
@@ -42006,7 +42002,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered**
 
@@ -42034,7 +42030,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -42075,7 +42071,7 @@ const people = [
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+            Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="text-center">
@@ -42117,7 +42113,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered with background image**
 
@@ -42145,7 +42141,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -42197,7 +42193,7 @@ const people = [
         <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div class="hidden sm:mb-8 sm:flex sm:justify-center">
             <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-              Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+              Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <div class="text-center">
@@ -42240,7 +42236,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with bordered screenshot**
 
@@ -42259,8 +42255,8 @@ const people = [
     </svg>
     <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
       <div class="mx-auto max-w-2xl lg:mx-0 lg:shrink-0 lg:pt-8">
-        <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company" />
-        <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+        <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+        <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
         <div class="mt-24 sm:mt-32 lg:mt-16">
           <a href="#" class="inline-flex space-x-6">
             <span class="rounded-full bg-indigo-50 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">What's new</span>
@@ -42298,7 +42294,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with code example**
 
@@ -42312,8 +42308,8 @@ const people = [
         <div class="px-6 lg:px-0 lg:pt-4">
           <div class="mx-auto max-w-2xl">
             <div class="max-w-lg">
-              <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company" />
-              <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+              <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+              <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
               <div class="mt-24 sm:mt-32 lg:mt-16">
                 <a href="#" class="inline-flex space-x-6">
                   <span class="rounded-full bg-indigo-50 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">What's new</span>
@@ -42371,7 +42367,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -42383,11 +42379,11 @@ const people = [
     <div class="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
       <div class="px-6 pt-10 pb-24 sm:pb-32 lg:col-span-7 lg:px-0 lg:pt-40 lg:pb-48 xl:col-span-6">
         <div class="mx-auto max-w-lg lg:mx-0">
-          <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company" />
-          <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+          <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+          <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
           <div class="hidden sm:mt-32 sm:flex lg:mt-16">
             <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-              Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+              Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a>
             </div>
           </div>
           <h1 class="mt-24 text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:mt-10 sm:text-7xl dark:text-white">Data to enrich your business</h1>
@@ -42414,7 +42410,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with screenshot**
 
@@ -42442,8 +42438,8 @@ const people = [
     </div>
     <div class="mx-auto max-w-7xl px-6 pt-10 pb-24 sm:pb-32 lg:flex lg:px-8 lg:py-40">
       <div class="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
-        <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=600" alt="Your Company" />
-        <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&amp;shade=500" alt="Your Company" />
+        <img class="h-11 dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
+        <img class="h-11 not-dark:hidden" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
         <div class="mt-24 sm:mt-32 lg:mt-16">
           <a href="#" class="inline-flex space-x-6">
             <span class="rounded-full bg-indigo-50 px-3 py-1 text-sm/6 font-semibold text-indigo-600 ring-1 ring-indigo-600/20 ring-inset dark:bg-indigo-500/10 dark:text-indigo-400 dark:ring-indigo-500/25">What's new</span>
@@ -42479,7 +42475,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With angled image on right**
 
@@ -42546,7 +42542,7 @@ const people = [
             <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
               <div class="hidden sm:mb-10 sm:flex">
                 <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+                  Anim aute id magna aliqua ad ad non deserunt sunt. <a href="#" class="font-semibold whitespace-nowrap text-indigo-600 dark:text-indigo-400"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">→</span></a>
                 </div>
               </div>
               <h1 class="text-5xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-7xl dark:text-white">Data to enrich your business</h1>
@@ -42587,7 +42583,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With app screenshot**
 
@@ -42615,7 +42611,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -42698,7 +42694,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With bordered app screenshot**
 
@@ -42726,7 +42722,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -42812,7 +42808,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image tiles**
 
@@ -42840,7 +42836,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -42978,7 +42974,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With offset image**
 
@@ -43006,7 +43002,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -43082,7 +43078,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With phone mockup**
 
@@ -43110,7 +43106,7 @@ const people = [
           <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-sm/6 font-semibold text-gray-900 dark:text-white">{{ item.name }}</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="text-sm/6 font-semibold text-gray-900 dark:text-white">Log in <span aria-hidden="true">→</span></a>
         </div>
       </nav>
       <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
@@ -43219,7 +43215,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Grid**
 
@@ -43260,7 +43256,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -43291,7 +43287,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple left-aligned**
 
@@ -43325,7 +43321,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with call-to-action**
 
@@ -43354,7 +43350,7 @@ const people = [
       <div class="mt-16 flex justify-center">
         <p class="relative rounded-full bg-gray-50 px-4 py-1.5 text-sm/6 text-gray-600 inset-ring inset-ring-gray-900/5 dark:bg-gray-800/75 dark:text-gray-400 dark:inset-ring-white/10">
           <span class="hidden md:inline">Over 2500 companies use our tools to better their business.</span>
-          <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> Read our customer stories <span aria-hidden="true">&rarr;</span></a>
+          <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"><span class="absolute inset-0" aria-hidden="true"></span> Read our customer stories <span aria-hidden="true">→</span></a>
         </p>
       </div>
     </div>
@@ -43362,7 +43358,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple with heading**
 
@@ -43394,7 +43390,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with logos on right**
 
@@ -43414,7 +43410,7 @@ const people = [
               class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
               >Create account</a
             >
-            <a href="#" class="text-sm font-semibold text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-200">Contact us <span aria-hidden="true">&rarr;</span></a>
+            <a href="#" class="text-sm font-semibold text-gray-900 hover:text-gray-700 dark:text-white dark:hover:text-gray-200">Contact us <span aria-hidden="true">→</span></a>
           </div>
         </div>
         <div class="mx-auto grid w-full max-w-xl grid-cols-2 items-center gap-y-12 sm:gap-y-14 lg:mx-0 lg:max-w-none lg:pl-8">
@@ -43442,7 +43438,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Centered card**
 
@@ -43485,7 +43481,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Side-by-side on card**
 
@@ -43535,7 +43531,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Side-by-side with details**
 
@@ -43600,7 +43596,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple side-by-side**
 
@@ -43637,7 +43633,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple side-by-side on brand**
 
@@ -43669,7 +43665,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple stacked**
 
@@ -43706,7 +43702,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Four tiers with toggle**
 
@@ -43816,7 +43812,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Single price with details**
 
@@ -43874,7 +43870,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers**
 
@@ -43969,7 +43965,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers with dividers**
 
@@ -44045,7 +44041,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers with emphasized tier**
 
@@ -44157,7 +44153,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers with feature comparison**
 
@@ -44430,7 +44426,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers with logos and feature comparison**
 
@@ -44655,7 +44651,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Three tiers with toggle**
 
@@ -44761,7 +44757,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two tiers with emphasized left tier**
 
@@ -44845,7 +44841,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two tiers with emphasized right tier**
 
@@ -44929,7 +44925,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Two tiers with extra tier**
 
@@ -44990,7 +44986,7 @@ const people = [
               <a
                 href="#"
                 class="rounded-md px-3.5 py-2 text-sm/6 font-semibold text-indigo-600 inset-ring inset-ring-indigo-200 hover:inset-ring-indigo-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-white/10 dark:text-white dark:inset-ring-white/5 dark:hover:bg-white/20 dark:hover:inset-ring-white/5 dark:focus-visible:outline-white/75"
-                >Buy discounted license <span aria-hidden="true">&rarr;</span></a
+                >Buy discounted license <span aria-hidden="true">→</span></a
               >
             </div>
           </div>
@@ -45024,7 +45020,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With comparison table**
 
@@ -45194,7 +45190,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple**
 
@@ -45223,7 +45219,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple grid**
 
@@ -45259,7 +45255,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Split with image**
 
@@ -45301,7 +45297,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Stepped**
 
@@ -45343,7 +45339,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Timeline**
 
@@ -45400,7 +45396,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background image**
 
@@ -45428,7 +45424,7 @@ const people = [
       </div>
       <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
         <h2 class="text-base/8 font-semibold text-indigo-600 dark:text-indigo-400">Our track record</h2>
-        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">Trusted by thousands of creators&nbsp;worldwide</p>
+        <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">Trusted by thousands of creators worldwide</p>
         <p class="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis.</p>
       </div>
       <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-gray-900 sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4 dark:text-white">
@@ -45451,7 +45447,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With description**
 
@@ -45496,7 +45492,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With two column description**
 
@@ -45546,7 +45542,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Full width with vertical images**
 
@@ -45604,7 +45600,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Grid with large round images**
 
@@ -45701,7 +45697,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Grid with round images**
 
@@ -45807,7 +45803,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Large grid with cards**
 
@@ -45904,7 +45900,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With image and short paragraph**
 
@@ -45992,7 +45988,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With large images**
 
@@ -46089,7 +46085,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With medium images**
 
@@ -46169,7 +46165,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With small images**
 
@@ -46234,7 +46230,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With vertical images**
 
@@ -46316,7 +46312,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Grid**
 
@@ -46485,7 +46481,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Side-by-side**
 
@@ -46537,7 +46533,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Simple centered**
 
@@ -46571,7 +46567,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **Subtle grid**
 
@@ -46685,7 +46681,7 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With background image**
 
@@ -46731,7 +46727,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With large avatar**
 
@@ -46771,7 +46767,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With overlapping image**
 
@@ -46811,7 +46807,7 @@ const people = [
 </template>
 ```
 
----
+--------------------------------------------------------------------------------
 
 ## Component: **With star rating**
 
@@ -46851,4 +46847,4 @@ const people = [
 </script>
 ```
 
----
+--------------------------------------------------------------------------------

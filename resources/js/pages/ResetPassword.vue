@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import AuthLayout from "@/layouts/AuthLayout.vue";
-import passwordRoutes from "@/routes/password";
-import { Head, useForm } from "@inertiajs/vue3";
+  import AuthLayout from "@/layouts/AuthLayout.vue";
+  import passwordRoutes from "@/routes/password";
+  import { Head, useForm } from "@inertiajs/vue3";
 
-const props = defineProps<{
-  email: string;
-  token: string;
-}>();
+  const props = defineProps<{
+    email: string;
+    token: string;
+  }>();
 
-const form = useForm({
-  token: props.token,
-  email: props.email,
-  password: "",
-  password_confirmation: "",
-});
-
-const submit = () => {
-  form.post(passwordRoutes.update.url(), {
-    onFinish: () => form.reset("password", "password_confirmation"),
+  const form = useForm({
+    token: props.token,
+    email: props.email,
+    password: "",
+    password_confirmation: "",
   });
-};
+
+  const submit = () => {
+    form.post(passwordRoutes.update.url(), {
+      onFinish: () => form.reset("password", "password_confirmation"),
+    });
+  };
 </script>
 
 <template>
@@ -37,13 +37,7 @@ const submit = () => {
         <form class="space-y-6" @submit.prevent="submit">
           <div class="space-y-2">
             <label for="email" class="text-sm font-medium text-gray-900 dark:text-gray-100">Email</label>
-            <input
-              id="email"
-              v-model="form.email"
-              type="email"
-              readonly
-              class="block w-full cursor-not-allowed rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm dark:border-white/10 dark:bg-gray-900 dark:text-white"
-            />
+            <input id="email" v-model="form.email" type="email" readonly class="block w-full cursor-not-allowed rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-gray-900 shadow-sm dark:border-white/10 dark:bg-gray-900 dark:text-white" />
             <p v-if="form.errors.email" class="text-sm text-rose-600 dark:text-rose-400">{{ form.errors.email }}</p>
           </div>
 

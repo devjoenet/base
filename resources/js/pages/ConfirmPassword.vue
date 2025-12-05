@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import AuthLayout from "@/layouts/AuthLayout.vue";
-import confirmPassword from "@/routes/password/confirm";
-import { Head, useForm } from "@inertiajs/vue3";
+  import AuthLayout from "@/layouts/AuthLayout.vue";
+  import confirmPassword from "@/routes/password/confirm";
+  import { Head, useForm } from "@inertiajs/vue3";
 
-const form = useForm({
-  password: "",
-});
-
-const submit = () => {
-  form.post(confirmPassword.store.url(), {
-    onFinish: () => form.reset("password"),
+  const form = useForm({
+    password: "",
   });
-};
+
+  const submit = () => {
+    form.post(confirmPassword.store.url(), {
+      onFinish: () => form.reset("password"),
+    });
+  };
 </script>
 
 <template>

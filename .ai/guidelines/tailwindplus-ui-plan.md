@@ -1,4 +1,4 @@
-# Tailwind Plus parity backlog
+# Tailwind Plus UI Development Plan
 
 This checklist compares the reference starter kit in `VUESTARTER-REF` with the current Tailwind Plus implementation and highlights what still needs to be ported. Each item calls for creating a Tailwind Plus equivalent in `resources/js` that mirrors the reference behavior (styling can adapt to Tailwind Plus tokens).
 
@@ -18,4 +18,4 @@ Use the `# Tailwind Plus Vue Component Library` section of the `AGENTS.md` file 
 
 ## Pages (`resources/js/pages`)
 
-- Recreate the settings pages present in `VUESTARTER-REF/resources/js/pages/settings`—`Appearance.vue`, `Password.vue`, and `TwoFactor.vue`—and ensure `Profile.vue` aligns with the settings layout conventions used in the reference. Each page should consume the new Tailwind Plus components and layouts to maintain feature parity.
+- Recreate the settings pages present in `VUESTARTER-REF/resources/js/pages/settings`--`Appearance.vue`, `Password.vue`, and `TwoFactor.vue`--and ensure `Profile.vue` aligns with the settings layout conventions used in the reference. Each page should consume the new Tailwind Plus components and layouts to maintain feature parity.

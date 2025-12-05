@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import AuthLayout from "@/layouts/AuthLayout.vue";
-import { login } from "@/routes";
-import registerStore from "@/routes/register";
-import { Head, Link, useForm } from "@inertiajs/vue3";
+  import AuthLayout from "@/layouts/AuthLayout.vue";
+  import { login } from "@/routes";
+  import registerStore from "@/routes/register";
+  import { Head, Link, useForm } from "@inertiajs/vue3";
 
-const props = defineProps<{
-  terms?: boolean;
-}>();
+  const props = defineProps<{
+    terms?: boolean;
+  }>();
 
-const form = useForm({
-  name: "",
-  email: "",
-  password: "",
-  password_confirmation: "",
-  terms: props.terms ?? false,
-});
-
-const submit = () => {
-  form.post(registerStore.store.url(), {
-    onFinish: () => form.reset("password", "password_confirmation"),
+  const form = useForm({
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+    terms: props.terms ?? false,
   });
-};
+
+  const submit = () => {
+    form.post(registerStore.store.url(), {
+      onFinish: () => form.reset("password", "password_confirmation"),
+    });
+  };
 </script>
 
 <template>
@@ -91,11 +91,7 @@ const submit = () => {
             </div>
 
             <label class="flex items-start gap-3 text-sm text-gray-700 dark:text-gray-300">
-              <input
-                v-model="form.terms"
-                type="checkbox"
-                class="mt-1 h-5 w-5 rounded-lg border border-gray-300 bg-white text-indigo-600 shadow-sm focus:ring-2 focus:ring-indigo-500 dark:border-white/10 dark:bg-gray-950"
-              />
+              <input v-model="form.terms" type="checkbox" class="mt-1 h-5 w-5 rounded-lg border border-gray-300 bg-white text-indigo-600 shadow-sm focus:ring-2 focus:ring-indigo-500 dark:border-white/10 dark:bg-gray-950" />
               <span class="leading-6">
                 I agree to the
                 <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">Terms &amp; Conditions</a>
@@ -116,13 +112,8 @@ const submit = () => {
 
         <div class="rounded-2xl border border-dashed border-indigo-200 bg-indigo-50/70 p-6 text-sm shadow-sm dark:border-indigo-500/40 dark:bg-indigo-500/10 lg:col-span-2 lg:p-8">
           <h2 class="text-lg font-semibold text-indigo-900 dark:text-indigo-100">Already onboard?</h2>
-          <p class="mt-2 text-indigo-800/80 dark:text-indigo-100/80">
-            If you already have an account you can sign in instead.
-          </p>
-          <Link
-            :href="login()"
-            class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 font-semibold text-indigo-700 shadow-sm ring-1 ring-indigo-200 transition hover:ring-indigo-300 dark:bg-indigo-500/20 dark:text-indigo-50 dark:ring-white/10"
-          >
+          <p class="mt-2 text-indigo-800/80 dark:text-indigo-100/80">If you already have an account you can sign in instead.</p>
+          <Link :href="login()" class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 font-semibold text-indigo-700 shadow-sm ring-1 ring-indigo-200 transition hover:ring-indigo-300 dark:bg-indigo-500/20 dark:text-indigo-50 dark:ring-white/10">
             Go to login
           </Link>
         </div>

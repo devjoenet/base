@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import AuthLayout from "@/layouts/AuthLayout.vue";
-import twoFactorLogin from "@/routes/two-factor/login";
-import { Head, Link, useForm } from "@inertiajs/vue3";
-import { ref } from "vue";
+  import AuthLayout from "@/layouts/AuthLayout.vue";
+  import twoFactorLogin from "@/routes/two-factor/login";
+  import { Head, Link, useForm } from "@inertiajs/vue3";
+  import { ref } from "vue";
 
-const form = useForm({
-  code: "",
-  recovery_code: "",
-});
-
-const recovery = ref(false);
-
-const submit = () => {
-  form.post(twoFactorLogin.store.url(), {
-    onFinish: () => form.reset("code", "recovery_code"),
+  const form = useForm({
+    code: "",
+    recovery_code: "",
   });
-};
+
+  const recovery = ref(false);
+
+  const submit = () => {
+    form.post(twoFactorLogin.store.url(), {
+      onFinish: () => form.reset("code", "recovery_code"),
+    });
+  };
 </script>
 
 <template>
@@ -34,10 +34,7 @@ const submit = () => {
       <div class="rounded-2xl border border-gray-200 bg-white/90 p-8 shadow-sm backdrop-blur dark:border-white/10 dark:bg-gray-900/90">
         <form class="space-y-6" @submit.prevent="submit">
           <div class="space-y-2">
-            <label
-              :for="recovery ? 'recovery_code' : 'code'"
-              class="text-sm font-medium text-gray-900 dark:text-gray-100"
-            >
+            <label :for="recovery ? 'recovery_code' : 'code'" class="text-sm font-medium text-gray-900 dark:text-gray-100">
               {{ recovery ? "Recovery code" : "Authentication code" }}
             </label>
             <input
@@ -68,13 +65,15 @@ const submit = () => {
             <button
               type="button"
               class="rounded-lg bg-gray-100 px-3 py-2 font-semibold text-gray-900 shadow-sm transition hover:bg-gray-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
-              @click="recovery = !recovery; form.clearErrors(); form.reset('code', 'recovery_code');"
+              @click="
+                recovery = !recovery;
+                form.clearErrors();
+                form.reset('code', 'recovery_code');
+              "
             >
               {{ recovery ? "Use authentication code" : "Use recovery code" }}
             </button>
-            <Link :href="twoFactorLogin.store.url()" class="inline-flex items-center font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
-              Having trouble?
-            </Link>
+            <Link :href="twoFactorLogin.store.url()" class="inline-flex items-center font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"> Having trouble? </Link>
           </div>
 
           <button

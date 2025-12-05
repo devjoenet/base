@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import AppLayout from "@/layouts/AppLayout.vue";
-import { logout } from "@/routes";
-import { Head, Link, useForm } from "@inertiajs/vue3";
-import { computed } from "vue";
+  import AppLayout from "@/layouts/AppLayout.vue";
+  import { logout } from "@/routes";
+  import { Head, Link, useForm } from "@inertiajs/vue3";
+  import { computed } from "vue";
 
-const props = defineProps<{
-  status?: string;
-}>();
+  const props = defineProps<{
+    status?: string;
+  }>();
 
-const form = useForm({});
+  const form = useForm({});
 
-const resent = computed(() => props.status === "verification-link-sent");
+  const resent = computed(() => props.status === "verification-link-sent");
 
-const submit = () => {
-  form.post("/email/verification-notification");
-};
+  const submit = () => {
+    form.post("/email/verification-notification");
+  };
 </script>
 
 <template>
@@ -25,9 +25,7 @@ const submit = () => {
       <div class="space-y-3">
         <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-500 dark:text-indigo-300">Verify email</p>
         <h1 class="text-3xl font-semibold text-gray-900 dark:text-white">Check your inbox</h1>
-        <p class="text-sm text-gray-700 dark:text-gray-200">
-          Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn’t receive the email, we will gladly send you another.
-        </p>
+        <p class="text-sm text-gray-700 dark:text-gray-200">Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn’t receive the email, we will gladly send you another.</p>
         <p v-if="resent" class="rounded-lg bg-white/60 px-4 py-3 text-sm font-medium text-emerald-700 shadow-sm ring-1 ring-emerald-100 dark:bg-emerald-500/20 dark:text-emerald-100 dark:ring-emerald-400/40">
           A new verification link has been sent to the email address you provided during registration.
         </p>

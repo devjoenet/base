@@ -1,31 +1,29 @@
 <script setup lang="ts">
-import { XMarkIcon } from "@heroicons/vue/24/outline";
-import { Link, usePage } from "@inertiajs/vue3";
-import { computed } from "vue";
+  import { XMarkIcon } from "@heroicons/vue/24/outline";
+  import { Link, usePage } from "@inertiajs/vue3";
+  import { computed } from "vue";
 
-import type { AppPageProps, NavItem, User } from "@/types";
+  import type { AppPageProps, NavItem, User } from "@/types";
 
-const props = defineProps<{
-  brand: string;
-  navItems: NavItem[];
-  user?: User;
-  mobile?: boolean;
-  brandHref?: string;
-}>();
+  const props = defineProps<{
+    brand: string;
+    navItems: NavItem[];
+    user?: User;
+    mobile?: boolean;
+    brandHref?: string;
+  }>();
 
-const emit = defineEmits<{
-  (e: "close"): void;
-}>();
+  const emit = defineEmits<{
+    (e: "close"): void;
+  }>();
 
-const page = usePage<AppPageProps>();
-const currentUrl = computed(() => page.url);
+  const page = usePage<AppPageProps>();
+  const currentUrl = computed(() => page.url);
 
-const resolveClass = (item: NavItem) => {
-  const active = item.isActive ?? currentUrl.value.startsWith(item.href.toString());
-  return active
-    ? "bg-white/10 text-white"
-    : "text-gray-200 hover:bg-white/10 hover:text-white";
-};
+  const resolveClass = (item: NavItem) => {
+    const active = item.isActive ?? currentUrl.value.startsWith(item.href.toString());
+    return active ? "bg-white/10 text-white" : "text-gray-200 hover:bg-white/10 hover:text-white";
+  };
 </script>
 
 <template>
@@ -34,12 +32,7 @@ const resolveClass = (item: NavItem) => {
       <Link :href="props.brandHref ?? '/'" class="text-lg font-semibold tracking-tight text-white">
         {{ props.brand }}
       </Link>
-      <button
-        v-if="props.mobile"
-        type="button"
-        class="ml-auto inline-flex size-9 items-center justify-center rounded-lg text-gray-300 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-        @click="emit('close')"
-      >
+      <button v-if="props.mobile" type="button" class="ml-auto inline-flex size-9 items-center justify-center rounded-lg text-gray-300 hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" @click="emit('close')">
         <span class="sr-only">Close navigation</span>
         <XMarkIcon class="size-5" aria-hidden="true" />
       </button>
@@ -48,11 +41,7 @@ const resolveClass = (item: NavItem) => {
     <nav class="flex-1">
       <ul class="space-y-1">
         <li v-for="item in props.navItems" :key="item.title">
-          <Link
-            :href="item.href"
-            class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
-            :class="resolveClass(item)"
-          >
+          <Link :href="item.href" class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400" :class="resolveClass(item)">
             <span class="truncate">{{ item.title }}</span>
           </Link>
         </li>

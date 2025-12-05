@@ -1,25 +1,25 @@
 <script setup lang="ts">
-import { Bars3Icon } from "@heroicons/vue/24/outline";
-import { Link } from "@inertiajs/vue3";
+  import { Bars3Icon } from "@heroicons/vue/24/outline";
+  import { Link } from "@inertiajs/vue3";
 
-import UserMenu from "./UserMenu.vue";
-import type { User } from "@/types";
+  import UserMenu from "./UserMenu.vue";
+  import type { User } from "@/types";
 
-const props = withDefaults(
-  defineProps<{
-    brand: string;
-    user?: User;
-    brandHref?: string;
-    showMenuButton?: boolean;
-  }>(),
-  {
-    showMenuButton: true,
-  },
-);
+  const props = withDefaults(
+    defineProps<{
+      brand: string;
+      user?: User;
+      brandHref?: string;
+      showMenuButton?: boolean;
+    }>(),
+    {
+      showMenuButton: true,
+    },
+  );
 
-const emit = defineEmits<{
-  (e: "openSidebar"): void;
-}>();
+  const emit = defineEmits<{
+    (e: "openSidebar"): void;
+  }>();
 </script>
 
 <template>
@@ -35,10 +35,7 @@ const emit = defineEmits<{
         <Bars3Icon class="size-6" aria-hidden="true" />
       </button>
 
-      <Link
-        :href="props.brandHref ?? '/'"
-        class="text-base font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-300"
-      >
+      <Link :href="props.brandHref ?? '/'" class="text-base font-semibold text-gray-900 hover:text-indigo-600 dark:text-white dark:hover:text-indigo-300">
         {{ props.brand }}
       </Link>
 

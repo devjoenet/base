@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import AppLayout from "@/layouts/AppLayout.vue";
-import userPassword from "@/routes/user-password";
-import userProfileInformation from "@/routes/user-profile-information";
-import { Head, Link, useForm, usePage } from "@inertiajs/vue3";
-import { computed } from "vue";
-import type { AppPageProps } from "@/types";
+  import AppLayout from "@/layouts/AppLayout.vue";
+  import userPassword from "@/routes/user-password";
+  import userProfileInformation from "@/routes/user-profile-information";
+  import { Head, Link, useForm, usePage } from "@inertiajs/vue3";
+  import { computed } from "vue";
+  import type { AppPageProps } from "@/types";
 
-const page = usePage<AppPageProps<{ mustVerifyEmail?: boolean; status?: string }>>();
-const user = computed(() => page.props.auth.user);
+  const page = usePage<AppPageProps<{ mustVerifyEmail?: boolean; status?: string }>>();
+  const user = computed(() => page.props.auth.user);
 
-const profileForm = useForm({
-  name: user.value.name,
-  email: user.value.email,
-});
-
-const passwordForm = useForm({
-  current_password: "",
-  password: "",
-  password_confirmation: "",
-});
-
-const submitProfile = () => {
-  profileForm.put(userProfileInformation.update.url(), {
-    preserveScroll: true,
+  const profileForm = useForm({
+    name: user.value.name,
+    email: user.value.email,
   });
-};
 
-const submitPassword = () => {
-  passwordForm.put(userPassword.update.url(), {
-    preserveScroll: true,
-    onSuccess: () => passwordForm.reset(),
-    onFinish: () => passwordForm.reset("current_password"),
+  const passwordForm = useForm({
+    current_password: "",
+    password: "",
+    password_confirmation: "",
   });
-};
+
+  const submitProfile = () => {
+    profileForm.put(userProfileInformation.update.url(), {
+      preserveScroll: true,
+    });
+  };
+
+  const submitPassword = () => {
+    passwordForm.put(userPassword.update.url(), {
+      preserveScroll: true,
+      onSuccess: () => passwordForm.reset(),
+      onFinish: () => passwordForm.reset("current_password"),
+    });
+  };
 </script>
 
 <template>
@@ -47,9 +47,7 @@ const submitPassword = () => {
             <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Personal information</h2>
             <p class="text-sm text-gray-600 dark:text-gray-400">Update your name and email address.</p>
           </div>
-          <p v-if="profileForm.recentlySuccessful" class="rounded-lg bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-100 dark:bg-emerald-500/10 dark:text-emerald-100 dark:ring-emerald-500/30">
-            Saved
-          </p>
+          <p v-if="profileForm.recentlySuccessful" class="rounded-lg bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-100 dark:bg-emerald-500/10 dark:text-emerald-100 dark:ring-emerald-500/30">Saved</p>
         </div>
 
         <form class="space-y-6 p-6" @submit.prevent="submitProfile">
@@ -79,12 +77,8 @@ const submitPassword = () => {
               <p v-if="profileForm.errors.email" class="text-sm text-rose-600 dark:text-rose-400">{{ profileForm.errors.email }}</p>
               <p v-else-if="page.props.mustVerifyEmail && !user.email_verified_at" class="text-sm text-gray-600 dark:text-gray-400">
                 Your email address is unverified.
-                <Link method="post" href="/email/verification-notification" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300">
-                  Click here to resend verification.
-                </Link>
-                <span v-if="page.props.status === 'verification-link-sent'" class="block text-emerald-600 dark:text-emerald-400">
-                  A new verification link has been sent to your email address.
-                </span>
+                <Link method="post" href="/email/verification-notification" class="font-semibold text-indigo-600 hover:text-indigo-500 dark:text-indigo-400 dark:hover:text-indigo-300"> Click here to resend verification. </Link>
+                <span v-if="page.props.status === 'verification-link-sent'" class="block text-emerald-600 dark:text-emerald-400"> A new verification link has been sent to your email address. </span>
               </p>
             </div>
           </div>
@@ -108,9 +102,7 @@ const submitPassword = () => {
             <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Update password</h2>
             <p class="text-sm text-gray-600 dark:text-gray-400">Ensure your account stays protected.</p>
           </div>
-          <p v-if="passwordForm.recentlySuccessful" class="rounded-lg bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-100 dark:bg-emerald-500/10 dark:text-emerald-100 dark:ring-emerald-500/30">
-            Updated
-          </p>
+          <p v-if="passwordForm.recentlySuccessful" class="rounded-lg bg-emerald-50 px-3 py-1 text-sm font-medium text-emerald-700 ring-1 ring-emerald-100 dark:bg-emerald-500/10 dark:text-emerald-100 dark:ring-emerald-500/30">Updated</p>
         </div>
 
         <form class="space-y-6 p-6" @submit.prevent="submitPassword">

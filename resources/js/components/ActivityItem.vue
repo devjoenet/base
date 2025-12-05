@@ -1,26 +1,24 @@
 <script setup lang="ts">
-import { computed, type Component } from "vue";
+  import { computed, type Component } from "vue";
 
-interface ActivityItemProps {
-  title: string;
-  description?: string;
-  timestamp?: string;
-  icon?: Component;
-  loading?: boolean;
-}
+  interface ActivityItemProps {
+    title: string;
+    description?: string;
+    timestamp?: string;
+    icon?: Component;
+    loading?: boolean;
+  }
 
-const props = withDefaults(defineProps<ActivityItemProps>(), {
-  loading: false,
-});
+  const props = withDefaults(defineProps<ActivityItemProps>(), {
+    loading: false,
+  });
 
-const placeholderIcon = computed(() => props.icon ?? "");
+  const placeholderIcon = computed(() => props.icon ?? "");
 </script>
 
 <template>
   <li class="flex gap-4 rounded-xl p-3 ring-1 ring-inset ring-gray-100/80 dark:ring-white/10">
-    <div
-      class="flex size-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100/80 dark:bg-indigo-500/10 dark:text-indigo-200 dark:ring-indigo-500/30"
-    >
+    <div class="flex size-10 items-center justify-center rounded-lg bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100/80 dark:bg-indigo-500/10 dark:text-indigo-200 dark:ring-indigo-500/30">
       <component :is="placeholderIcon || 'div'" v-if="placeholderIcon" class="size-5" aria-hidden="true" />
       <div v-else class="size-5 rounded-full bg-indigo-200/70 dark:bg-indigo-400/40" />
     </div>
