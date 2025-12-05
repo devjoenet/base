@@ -5,6 +5,12 @@ export interface Auth {
   user: User;
 }
 
+/**
+ * Breadcrumb items follow the Tailwind Plus navigation examples: `title` renders the label and
+ * `href` is used for intermediate links, with the final item treated as the current page
+ * (aria-current="page"). Separators default to an inline slash SVG so no external icon
+ * dependency is required.
+ */
 export interface BreadcrumbItem {
   title: string;
   href: string;
