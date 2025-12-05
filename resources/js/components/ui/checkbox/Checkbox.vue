@@ -53,13 +53,7 @@
 <template>
   <label
     :for="props.id"
-    :class="
-      cn(
-        'group inline-flex items-start gap-3 text-sm font-medium text-gray-900 dark:text-gray-100',
-        props.disabled ? 'cursor-not-allowed opacity-75' : 'cursor-pointer',
-        props.class,
-      )
-    "
+    :class="cn('group inline-flex items-start gap-3 text-sm font-medium text-gray-900 dark:text-gray-100', props.disabled ? 'cursor-not-allowed opacity-75' : 'cursor-pointer', props.class)"
     :data-focused="isFocused ? '' : undefined"
     :data-invalid="props.invalid ? '' : undefined"
   >
@@ -76,26 +70,12 @@
         :aria-labelledby="props.ariaLabelledby"
         :aria-describedby="props.ariaDescribedby"
         :aria-invalid="props.invalid || undefined"
-        class="
-          peer size-5 shrink-0 appearance-none rounded-[6px] border border-gray-300 bg-white text-white shadow-[0_1px_0_rgba(0,0,0,0.08)]
-          ring-1 ring-inset ring-gray-200 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500
-          focus-visible:ring-offset-2 focus-visible:ring-offset-white checked:border-indigo-600 checked:bg-indigo-600 checked:ring-indigo-500/60
-          aria-invalid:border-red-500 aria-invalid:ring-red-500/40 aria-invalid:focus-visible:ring-red-500 aria-invalid:checked:bg-red-600
-          disabled:cursor-not-allowed disabled:opacity-60 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-50 dark:ring-gray-800
-          dark:focus-visible:ring-offset-gray-950 dark:checked:border-indigo-400 dark:checked:bg-indigo-500
-          dark:aria-invalid:border-red-500 dark:aria-invalid:ring-red-500/40 dark:aria-invalid:focus-visible:ring-red-500
-        "
+        class="peer size-5 shrink-0 appearance-none rounded-[6px] border border-gray-300 bg-white text-white shadow-[0_1px_0_rgba(0,0,0,0.08)] ring-1 ring-inset ring-gray-200 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white checked:border-indigo-600 checked:bg-indigo-600 checked:ring-indigo-500/60 aria-invalid:border-red-500 aria-invalid:ring-red-500/40 aria-invalid:focus-visible:ring-red-500 aria-invalid:checked:bg-red-600 disabled:cursor-not-allowed disabled:opacity-60 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-50 dark:ring-gray-800 dark:focus-visible:ring-offset-gray-950 dark:checked:border-indigo-400 dark:checked:bg-indigo-500 dark:aria-invalid:border-red-500 dark:aria-invalid:ring-red-500/40 dark:aria-invalid:focus-visible:ring-red-500"
         @change="handleChange"
         @focus="handleFocus"
         @blur="handleBlur"
       />
-      <span
-        class="
-          pointer-events-none absolute inset-0 flex items-center justify-center text-white opacity-0 transition-opacity duration-150
-          peer-checked:opacity-100
-        "
-        aria-hidden="true"
-      >
+      <span class="pointer-events-none absolute inset-0 flex items-center justify-center text-white opacity-0 transition-opacity duration-150 peer-checked:opacity-100" aria-hidden="true">
         <svg class="size-3.5" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M5 10.5 8.5 14 15 7.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
