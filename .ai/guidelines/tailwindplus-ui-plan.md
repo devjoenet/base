@@ -18,4 +18,24 @@ Use the `# Tailwind Plus Vue Component Library` section of the `AGENTS.md` file 
 
 ## Pages (`resources/js/pages`)
 
-- Recreate the settings pages present in `VUESTARTER-REF/resources/js/pages/settings`--`Appearance.vue`, `Password.vue`, and `TwoFactor.vue`--and ensure `Profile.vue` aligns with the settings layout conventions used in the reference. Each page should consume the new Tailwind Plus components and layouts to maintain feature parity.
+- Recreate pages present in `VUESTARTER-REF/resources/js/pages` 
+
+- `VUESTARTER-REF/resources/js/pages`
+  - `Dashboard.vue`
+  - `Welcome.vue`
+- `VUESTARTER-REF/resources/js/pages/auth`
+  - `ConfirmPassword.vue`
+  - `ForgotPassword.vue`
+  - `Login.vue`
+  - `Register.vue`
+  - `ResetPassword.vue`
+  - `TwoFactorChallenge.vue`
+  - `VerifyEmail.vue`
+
+- `VUESTARTER-REF/resources/js/pages/settings`
+  - `Appearance.vue`
+  - `Password.vue`
+  - `Profile.vue`
+  - `TwoFactor.vue`
+  
+Ensure all pages align with the conventions used in their reference counterpart. Each page should consume the new Tailwind Plus components and layouts to maintain feature parity. Currently, don't fill in any data or content that is not present in the reference.
