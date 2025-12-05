@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, inject, type HTMLAttributes } from "vue";
   import { cn } from "@/lib/utils";
-  import { alertVariantKey, defaultAlertVisuals } from "./";
+  import { alertVariantKey, defaultAlertVisuals } from "@/components/ui/alert/variants";
 
   const props = defineProps<{
     class?: HTMLAttributes["class"];

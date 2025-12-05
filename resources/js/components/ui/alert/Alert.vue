@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { type AlertVariants, variantVisuals, alertVariantKey, alertVariants } from "./";
+  import { type AlertVariants, variantVisuals, alertVariantKey, alertVariants } from "@/components/ui/alert/variants";
   import { computed, provide, useSlots, type Component, type HTMLAttributes } from "vue";
   import { cn } from "@/lib/utils";
 
