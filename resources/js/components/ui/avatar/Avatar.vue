@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { cn } from "@/lib/utils";
-  import { avatarInjectionKey, type AvatarStatus } from "@/components/ui/avatar/variants";
+  import { avatarInjectionKey, type AvatarStatus } from "@/components/ui/avatar/context";
   import { computed, provide, ref, type HTMLAttributes } from "vue";
 
   const avatarSizes = {

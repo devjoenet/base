@@ -1,12 +1,5 @@
 <script setup lang="ts">
-  import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-  } from "@/components/ui/breadcrumb";
+  import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
   import type { BreadcrumbItemType } from "@/types";
 
   const props = defineProps<{

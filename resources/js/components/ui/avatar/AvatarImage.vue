@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { cn } from "@/lib/utils";
-  import { avatarInjectionKey } from "@/components/ui/avatar/variants";
+  import { avatarInjectionKey } from "@/components/ui/avatar/context";
   import { computed, inject, onMounted, watch, type HTMLAttributes } from "vue";
 
   const props = defineProps<{

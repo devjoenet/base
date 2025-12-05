@@ -1,4 +1,5 @@
 export { default as Breadcrumb } from "@/components/ui/breadcrumb/Breadcrumb.vue";
+export { default as Breadcrumbs } from "@/components/ui/breadcrumb/Breadcrumbs.vue";
 export { default as BreadcrumbItem } from "@/components/ui/breadcrumb/BreadcrumbItem.vue";
 export { default as BreadcrumbLink } from "@/components/ui/breadcrumb/BreadcrumbLink.vue";
 export { default as BreadcrumbList } from "@/components/ui/breadcrumb/BreadcrumbList.vue";

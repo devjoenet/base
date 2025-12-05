@@ -40,19 +40,14 @@
     :disabled="props.as === 'button' ? isDisabled : undefined"
     :aria-busy="props.loading || undefined"
     :aria-disabled="props.as !== 'button' ? isDisabled : undefined"
-    :class="
-      cn(
-        buttonVariants({ variant: props.variant, size: props.size }),
-        props.class,
-        props.loading ? 'cursor-progress' : '',
-        isDisabled ? 'opacity-70' : '',
-      )
-    "
-    @click="(event) => {
-      if (!props.loading) {
-        emit("click", event as MouseEvent);
+    :class="cn(buttonVariants({ variant: props.variant, size: props.size }), props.class, props.loading ? 'cursor-progress' : '', isDisabled ? 'opacity-70' : '')"
+    @click="
+      (event: MouseEvent) => {
+        if (!props.loading) {
+          emit('click', event as MouseEvent);
+        }
       }
-    }"
+    "
   >
     <span class="flex items-center gap-2">
       <span v-if="props.loading" class="flex items-center" aria-live="polite" aria-atomic="true">
