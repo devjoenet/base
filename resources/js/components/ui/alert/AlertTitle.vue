@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { computed, inject, type HTMLAttributes } from "vue"
+  import { computed, inject, type HTMLAttributes } from "vue";
+  import { cn } from "@/lib/utils";
+  import { alertVariantKey, defaultAlertVisuals } from "./";
 
-import { cn } from "@/lib/utils"
-import { alertVariantKey, defaultAlertVisuals } from "./context"
+  const props = defineProps<{
+    class?: HTMLAttributes["class"];
+  }>();
 
-const props = defineProps<{
-  class?: HTMLAttributes["class"]
-}>()
-
-const visuals = inject(alertVariantKey, defaultAlertVisuals)
-const titleClass = computed(() => visuals.value.titleClass)
+  const visuals = inject(alertVariantKey, defaultAlertVisuals);
+  const titleClass = computed(() => visuals.value.titleClass);
 </script>
 
 <template>

@@ -1,5 +1,5 @@
-export { default as Alert } from "./Alert.vue"
-export { default as AlertDescription } from "./AlertDescription.vue"
-export { default as AlertTitle } from "./AlertTitle.vue"
-export { alertVariants } from "./Alert.vue"
-export type { AlertVariants } from "./Alert.vue"
+export { default as Alert } from "@/components/ui/alert/Alert.vue";
+export { default as AlertDescription } from "@/components/ui/alert/AlertDescription.vue";
+export { default as AlertTitle } from "@/components/ui/alert/AlertTitle.vue";
+export { alertVariants } from "@/components/ui/alert/variants";
+export type { AlertVariants } from "@/components/ui/alert/variants";
