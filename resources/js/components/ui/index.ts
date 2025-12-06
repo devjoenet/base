@@ -10,3 +10,4 @@ export * from "@/components/ui/dialog";
 export * from "@/components/ui/input";
 export * from "@/components/ui/menu";
 export * from "@/components/ui/navigation-menu";
+export * from "@/components/ui/separator";
