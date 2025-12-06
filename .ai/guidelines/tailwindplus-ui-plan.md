@@ -1,8 +1,16 @@
 # Tailwind Plus UI Development Plan
 
-This checklist compares the reference starter kit in `.VUESTARTER-REF` with the current Tailwind Plus implementation and highlights what still needs to be ported. Each item calls for creating a Tailwind Plus equivalent in `resources/js` that mirrors the reference behavior (styling can adapt to Tailwind Plus tokens).
+Please review `GEMINI.md`, especially the sections titled `# Tailwind Plus UI Development Plan` and `# Tailwind Plus Vue Component Library`. These sections outline the tasks we need to create, the Tailwind Plus source code, and the location of the code we're referencing to achieve functional parity with the reference code.
 
-Use the `# Tailwind Plus Vue Component Library` section of the `AGENTS.md` file to see the original source code for Tailwind Plus blocks. These will need to be broken down, and they contain several areas with example dummy text that will convert to slots. The components created from this source code should be logically broken down to match those in the `.VUESTARTER-REF` directory.
+We're using Tailwind Plus to create primitives (`./resources/js/components/ui`) components (`./resources/js/components`) , layouts (`./resources/js/layouts/*`) , and pages (`./resources/js/pages/*`) that are functionally equivalent to the reference code (see ./.VUESTARTER-REF/*).
+
+Please review this plan and start writing down tasks that we can follow to complete everything in the plan. Avoid modifying any files across multiple tasks.
+
+- Review an example Vue file from the `./.VUESTARTER-REF` directory to understand its functionality and structure.
+- Locate a snippet of code from the Tailwind Plus code in the `GEMINI.md` that matches the structure (roughly).
+- Select only the necessary code and remove any placeholder content.
+- Using the appropriate amount of code from the Tailwind Plus code you selected, write it to the new file (excluding any example content) and supplement it with any TypeScript, HeadlessUI component, or VueUse code you need to ensure it's functionally equivalent to the reference component. This means that the new component should use the Tailwind CSS class names provided in the Tailwind Plus code, not those in the reference code. Additionally, our new component should not rely on anything from `reka-ui` or `lucide-vue-next`. Those should be rewritten to achieve the same functionality using any available resources in the project's root `./package.json`.
+- Any input, checkbox, radio and button should be styled to Material Design 3 specs (or as close as possible) using only libraries already present in `./package.json` and tailwindcss classes.
 
 ## Components (`resources/js/components`)
 
