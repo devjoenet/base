@@ -1,6 +1,6 @@
 <script setup lang="ts">
-  import { ArrowPathIcon } from "@heroicons/vue/20/solid";
   import { buttonVariants, type ButtonVariants } from "@/components/ui/button/variants";
+  import { Spinner, type SpinnerVariants } from "@/components/ui/spinner";
   import { cn } from "@/lib/utils";
   import { computed, type Component, type HTMLAttributes } from "vue";
 
@@ -29,6 +29,30 @@
   );
 
   const isDisabled = computed(() => props.disabled || props.loading);
+
+  const spinnerSize = computed<SpinnerVariants["size"]>(() => {
+    switch (props.size) {
+      case "sm":
+        return "sm";
+      case "lg":
+        return "lg";
+      default:
+        return "md";
+    }
+  });
+
+  const spinnerColor = computed<SpinnerVariants["color"]>(() => {
+    switch (props.variant) {
+      case "secondary":
+      case "ghost":
+      case "link":
+        return "primary";
+      case "outline":
+        return "muted";
+      default:
+        return "contrast";
+    }
+  });
 </script>
 
 <template>
@@ -51,7 +75,7 @@
   >
     <span class="flex items-center gap-2">
       <span v-if="props.loading" class="flex items-center" aria-live="polite" aria-atomic="true">
-        <ArrowPathIcon class="size-4 animate-spin" aria-hidden="true" />
+        <Spinner :size="spinnerSize" :color="spinnerColor" :label="props.loadingLabel" />
         <span class="sr-only">{{ props.loadingLabel }}</span>
       </span>
       <span :class="props.loading ? 'opacity-80' : ''">
