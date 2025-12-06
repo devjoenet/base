@@ -1,8 +1,7 @@
 <script setup lang="ts">
-  import { cn } from "@/lib/utils";
-  import { useVModel } from "@vueuse/core";
-  import { inputVariants, labelVariants } from "./variants";
-  import { computed, ref, useAttrs, type HTMLAttributes, type InputTypeHTMLAttribute, type Ref } from "vue";
+  import { computed, useId } from "vue";
+  import { useDensity } from "@/composables/useDensity";
+  import type { Density } from "@/composables/useDensity";
 
   defineOptions({
     inheritAttrs: false,
@@ -10,99 +9,77 @@
 
   const props = withDefaults(
     defineProps<{
-      modelValue?: string | number | null;
-      defaultValue?: string | number | null;
-      type?: InputTypeHTMLAttribute;
+      id?: string;
       label?: string;
-      placeholder?: string;
-      disabled?: boolean;
-      invalid?: boolean;
-      variant?: "filled" | "outlined";
+      type?: string;
+      error?: string;
+      help?: string;
+      density?: Density;
     }>(),
     {
       type: "text",
-      placeholder: "",
-      disabled: false,
-      invalid: false,
-      variant: "filled",
+      density: "normal",
     },
   );
 
-  const emit = defineEmits<{
-    (e: "update:modelValue", value: string | number | null): void;
-    (e: "focus", event: FocusEvent): void;
-    (e: "blur", event: FocusEvent): void;
-  }>();
+  // Vue 3.4+ defineModel is the cleanest way to handle v-model
+  const model = defineModel<string | number>();
 
-  const modelValue = useVModel(props, "modelValue", emit, {
-    passive: true,
-    defaultValue: props.defaultValue ?? "",
+  // If no ID is provided, generate a unique one for accessibility
+  const inputId = computed(() => props.id || `input-${useId()}`);
+
+  // Hook into our density system
+  const { densityClass, iconSizeClass } = useDensity(props);
+
+  // Base styles ensuring we match the "Teal/Charcoal" vibe
+  // Tailwind v4 note: We are using specific border colors that adapt to light/dark
+  const baseStyles = computed(() => {
+    const errorState = props.error
+      ? "border-red-500 focus:border-red-500 focus:ring-red-500/20 text-red-900 dark:text-red-100 placeholder:text-red-300"
+      : "border-zinc-300 dark:border-zinc-700 hover:border-zinc-400 dark:hover:border-zinc-600 focus:border-teal-500 dark:focus:border-teal-400 focus:ring-teal-500/20 dark:focus:ring-teal-400/20 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400 dark:placeholder:text-zinc-500";
+
+    return [
+      "block w-full rounded-lg border bg-white dark:bg-zinc-900",
+      "shadow-sm transition-all duration-200 ease-in-out",
+      "focus:outline-none focus:ring-4",
+      "disabled:cursor-not-allowed disabled:bg-zinc-50 dark:disabled:bg-zinc-800 disabled:text-zinc-500",
+      densityClass.value,
+      errorState,
+    ];
   });
-
-  const attrs = useAttrs();
-  const { class: labelClass, ...inputAttrs } = attrs;
-
-  const isFocused: Ref<boolean> = ref(false);
-
-  const hasContent = computed(() => {
-    if (modelValue.value === null || modelValue.value === undefined) return false;
-    return String(modelValue.value).length > 0;
-  });
-
-  const floatLabel = computed(() => isFocused.value || hasContent.value);
-
-  const placeholderValue = computed(() => {
-    if (props.label) {
-      return props.placeholder || " ";
-    }
-
-    return props.placeholder;
-  });
-
-  const inputClasses = computed(() => inputVariants({ variant: props.variant, invalid: props.invalid, disabled: props.disabled }));
-
-  const labelClasses = computed(() =>
-    cn(
-      labelVariants({
-        invalid: props.invalid,
-        disabled: props.disabled,
-        float: floatLabel.value,
-      }),
-      props.variant === "outlined" && floatLabel.value ? "bg-background px-1 dark:bg-gray-950" : "",
-    ),
-  );
 </script>
 
 <template>
-  <label class="relative block" :class="labelClass">
-    <input
-      v-model="modelValue"
-      v-bind="inputAttrs"
-      data-slot="input"
-      :type="props.type"
-      :placeholder="placeholderValue"
-      :disabled="props.disabled"
-      :aria-invalid="props.invalid || undefined"
-      :aria-disabled="props.disabled || undefined"
-      :class="inputClasses"
-      @focus="
-        (event) => {
-          isFocused = true;
-          emit('focus', event);
-        }
-      "
-      @blur="
-        (event) => {
-          isFocused = false;
-          emit('blur', event);
-        }
-      "
-    />
+  <div class="w-full space-y-1.5">
+    <!-- Label -->
+    <label v-if="label" :for="inputId" class="block text-sm font-medium leading-none text-zinc-700 dark:text-zinc-300" :class="{ 'text-red-600 dark:text-red-400': error }">
+      {{ label }}
+      <span v-if="$attrs.required" class="text-teal-600 dark:text-teal-400 ml-0.5">*</span>
+    </label>
 
-    <span v-if="props.label" :class="labelClasses">{{ props.label }}</span>
+    <!-- Input Wrapper (Relative for Icons) -->
+    <div class="relative group">
+      <!-- Leading Icon/Content -->
+      <div v-if="$slots.leading" class="absolute inset-y-0 left-0 flex items-center pl-3 text-zinc-500 pointer-events-none" :class="iconSizeClass">
+        <slot name="leading" />
+      </div>
 
-    <p v-if="$slots.supportingText" class="mt-1 text-xs text-muted-foreground" :class="props.invalid ? 'text-destructive' : ''">
-      <slot name="supportingText" />
+      <input :id="inputId" ref="inputRef" v-model="model" :type="type" :class="[baseStyles, $slots.leading ? 'pl-10' : '', $slots.trailing ? 'pr-10' : '']" :aria-invalid="!!error" :aria-describedby="error ? `${inputId}-error` : help ? `${inputId}-help` : undefined" v-bind="$attrs" />
+
+      <!-- Trailing Icon/Content -->
+      <div v-if="$slots.trailing" class="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300" :class="iconSizeClass">
+        <slot name="trailing" />
+      </div>
+    </div>
+
+    <!-- Hint Text -->
+    <p v-if="help && !error" :id="`${inputId}-help`" class="text-xs text-zinc-500 dark:text-zinc-400 transition-opacity">
+      {{ help }}
     </p>
-  </label>
+
+    <!-- Error Message -->
+    <p v-if="error" :id="`${inputId}-error`" class="text-sm font-medium text-red-600 dark:text-red-400 animate-in slide-in-from-top-1 fade-in duration-200">
+      {{ error }}
+    </p>
+  </div>
 </template>

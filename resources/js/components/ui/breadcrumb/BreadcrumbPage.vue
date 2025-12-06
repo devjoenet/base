@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <span data-slot="breadcrumb-page" role="link" aria-disabled="true" aria-current="page" :class="cn('text-sm font-medium text-gray-900 dark:text-gray-100', props.class)">
+  <span role="link" aria-disabled="true" aria-current="page" :class="cn('font-normal text-foreground', props.class)">
     <slot />
   </span>
 </template>
