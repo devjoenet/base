@@ -1,12 +1,9 @@
 <script setup lang="ts">
-  import NavigationMenuViewport from "./NavigationMenuViewport.vue";
+  import NavigationMenuViewport from "@/components/ui/navigation-menu/NavigationMenuViewport.vue";
   import { cn } from "@/lib/utils";
   import { onClickOutside } from "@vueuse/core";
   import { computed, ref, shallowRef, type HTMLAttributes } from "vue";
-  import {
-    provideNavigationMenuContext,
-    type NavigationMenuOrientation,
-  } from "./context";
+  import { provideNavigationMenuContext, type NavigationMenuOrientation } from "./context";
 
   const props = withDefaults(
     defineProps<{
@@ -27,7 +24,13 @@
 
   const setOpenItem = (id: string | null, trigger?: HTMLElement | null) => {
     openItem.value = id;
-    activeTrigger.value = id ? trigger ?? activeTrigger.value : null;
+    activeTrigger.value = id ? (trigger ?? activeTrigger.value) : null;
+  };
+
+  const handleKeydown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setOpenItem(null);
+    }
   };
 
   onClickOutside(rootRef, () => setOpenItem(null));
@@ -41,23 +44,10 @@
     viewportEnabled: computed(() => props.viewport),
     activeTrigger,
   });
-
-  const handleKeydown = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      setOpenItem(null);
-    }
-  };
 </script>
 
 <template>
-  <nav
-    ref="rootRef"
-    data-slot="navigation-menu"
-    :data-orientation="props.orientation"
-    :data-viewport="props.viewport"
-    :class="cn('group/navigation-menu relative flex max-w-max flex-1 items-center justify-center', props.class)"
-    @keydown="handleKeydown"
-  >
+  <nav ref="rootRef" data-slot="navigation-menu" :data-orientation="props.orientation" :data-viewport="props.viewport" :class="cn('group/navigation-menu relative flex max-w-max flex-1 items-center justify-center', props.class)" @keydown="handleKeydown">
     <slot />
     <NavigationMenuViewport v-if="props.viewport" />
   </nav>

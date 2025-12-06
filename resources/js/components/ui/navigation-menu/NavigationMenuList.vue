@@ -4,7 +4,6 @@
   import { onBeforeUnmount, ref, type HTMLAttributes } from "vue";
 
   const props = defineProps<{ class?: HTMLAttributes["class"] }>();
-
   const menu = useNavigationMenuContext("NavigationMenuList");
   const closeTimer = ref<number | undefined>();
 
@@ -25,13 +24,7 @@
   <div
     role="menubar"
     :data-orientation="orientationDataAttr(menu.orientation.value)"
-    :class="
-      cn(
-        'group flex flex-1 list-none items-center justify-center gap-1',
-        menu.orientation.value === 'vertical' ? 'flex-col' : 'flex-row',
-        props.class,
-      )
-    "
+    :class="cn('group flex flex-1 list-none items-center justify-center gap-1', menu.orientation.value === 'vertical' ? 'flex-col' : 'flex-row', props.class)"
     @mouseleave="startCloseTimer"
     @mouseenter="clearCloseTimer"
   >

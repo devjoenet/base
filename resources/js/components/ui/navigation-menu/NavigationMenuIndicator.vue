@@ -29,12 +29,7 @@
     aria-hidden="true"
     data-slot="navigation-menu-indicator"
     :data-state="menu.openItem.value ? 'visible' : 'hidden'"
-    :class="
-      cn(
-        'data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in top-full z-[1] flex h-1.5 items-end justify-center overflow-hidden',
-        props.class,
-      )
-    "
+    :class="cn('data-[state=visible]:animate-in data-[state=hidden]:animate-out data-[state=hidden]:fade-out data-[state=visible]:fade-in top-full z-1 flex h-1.5 items-end justify-center overflow-hidden', props.class)"
     :style="indicatorStyle"
   >
     <div class="bg-border relative top-[60%] h-2 w-2 rotate-45 rounded-sm shadow-md shadow-gray-900/20 dark:bg-white/70" />

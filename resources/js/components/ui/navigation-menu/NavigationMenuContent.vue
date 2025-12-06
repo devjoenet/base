@@ -1,29 +1,18 @@
 <script setup lang="ts">
   import { cn } from "@/lib/utils";
-  import {
-    orientationDataAttr,
-    useNavigationMenuContext,
-    useNavigationMenuItemContext,
-  } from "./context";
+  import { orientationDataAttr, useNavigationMenuContext, useNavigationMenuItemContext } from "@/components/ui/navigation-menu/context";
   import { Transition, Teleport, computed, type HTMLAttributes } from "vue";
 
   const props = defineProps<{ class?: HTMLAttributes["class"]; forceMount?: boolean }>();
-
   const item = useNavigationMenuItemContext("NavigationMenuContent");
   const menu = useNavigationMenuContext("NavigationMenuContent");
-  const shouldPortal = computed(
-    () => menu.viewportEnabled.value && !!menu.viewportRef.value && menu.orientation.value === "horizontal",
-  );
-
+  const shouldPortal = computed(() => menu.viewportEnabled.value && !!menu.viewportRef.value && menu.orientation.value === "horizontal");
   const target = computed(() => menu.viewportRef.value ?? "body");
 </script>
 
 <template>
   <Teleport :to="target" :disabled="!shouldPortal">
-    <Transition
-      enter-active-class="data-[state=open]:duration-200"
-      leave-active-class="data-[state=closed]:duration-150"
-    >
+    <Transition enter-active-class="data-[state=open]:duration-200" leave-active-class="data-[state=closed]:duration-150">
       <div
         v-if="item.isOpen || props.forceMount"
         role="group"
