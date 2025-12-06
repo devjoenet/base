@@ -43,9 +43,13 @@
     () => tooltip.open.value,
     (isOpen) => {
       if (isOpen) {
-        watch(floatingRef, () => {
-          updatePosition();
-        }, { once: true });
+        watch(
+          floatingRef,
+          () => {
+            updatePosition();
+          },
+          { once: true },
+        );
       }
     },
   );
