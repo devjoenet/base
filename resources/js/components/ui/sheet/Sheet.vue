@@ -28,13 +28,7 @@
 
 <template>
   <TransitionRoot as="template" :show="modelValue">
-    <HeadlessDialog
-      data-slot="sheet"
-      :open="modelValue"
-      :class="sheetClasses"
-      :initial-focus="props.initialFocus"
-      @close="setOpen(false)"
-    >
+    <HeadlessDialog data-slot="sheet" :open="modelValue" :class="sheetClasses" :initial-focus="props.initialFocus" @close="setOpen(false)">
       <slot />
     </HeadlessDialog>
   </TransitionRoot>

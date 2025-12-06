@@ -26,13 +26,7 @@
 </script>
 
 <template>
-  <component
-    :is="triggerTag"
-    :type="triggerTag === 'button' ? 'button' : undefined"
-    data-slot="sheet-trigger"
-    :class="cn(props.class)"
-    @click="handleClick"
-  >
+  <component :is="triggerTag" :type="triggerTag === 'button' ? 'button' : undefined" data-slot="sheet-trigger" :class="cn(props.class)" @click="handleClick">
     <slot />
   </component>
 </template>

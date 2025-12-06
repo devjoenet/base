@@ -23,8 +23,7 @@
 
   useSheetContext("SheetContent");
 
-  const sideClasses: Record<SheetSide, { container: string; enterFrom: string; leaveTo: string; sizeKey: "width" | "height" }>
- = {
+  const sideClasses: Record<SheetSide, { container: string; enterFrom: string; leaveTo: string; sizeKey: "width" | "height" }> = {
     right: {
       container: "inset-y-0 right-0 flex max-w-full pl-10 sm:pl-16",
       enterFrom: "translate-x-full",
@@ -69,24 +68,11 @@
 
   const transitionClasses = computed(() => sideClasses[props.side]);
 
-  const neutralTransform = computed(() =>
-    transitionClasses.value.sizeKey === "width" ? "translate-x-0" : "translate-y-0",
-  );
+  const neutralTransform = computed(() => (transitionClasses.value.sizeKey === "width" ? "translate-x-0" : "translate-y-0"));
 
-  const panelClasses = computed(() =>
-    cn(
-      "pointer-events-auto w-screen",
-      transitionClasses.value.sizeKey === "width" ? widthClasses[props.size] : "max-w-full",
-      transitionClasses.value.sizeKey === "height" ? heightClasses[props.size] : "h-full",
-    ),
-  );
+  const panelClasses = computed(() => cn("pointer-events-auto w-screen", transitionClasses.value.sizeKey === "width" ? widthClasses[props.size] : "max-w-full", transitionClasses.value.sizeKey === "height" ? heightClasses[props.size] : "h-full"));
 
-  const contentClasses = computed(() =>
-    cn(
-      "relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl dark:bg-gray-800 dark:after:absolute dark:after:inset-y-0 dark:after:left-0 dark:after:w-px dark:after:bg-white/10",
-      props.class,
-    ),
-  );
+  const contentClasses = computed(() => cn("relative flex h-full flex-col overflow-y-auto bg-white py-6 shadow-xl dark:bg-gray-800 dark:after:absolute dark:after:inset-y-0 dark:after:left-0 dark:after:w-px dark:after:bg-white/10", props.class));
 </script>
 
 <template>
