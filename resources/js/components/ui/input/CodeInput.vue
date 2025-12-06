@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { cn } from "@/lib/utils";
   import { useVModel } from "@vueuse/core";
-  import { computed, onMounted, ref, watch } from "vue";
+  import { computed, ref, watch } from "vue";
 
   const props = withDefaults(
     defineProps<{
@@ -37,20 +37,14 @@
   const fieldClasses = computed(() =>
     cn(
       "block h-12 w-12 rounded-md bg-white text-center text-lg text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:h-11 sm:w-11 sm:text-sm/6 dark:bg-gray-800/50 dark:text-white dark:outline-gray-700 dark:placeholder:text-gray-500 dark:focus:outline-indigo-500 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-400 dark:disabled:bg-gray-900/50 dark:disabled:text-gray-500",
-      props.invalid &&
-        "outline-destructive text-destructive focus:outline-destructive focus:ring-destructive/60 dark:outline-red-500 dark:focus:outline-red-500",
+      props.invalid && "outline-destructive text-destructive focus:outline-destructive focus:ring-destructive/60 dark:outline-red-500 dark:focus:outline-red-500",
     ),
   );
 
   const syncFromModel = (value: string) => {
     const sanitized = (value ?? "").replace(/\D/g, "").slice(0, normalizedLength.value);
-    const nextDigits = Array(normalizedLength.value).fill("");
-
-    sanitized.split("").forEach((char, index) => {
-      nextDigits[index] = char;
-    });
-
-    digits.value = nextDigits;
+    const nextDigits = sanitized.split("");
+    digits.value = Array.from({ length: normalizedLength.value }, (_, i) => nextDigits[i] || "");
   };
 
   const updateModel = () => {
@@ -161,10 +155,6 @@
     (value) => syncFromModel(value ?? ""),
     { immediate: true },
   );
-
-  onMounted(() => {
-    syncFromModel(modelValue.value ?? "");
-  });
 </script>
 
 <template>
@@ -173,7 +163,7 @@
       <input
         v-for="(_, index) in normalizedLength"
         :key="index"
-        :ref="(el) => (inputRefs[index] = el)"
+        :ref="(el) => (inputRefs[index] = el as HTMLInputElement | null)"
         :value="digits[index]"
         type="text"
         inputmode="numeric"
