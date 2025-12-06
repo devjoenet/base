@@ -1,5 +1,5 @@
 import { inject, type InjectionKey, type Ref } from "vue";
-import type { Placement } from "@floating-ui/vue";
+import type { Placement } from "./types";
 
 export interface TooltipProviderContextValue {
   delayDuration: Ref<number>;

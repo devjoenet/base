@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import { tooltipContextKey, useTooltipProviderContext } from "@/components/ui/tooltip/context";
-  import type { Placement } from "@floating-ui/vue";
+  import type { Placement } from "./types";
   import { computed, onBeforeUnmount, provide, ref, useId, watch } from "vue";
 
   const emit = defineEmits<{
