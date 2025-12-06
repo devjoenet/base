@@ -20,17 +20,9 @@
   const ariaOrientation = computed(() => (props.decorative ? undefined : props.orientation));
   const ariaHidden = computed(() => (props.decorative ? true : undefined));
 
-  const sizeClasses = computed(() =>
-    props.orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
-  );
+  const sizeClasses = computed(() => (props.orientation === "horizontal" ? "h-px w-full" : "h-full w-px"));
 </script>
 
 <template>
-  <div
-    data-slot="separator-root"
-    :role="role"
-    :aria-hidden="ariaHidden"
-    :aria-orientation="ariaOrientation"
-    :class="cn('shrink-0 bg-gray-900/10 dark:bg-white/10', sizeClasses, props.class)"
-  />
+  <div data-slot="separator-root" :role="role" :aria-hidden="ariaHidden" :aria-orientation="ariaOrientation" :class="cn('shrink-0 bg-gray-900/10 dark:bg-white/10', sizeClasses, props.class)" />
 </template>
