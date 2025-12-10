@@ -4,9 +4,9 @@
         "gemini"
     ],
     "editors": [
-        "codex",
-        "gemini",
         "vscode"
     ],
-    "guidelines": []
+    "guidelines": [
+        "laravel/fortify"
+    ]
 }
