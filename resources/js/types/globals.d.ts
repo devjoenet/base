@@ -17,6 +17,18 @@ declare module "@inertiajs/core" {
   interface PageProps extends InertiaPageProps, AppPageProps {}
 }
 
+export interface SharedData extends PageProps {
+  [key: string]: unknown;
+  name: string;
+  quote: { message: string; author: string };
+  auth: {
+    user: User;
+    roles: string[];
+    permissions: string[];
+  };
+  sidebarOpen: boolean;
+}
+
 declare module "vue" {
   interface ComponentCustomProperties {
     $inertia: typeof Router;

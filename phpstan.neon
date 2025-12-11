@@ -4,6 +4,8 @@ includes:
 
 parameters:
   level: 5
+  stubFiles:
+    - stubs/ModelWithProfilePhotoUrl.stub
 
   paths:
     - app
