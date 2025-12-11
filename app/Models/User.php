@@ -101,6 +101,7 @@ class User extends Authenticatable
         if (is_null($team)) {
             return false;
         }
+
         if ($this->ownsTeam($team)) {
             return true;
         }
