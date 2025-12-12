@@ -1,4 +1,3 @@
-// resources/js/components/ui/input/Input.vue
 <script setup lang="ts">
   import type { InputHTMLAttributes, HTMLAttributes } from "vue";
   import { computed, useId, useSlots } from "vue";
@@ -7,8 +6,7 @@
   import type { InputVariants } from ".";
   import { inputFieldVariants } from ".";
 
-  interface Props
-    extends Omit<InputHTMLAttributes, "class" | "disabled" | "id" | "modelValue"> {
+  interface Props extends Omit<InputHTMLAttributes, "class" | "disabled" | "id" | "modelValue"> {
     id?: string;
     defaultValue?: string | number;
     modelValue?: string | number;
@@ -38,37 +36,14 @@
 
   const slots = useSlots();
   const inputId = computed(() => props.id ?? `input-${useId()}`);
-  const hasMessageContent = computed(
-    () => Boolean(props.error || props.helper || slots.message || slots.helper || slots.error),
-  );
+  const hasMessageContent = computed(() => Boolean(props.error || props.helper || slots.message || slots.helper || slots.error));
   const messageId = computed(() => (hasMessageContent.value ? `${inputId.value}-assistive` : undefined));
-
-  const delegatedProps = reactiveOmit(
-    props,
-    "class",
-    "inputClass",
-    "label",
-    "helper",
-    "error",
-    "variant",
-    "disabled",
-    "controlClass",
-    "defaultValue",
-    "modelValue",
-    "id",
-  );
+  const delegatedProps = reactiveOmit(props, "class", "inputClass", "label", "helper", "error", "variant", "disabled", "controlClass", "defaultValue", "modelValue", "id");
 </script>
 
 <template>
   <div data-slot="input-field" :class="cn('group/input flex w-full flex-col gap-1.5', props.class)">
-    <div
-      data-slot="control"
-      :class="cn(
-        inputFieldVariants({ variant, invalid: Boolean(error), disabled }),
-        'shadow-xs px-3 py-2',
-        props.controlClass,
-      )"
-    >
+    <div data-slot="control" :class="cn(inputFieldVariants({ variant, invalid: Boolean(error), disabled }), 'shadow-xs px-3 py-2', props.controlClass)">
       <span v-if="$slots.leading" class="text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0">
         <slot name="leading" />
       </span>
@@ -95,7 +70,7 @@
         <label
           v-if="label"
           :for="inputId"
-          class="pointer-events-none absolute inset-x-0 top-2 origin-[0_0] truncate text-sm text-muted-foreground transition-all duration-200 ease-out peer-focus-visible:-translate-y-3 peer-focus-visible:text-xs peer-focus-visible:text-primary peer-[&:not(:placeholder-shown)]:-translate-y-3 peer-[&:not(:placeholder-shown)]:text-xs peer-disabled:text-muted-foreground/70"
+          class="pointer-events-none absolute inset-x-0 top-2 origin-top-left truncate text-sm text-muted-foreground transition-all duration-200 ease-out peer-focus-visible:-translate-y-3 peer-focus-visible:text-xs peer-focus-visible:text-primary peer-not-placeholder-shown:-translate-y-3 peer-not-placeholder-shown:text-xs peer-disabled:text-muted-foreground/70"
         >
           {{ label }}
         </label>
@@ -106,11 +81,7 @@
       </span>
     </div>
 
-    <p
-      v-if="hasMessageContent"
-      :id="messageId"
-      :class="cn('min-h-5 text-sm leading-snug text-muted-foreground', error ? 'text-destructive' : null)"
-    >
+    <p v-if="hasMessageContent" :id="messageId" :class="cn('min-h-5 text-sm leading-snug text-muted-foreground', error ? 'text-destructive' : null)">
       <slot name="message" :error="error" :helper="helper">
         <slot name="error" :error="error" :helper="helper">
           <slot name="helper" :error="error" :helper="helper">

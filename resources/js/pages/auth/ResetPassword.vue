@@ -22,41 +22,15 @@
     <Form v-bind="update.form()" :transform="(data) => ({ ...data, token, email })" :reset-on-success="['password', 'password_confirmation']" v-slot="{ errors, processing }">
       <div class="grid gap-6">
         <div class="grid gap-2">
-          <Input
-            id="email"
-            v-model="inputEmail"
-            type="email"
-            name="email"
-            label="Email"
-            autocomplete="email"
-            readonly
-            :error="errors.email"
-          />
+          <Input id="email" v-model="inputEmail" type="email" name="email" label="Email" autocomplete="email" readonly :error="errors.email" />
         </div>
 
         <div class="grid gap-2">
-          <Input
-            id="password"
-            type="password"
-            name="password"
-            label="Password"
-            autocomplete="new-password"
-            autofocus
-            placeholder="Password"
-            :error="errors.password"
-          />
+          <Input id="password" type="password" name="password" label="Password" autocomplete="new-password" autofocus placeholder="Password" :error="errors.password" />
         </div>
 
         <div class="grid gap-2">
-          <Input
-            id="password_confirmation"
-            type="password"
-            name="password_confirmation"
-            label="Confirm Password"
-            autocomplete="new-password"
-            placeholder="Confirm password"
-            :error="errors.password_confirmation"
-          />
+          <Input id="password_confirmation" type="password" name="password_confirmation" label="Confirm Password" autocomplete="new-password" placeholder="Confirm password" :error="errors.password_confirmation" />
         </div>
 
         <Button type="submit" class="mt-4 w-full" :disabled="processing" data-test="reset-password-button">

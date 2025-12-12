@@ -41,15 +41,7 @@
             </DialogHeader>
 
             <div class="grid gap-2">
-              <Input
-                id="password"
-                ref="passwordInput"
-                type="password"
-                name="password"
-                label="Password"
-                placeholder="Password"
-                :error="errors.password"
-              />
+              <Input id="password" ref="passwordInput" type="password" name="password" label="Password" placeholder="Password" :error="errors.password" />
             </div>
 
             <DialogFooter class="gap-2">

@@ -24,16 +24,7 @@
     <div class="space-y-6">
       <Form v-bind="email.form()" v-slot="{ errors, processing }">
         <div class="grid gap-2">
-          <Input
-            id="email"
-            type="email"
-            name="email"
-            label="Email address"
-            autocomplete="off"
-            autofocus
-            placeholder="email@example.com"
-            :error="errors.email"
-          />
+          <Input id="email" type="email" name="email" label="Email address" autocomplete="off" autofocus placeholder="email@example.com" :error="errors.email" />
         </div>
 
         <div class="my-6 flex items-center justify-start">

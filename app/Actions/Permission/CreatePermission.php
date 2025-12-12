@@ -12,11 +12,9 @@ class CreatePermission
 {
     public function execute(PermissionDTO $data): Permission
     {
-        return DB::transaction(function () use ($data): Permission {
-            return Permission::create([
-                'name' => $data->name,
-                'guard_name' => $data->guardName,
-            ]);
-        });
+        return DB::transaction(fn (): Permission => Permission::create([
+            'name' => $data->name,
+            'guard_name' => $data->guardName,
+        ]));
     }
 }

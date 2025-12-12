@@ -9,12 +9,7 @@
 </script>
 
 <template>
-  <Input
-    data-slot="sidebar-input"
-    data-sidebar="input"
-    :class="cn('w-full', props.class)"
-    control-class="bg-background h-8 shadow-none"
-  >
+  <Input data-slot="sidebar-input" data-sidebar="input" :class="cn('w-full', props.class)" control-class="bg-background h-8 shadow-none">
     <slot />
   </Input>
 </template>

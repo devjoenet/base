@@ -64,11 +64,7 @@
             </TableRow>
           </TableHeader>
           <TableBody class="divide-y divide-zinc-200 dark:divide-zinc-800">
-            <TableRow
-              v-for="permission in permissions.data"
-              :key="permission.id"
-              class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50 transition-colors"
-            >
+            <TableRow v-for="permission in permissions.data" :key="permission.id" class="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/50 transition-colors">
               <TableCell class="px-6 py-4">
                 <div class="flex items-center gap-3">
                   <div class="p-2 bg-zinc-100 dark:bg-zinc-800 rounded-lg">
@@ -101,11 +97,7 @@
                         Edit
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem
-                      v-if="can('manage permissions')"
-                      @click="deletePermission(permission.id)"
-                      class="text-red-600 focus:text-red-600"
-                    >
+                    <DropdownMenuItem v-if="can('manage permissions')" @click="deletePermission(permission.id)" class="text-red-600 focus:text-red-600">
                       <Trash2 class="mr-2 h-4 w-4" />
                       Delete
                     </DropdownMenuItem>

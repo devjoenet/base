@@ -14,16 +14,7 @@
     <Form v-bind="store.form()" reset-on-success v-slot="{ errors, processing }">
       <div class="space-y-6">
         <div class="grid gap-2">
-          <Input
-            id="password"
-            type="password"
-            name="password"
-            label="Password"
-            required
-            autocomplete="current-password"
-            autofocus
-            :error="errors.password"
-          />
+          <Input id="password" type="password" name="password" label="Password" required autocomplete="current-password" autofocus :error="errors.password" />
         </div>
 
         <div class="flex items-center">

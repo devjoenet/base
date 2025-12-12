@@ -50,25 +50,11 @@
 
       <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Input
-            id="name"
-            v-model="form.name"
-            type="text"
-            label="Name"
-            required
-            :error="form.errors.name"
-          />
+          <Input id="name" v-model="form.name" type="text" label="Name" required :error="form.errors.name" />
         </div>
 
         <div class="grid gap-2">
-          <Input
-            id="email"
-            v-model="form.email"
-            type="email"
-            label="Email"
-            required
-            :error="form.errors.email"
-          />
+          <Input id="email" v-model="form.email" type="email" label="Email" required :error="form.errors.email" />
         </div>
 
         <div class="grid gap-2">
@@ -88,23 +74,11 @@
           <h3 class="text-sm font-medium mb-4">Change Password <span class="text-zinc-500 font-normal">(Optional)</span></h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="grid gap-2">
-              <Input
-                id="password"
-                v-model="form.password"
-                type="password"
-                label="New Password"
-                :error="form.errors.password"
-              />
+              <Input id="password" v-model="form.password" type="password" label="New Password" :error="form.errors.password" />
             </div>
 
             <div class="grid gap-2">
-              <Input
-                id="password_confirmation"
-                v-model="form.password_confirmation"
-                type="password"
-                label="Confirm Password"
-                :error="form.errors.password_confirmation"
-              />
+              <Input id="password_confirmation" v-model="form.password_confirmation" type="password" label="Confirm Password" :error="form.errors.password_confirmation" />
             </div>
           </div>
         </div>

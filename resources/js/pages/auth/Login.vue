@@ -29,32 +29,11 @@
     <Form v-bind="store.form()" :reset-on-success="['password']" v-slot="{ errors, processing }" class="flex flex-col gap-6">
       <div class="grid gap-6">
         <div class="grid gap-2">
-          <Input
-            id="email"
-            type="email"
-            name="email"
-            label="Email address"
-            required
-            autofocus
-            :tabindex="1"
-            autocomplete="email"
-            placeholder="email@example.com"
-            :error="errors.email"
-          />
+          <Input id="email" type="email" name="email" label="Email address" required autofocus :tabindex="1" autocomplete="email" placeholder="email@example.com" :error="errors.email" />
         </div>
 
         <div class="grid gap-2">
-          <Input
-            id="password"
-            type="password"
-            name="password"
-            label="Password"
-            required
-            :tabindex="2"
-            autocomplete="current-password"
-            placeholder="Password"
-            :error="errors.password"
-          >
+          <Input id="password" type="password" name="password" label="Password" required :tabindex="2" autocomplete="current-password" placeholder="Password" :error="errors.password">
             <template v-if="canResetPassword" #helper>
               <div class="flex justify-between">
                 <span />

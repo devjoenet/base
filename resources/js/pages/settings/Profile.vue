@@ -40,30 +40,11 @@
 
         <Form v-bind="ProfileController.update.form()" class="space-y-6" v-slot="{ errors, processing, recentlySuccessful }">
           <div class="grid gap-2">
-            <Input
-              id="name"
-              name="name"
-              label="Name"
-              :default-value="user.name"
-              required
-              autocomplete="name"
-              placeholder="Full name"
-              :error="errors.name"
-            />
+            <Input id="name" name="name" label="Name" :default-value="user.name" required autocomplete="name" placeholder="Full name" :error="errors.name" />
           </div>
 
           <div class="grid gap-2">
-            <Input
-              id="email"
-              type="email"
-              name="email"
-              label="Email address"
-              :default-value="user.email"
-              required
-              autocomplete="username"
-              placeholder="Email address"
-              :error="errors.email"
-            />
+            <Input id="email" type="email" name="email" label="Email address" :default-value="user.email" required autocomplete="username" placeholder="Email address" :error="errors.email" />
           </div>
 
           <div v-if="mustVerifyEmail && !user.email_verified_at">

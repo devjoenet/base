@@ -37,39 +37,15 @@
           v-slot="{ errors, processing, recentlySuccessful }"
         >
           <div class="grid gap-2">
-            <Input
-              id="current_password"
-              name="current_password"
-              type="password"
-              label="Current password"
-              autocomplete="current-password"
-              placeholder="Current password"
-              :error="errors.current_password"
-            />
+            <Input id="current_password" name="current_password" type="password" label="Current password" autocomplete="current-password" placeholder="Current password" :error="errors.current_password" />
           </div>
 
           <div class="grid gap-2">
-            <Input
-              id="password"
-              name="password"
-              type="password"
-              label="New password"
-              autocomplete="new-password"
-              placeholder="New password"
-              :error="errors.password"
-            />
+            <Input id="password" name="password" type="password" label="New password" autocomplete="new-password" placeholder="New password" :error="errors.password" />
           </div>
 
           <div class="grid gap-2">
-            <Input
-              id="password_confirmation"
-              name="password_confirmation"
-              type="password"
-              label="Confirm password"
-              autocomplete="new-password"
-              placeholder="Confirm password"
-              :error="errors.password_confirmation"
-            />
+            <Input id="password_confirmation" name="password_confirmation" type="password" label="Confirm password" autocomplete="new-password" placeholder="Confirm password" :error="errors.password_confirmation" />
           </div>
 
           <div class="flex items-center gap-4">

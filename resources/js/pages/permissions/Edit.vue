@@ -45,14 +45,7 @@
 
       <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Input
-            id="name"
-            v-model="form.name"
-            type="text"
-            label="Permission Name"
-            required
-            :error="form.errors.name"
-          >
+          <Input id="name" v-model="form.name" type="text" label="Permission Name" required :error="form.errors.name">
             <template #leading>
               <ShieldCheck class="h-5 w-5 text-muted-foreground" />
             </template>
@@ -60,13 +53,7 @@
         </div>
 
         <div class="grid gap-2">
-          <Input
-            id="guard_name"
-            v-model="form.guard_name"
-            type="text"
-            label="Guard"
-            :error="form.errors.guard_name"
-          />
+          <Input id="guard_name" v-model="form.guard_name" type="text" label="Guard" :error="form.errors.guard_name" />
         </div>
 
         <div class="flex justify-end pt-4">
