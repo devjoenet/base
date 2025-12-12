@@ -5,9 +5,10 @@
   import { dashboard } from "@/routes";
   import { index as UsersIndex } from "@/routes/users";
   import { index as RolesIndex } from "@/routes/roles";
+  import { index as PermissionsIndex } from "@/routes/permissions";
   import { type NavItem } from "@/types";
   import { Link } from "@inertiajs/vue3";
-  import { BookOpen, Folder, LayoutGrid, UserRoundCog, ShieldUser } from "lucide-vue-next";
+  import { BookOpen, Folder, KeyRound, LayoutGrid, Shield, ShieldUser, UserRoundCog } from "lucide-vue-next";
   import { computed } from "vue";
   import AppLogo from "./AppLogo.vue";
   import { usePermissions } from "@/composables/usePermissions";
@@ -30,6 +31,14 @@
         title: "Users",
         href: UsersIndex(),
         icon: UserRoundCog,
+      });
+    }
+
+    if (can("manage permissions")) {
+      items.push({
+        title: "Permissions",
+        href: PermissionsIndex(),
+        icon: Shield,
       });
     }
 
