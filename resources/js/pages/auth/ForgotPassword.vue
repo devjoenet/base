@@ -1,9 +1,7 @@
 <script setup lang="ts">
-  import InputError from "@/components/InputError.vue";
   import TextLink from "@/components/TextLink.vue";
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
-  import { Label } from "@/components/ui/label";
   import { Spinner } from "@/components/ui/spinner";
   import AuthLayout from "@/layouts/AuthLayout.vue";
   import { login } from "@/routes";
@@ -26,9 +24,16 @@
     <div class="space-y-6">
       <Form v-bind="email.form()" v-slot="{ errors, processing }">
         <div class="grid gap-2">
-          <Label for="email">Email address</Label>
-          <Input id="email" type="email" name="email" autocomplete="off" autofocus placeholder="email@example.com" />
-          <InputError :message="errors.email" />
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            label="Email address"
+            autocomplete="off"
+            autofocus
+            placeholder="email@example.com"
+            :error="errors.email"
+          />
         </div>
 
         <div class="my-6 flex items-center justify-start">

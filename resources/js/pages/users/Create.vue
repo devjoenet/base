@@ -45,15 +45,28 @@
 
       <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Label for="name">Name</Label>
-          <Input id="name" v-model="form.name" type="text" placeholder="John Doe" required autofocus />
-          <InputError :message="form.errors.name" />
+          <Input
+            id="name"
+            v-model="form.name"
+            type="text"
+            label="Name"
+            placeholder="John Doe"
+            required
+            autofocus
+            :error="form.errors.name"
+          />
         </div>
 
         <div class="grid gap-2">
-          <Label for="email">Email</Label>
-          <Input id="email" v-model="form.email" type="email" placeholder="john@example.com" required />
-          <InputError :message="form.errors.email" />
+          <Input
+            id="email"
+            v-model="form.email"
+            type="email"
+            label="Email"
+            placeholder="john@example.com"
+            required
+            :error="form.errors.email"
+          />
         </div>
 
         <div class="grid gap-2">
@@ -71,14 +84,25 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="grid gap-2">
-            <Label for="password">Password</Label>
-            <Input id="password" v-model="form.password" type="password" required />
-            <InputError :message="form.errors.password" />
+            <Input
+              id="password"
+              v-model="form.password"
+              type="password"
+              label="Password"
+              required
+              :error="form.errors.password"
+            />
           </div>
 
           <div class="grid gap-2">
-            <Label for="password_confirmation">Confirm Password</Label>
-            <Input id="password_confirmation" v-model="form.password_confirmation" type="password" required />
+            <Input
+              id="password_confirmation"
+              v-model="form.password_confirmation"
+              type="password"
+              label="Confirm Password"
+              required
+              :error="form.errors.password_confirmation"
+            />
           </div>
         </div>
 

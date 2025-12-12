@@ -40,9 +40,16 @@
       <!-- Used inline wayfinder route helper directly in the submit handler -->
       <Form :action="store()" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Label for="name">Role Name</Label>
-          <Input id="name" v-model="form.name" type="text" placeholder="e.g. Editor" required autofocus />
-          <InputError :message="form.errors.name" />
+          <Input
+            id="name"
+            v-model="form.name"
+            type="text"
+            label="Role Name"
+            placeholder="e.g. Editor"
+            required
+            autofocus
+            :error="form.errors.name"
+          />
         </div>
 
         <div class="grid gap-4">
