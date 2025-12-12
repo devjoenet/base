@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
@@ -29,6 +30,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::group(['middleware' => ['can:manage roles']], function () {
         Route::resource('roles', RoleController::class);
+    });
+
+    Route::group(['middleware' => ['can:manage permissions']], function () {
+        Route::resource('permissions', PermissionController::class);
     });
 });
 
