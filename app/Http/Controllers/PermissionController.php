@@ -17,11 +17,6 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('can:manage permissions');
-    }
-
     public function index(): Response
     {
         $permissions = Permission::withCount('roles')
