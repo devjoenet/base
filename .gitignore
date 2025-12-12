@@ -35,4 +35,4 @@ _ide_helper_models.php
 ./GEMINI.md
 AGENTS.md
 GEMINI.md
-resources/types/generated.d.ts
+resources/js/types/generated.d.ts
