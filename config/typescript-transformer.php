@@ -52,7 +52,7 @@ return [
      * The package will write the generated TypeScript to this file.
      */
 
-    'output_file' => resource_path('types/generated.d.ts'),
+    'output_file' => resource_path('js/types/generated.d.ts'),
 
     /*
      * When the package is writing types to the output file, a writer is used to
@@ -83,5 +83,5 @@ return [
      * make them optional instead.
      */
 
-    'transform_null_to_optional' => false,
+    'transform_null_to_optional' => true,
 ];
