@@ -4,13 +4,9 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Actions\Permission\CreatePermission;
-use App\Actions\Permission\DeletePermission;
-use App\Actions\Permission\UpdatePermission;
-use App\DataTransferObjects\PermissionDTO;
-use App\Http\Requests\Permission\StorePermissionRequest;
-use App\Http\Requests\Permission\UpdatePermissionRequest;
+use App\Data\PermissionData;
 use Exception;
+use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
 use Inertia\Response;
 use Spatie\Permission\Models\Permission;
@@ -42,36 +38,32 @@ class PermissionController extends Controller
         ]);
     }
 
-    public function store(StorePermissionRequest $request, CreatePermission $action)
+    public function store(PermissionData $data): RedirectResponse
     {
-        $action->execute(PermissionDTO::fromRequest($request));
+        Permission::create($data->all());
 
-        return redirect()->route('permissions.index')->with('success', 'Permission created successfully.');
+        return to_route('permissions.index')->with('success', 'Permission created successfully.');
     }
 
     public function edit(Permission $permission): Response
     {
         return Inertia::render('permissions/Edit', [
-            'permission' => [
-                'id' => $permission->id,
-                'name' => $permission->name,
-                'guard_name' => $permission->guard_name,
-            ],
+            'permission' => PermissionData::from($permission),
             'default_guard' => config('auth.defaults.guard'),
         ]);
     }
 
-    public function update(UpdatePermissionRequest $request, Permission $permission, UpdatePermission $action)
+    public function update(Permission $permission, PermissionData $data): RedirectResponse
     {
-        $action->execute($permission, PermissionDTO::fromRequest($request));
+        $permission->update($data->all());
 
         return redirect()->route('permissions.index')->with('success', 'Permission updated successfully.');
     }
 
-    public function destroy(Permission $permission, DeletePermission $action)
+    public function destroy(Permission $permission): RedirectResponse
     {
         try {
-            $action->execute($permission);
+            $permission->delete();
 
             return redirect()->route('permissions.index')->with('success', 'Permission deleted successfully.');
         } catch (Exception $exception) {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import NavGroup from "./NavGroup.vue";
   import NavUser from "@/components/NavUser.vue";
+  import NavFooter from "./NavFooter.vue";
   import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
   import { dashboard } from "@/routes";
   import { index as UsersIndex } from "@/routes/users";

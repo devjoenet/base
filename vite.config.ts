@@ -2,6 +2,7 @@ import { wayfinder } from "@laravel/vite-plugin-wayfinder";
 import tailwindcss from "@tailwindcss/vite";
 import vue from "@vitejs/plugin-vue";
 import laravel from "laravel-vite-plugin";
+import { run } from "vite-plugin-run";
 import { defineConfig } from "vite";
 
 export default defineConfig({
@@ -23,5 +24,12 @@ export default defineConfig({
         },
       },
     }),
+    run([
+      {
+        name: "typescript transform",
+        run: ["php", "artisan", "typescript:transform"],
+        pattern: ["app/**/*Data.php"],
+      },
+    ]),
   ],
 });

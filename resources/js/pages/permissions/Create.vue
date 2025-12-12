@@ -3,8 +3,6 @@
   import { Head, Link, useForm } from "@inertiajs/vue3";
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
-  import { Label } from "@/components/ui/label";
-  import InputError from "@/components/InputError.vue";
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft, ShieldCheck } from "lucide-vue-next";
   import { index, store } from "@/routes/permissions";
@@ -42,18 +40,15 @@
 
       <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Label for="name">Permission Name</Label>
-          <div class="relative">
-            <ShieldCheck class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zinc-400" />
-            <Input id="name" v-model="form.name" type="text" class="pl-9" placeholder="e.g. manage posts" required autofocus />
-          </div>
-          <InputError :message="form.errors.name" />
+          <Input id="name" v-model="form.name" type="text" label="Permission Name" placeholder="e.g. manage posts" required autofocus :error="form.errors.name">
+            <template #leading>
+              <ShieldCheck class="h-5 w-5 text-muted-foreground" />
+            </template>
+          </Input>
         </div>
 
         <div class="grid gap-2">
-          <Label for="guard_name">Guard</Label>
-          <Input id="guard_name" v-model="form.guard_name" type="text" placeholder="web" />
-          <InputError :message="form.errors.guard_name" />
+          <Input id="guard_name" v-model="form.guard_name" type="text" label="Guard" placeholder="web" :error="form.errors.guard_name" />
         </div>
 
         <div class="flex justify-end pt-4">

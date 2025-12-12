@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { computed, watch } from "vue";
   import AppLayout from "@/layouts/AppLayout.vue";
   import { index, store } from "@/routes/roles";
   import { Head, Link, Form, useForm } from "@inertiajs/vue3";
@@ -9,20 +10,38 @@
   import InputError from "@/components/InputError.vue";
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft } from "lucide-vue-next";
+  import Spinner from "@/components/ui/spinner/Spinner.vue";
+
+  type Role = { id: number; name: string; permissions: string[] };
 
   const props = defineProps<{
-    role: {
-      id: number;
-      name: string;
-      permissions: string[];
-    };
+    role: Role;
     permissions: string[];
   }>();
 
   const form = useForm({
-    name: props.role.name,
-    permissions: props.role.permissions,
+    permissions: [...props.role.permissions] as string[],
   });
+
+  watch(
+    () => props.role.permissions,
+    (next) => {
+      form.permissions = [...next];
+    },
+    { deep: true },
+  );
+
+  const selected = computed(() => new Set(form.permissions));
+
+  function togglePermission(permission: string, checked: boolean) {
+    const idx = form.permissions.indexOf(permission);
+
+    if (checked) {
+      if (idx === -1) form.permissions.push(permission);
+    } else {
+      if (idx !== -1) form.permissions.splice(idx, 1);
+    }
+  }
 </script>
 
 <template>
@@ -42,37 +61,23 @@
 
       <Heading title="Edit Role" :description="`Update permissions for ${role.name}`" class="mb-8" />
 
-      <Form :action="store()" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
+      <Form v-bind="store.form()" v-slot="{ errors, processing }" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
-          <Label for="name">Role Name</Label>
-          <Input id="name" v-model="form.name" type="text" required />
-          <InputError :message="form.errors.name" />
+          <Input id="name" :v-model="role.name" type="text" label="Role Name" required :error="errors.name" />
         </div>
 
         <div class="grid gap-4">
           <Label class="text-base font-medium">Permissions</Label>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border rounded-md p-4 max-h-[400px] overflow-y-auto">
-            <div v-for="permission in permissions" :key="permission" class="flex items-center space-x-2">
-              <Checkbox
-                :id="permission"
-                :checked="form.permissions.includes(permission)"
-                @update:checked="
-                  (checked: boolean) => {
-                    if (checked) form.permissions.push(permission);
-                    else form.permissions = form.permissions.filter((p) => p !== permission);
-                  }
-                "
-              />
-              <label :for="permission" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer capitalize">
-                {{ permission }}
-              </label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border rounded-md p-4 max-h-100 overflow-y-auto">
+            <div v-for="permission in props.permissions" :key="permission" class="flex items-center space-x-2">
+              <Checkbox :id="permission" :checked="selected.has(permission)" @change="togglePermission(permission, ($event.target as HTMLInputElement).checked)" />
             </div>
           </div>
-          <InputError :message="form.errors.permissions" />
+          <InputError :message="errors.permissions" />
         </div>
 
         <div class="flex justify-end pt-4">
-          <Button type="submit" :disabled="form.processing"> Update Role </Button>
+          <Button type="submit" :disabled="processing"> <Spinner v-if="processing" /> Role </Button>
         </div>
       </Form>
     </div>

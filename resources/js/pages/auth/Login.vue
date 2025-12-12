@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import InputError from "@/components/InputError.vue";
   import TextLink from "@/components/TextLink.vue";
   import { Button } from "@/components/ui/button";
   import { Checkbox } from "@/components/ui/checkbox";
@@ -30,18 +29,18 @@
     <Form v-bind="store.form()" :reset-on-success="['password']" v-slot="{ errors, processing }" class="flex flex-col gap-6">
       <div class="grid gap-6">
         <div class="grid gap-2">
-          <Label for="email">Email address</Label>
-          <Input id="email" type="email" name="email" required autofocus :tabindex="1" autocomplete="email" placeholder="email@example.com" />
-          <InputError :message="errors.email" />
+          <Input id="email" type="email" name="email" label="Email address" required autofocus :tabindex="1" autocomplete="email" placeholder="email@example.com" :error="errors.email" />
         </div>
 
         <div class="grid gap-2">
-          <div class="flex items-center justify-between">
-            <Label for="password">Password</Label>
-            <TextLink v-if="canResetPassword" :href="request()" class="text-sm" :tabindex="5"> Forgot password? </TextLink>
-          </div>
-          <Input id="password" type="password" name="password" required :tabindex="2" autocomplete="current-password" placeholder="Password" />
-          <InputError :message="errors.password" />
+          <Input id="password" type="password" name="password" label="Password" required :tabindex="2" autocomplete="current-password" placeholder="Password" :error="errors.password">
+            <template v-if="canResetPassword" #helper>
+              <div class="flex justify-between">
+                <span />
+                <TextLink :href="request()" class="text-sm" :tabindex="5"> Forgot password? </TextLink>
+              </div>
+            </template>
+          </Input>
         </div>
 
         <div class="flex items-center justify-between">

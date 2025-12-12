@@ -1,0 +1,19 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Data;
+
+use Spatie\LaravelData\Data;
+use Spatie\TypeScriptTransformer\Attributes\TypeScript;
+
+#[TypeScript]
+class RoleData extends Data
+{
+    public function __construct(
+        public string $name,
+
+        /** @var array<int, string> */
+        public array $permissions,
+    ) {}
+}

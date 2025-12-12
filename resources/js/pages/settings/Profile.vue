@@ -6,10 +6,8 @@
 
   import DeleteUser from "@/components/DeleteUser.vue";
   import HeadingSmall from "@/components/HeadingSmall.vue";
-  import InputError from "@/components/InputError.vue";
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
-  import { Label } from "@/components/ui/label";
   import AppLayout from "@/layouts/AppLayout.vue";
   import SettingsLayout from "@/layouts/settings/Layout.vue";
   import { type BreadcrumbItem } from "@/types";
@@ -42,15 +40,11 @@
 
         <Form v-bind="ProfileController.update.form()" class="space-y-6" v-slot="{ errors, processing, recentlySuccessful }">
           <div class="grid gap-2">
-            <Label for="name">Name</Label>
-            <Input id="name" class="mt-1 block w-full" name="name" :default-value="user.name" required autocomplete="name" placeholder="Full name" />
-            <InputError class="mt-2" :message="errors.name" />
+            <Input type="name" name="name" label="Name" :default-value="user.name" required autocomplete="name" placeholder="Full name" :error="errors.name" />
           </div>
 
           <div class="grid gap-2">
-            <Label for="email">Email address</Label>
-            <Input id="email" type="email" class="mt-1 block w-full" name="email" :default-value="user.email" required autocomplete="username" placeholder="Email address" />
-            <InputError class="mt-2" :message="errors.email" />
+            <Input id="email" type="email" name="email" label="Email address" :default-value="user.email" required autocomplete="username" placeholder="Email address" :error="errors.email" />
           </div>
 
           <div v-if="mustVerifyEmail && !user.email_verified_at">
