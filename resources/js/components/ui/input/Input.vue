@@ -6,24 +6,28 @@
   import type { InputVariants } from ".";
   import { inputFieldVariants } from ".";
 
-  interface Props extends Omit<InputHTMLAttributes, "class" | "disabled" | "id" | "modelValue"> {
-    id?: string;
-    defaultValue?: string | number;
-    modelValue?: string | number;
-    label?: string;
-    helper?: string;
-    error?: string;
-    variant?: InputVariants["variant"];
-    disabled?: boolean;
-    class?: HTMLAttributes["class"];
-    inputClass?: HTMLAttributes["class"];
-    controlClass?: HTMLAttributes["class"];
-  }
-
-  const props = withDefaults(defineProps<Props>(), {
-    variant: "filled",
-    disabled: false,
-  });
+  const props = withDefaults(
+    defineProps<{
+      id?: string;
+      type?: InputHTMLAttributes["type"];
+      defaultValue?: string | number;
+      modelValue?: string | number;
+      label?: string;
+      placeholder?: string;
+      helper?: string;
+      error?: string;
+      variant?: InputVariants["variant"];
+      disabled?: boolean;
+      class?: HTMLAttributes["class"];
+      inputClass?: HTMLAttributes["class"];
+      controlClass?: HTMLAttributes["class"];
+    }>(),
+    {
+      type: "text",
+      variant: "filled",
+      disabled: false,
+    },
+  );
 
   const emits = defineEmits<{
     (e: "update:modelValue", payload: string | number): void;
@@ -50,14 +54,12 @@
 
       <div class="relative flex-1">
         <input
-          v-bind="delegatedProps"
           v-model="modelValue"
           :id="inputId"
           :disabled="disabled"
           :aria-invalid="error ? 'true' : undefined"
           :aria-errormessage="error && messageId ? messageId : undefined"
           :aria-describedby="messageId"
-          :placeholder="label ? ' ' : props.placeholder"
           data-slot="input"
           :class="
             cn(
@@ -65,6 +67,7 @@
               props.inputClass,
             )
           "
+          v-bind="delegatedProps"
         />
 
         <label

@@ -8,6 +8,7 @@
   import InputError from "@/components/InputError.vue";
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft } from "lucide-vue-next";
+  import { index, store } from "@/routes/users";
 
   defineProps<{
     roles: string[];
@@ -22,7 +23,7 @@
   });
 
   const submit = () => {
-    form.post(route("users.store"));
+    form.post(store().url);
   };
 </script>
 
@@ -31,12 +32,12 @@
 
   <AppLayout
     :breadcrumbs="[
-      { title: 'Users', href: route('users.index') },
+      { title: 'Users', href: index.url() },
       { title: 'Create', href: '#' },
     ]"
   >
     <div class="max-w-2xl mx-auto px-4 py-8">
-      <Link :href="route('users.index')" class="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-700 mb-6">
+      <Link :href="index().url" class="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-700 mb-6">
         <ChevronLeft class="w-4 h-4 mr-1" />
         Back to Users
       </Link>

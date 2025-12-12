@@ -23,5 +23,12 @@ export default defineConfig({
         },
       },
     }),
+    run([
+      {
+        name: "typescript transform",
+        run: ["php", "artisan", "typescript:transform"],
+        pattern: ["app/**/*Data.php"],
+      },
+    ]),
   ],
 });
