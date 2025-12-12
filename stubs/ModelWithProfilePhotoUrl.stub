@@ -1,6 +1,0 @@
-namespace App\Models;
-
-/**
- * @property string $profile_photo_url
- */
-class User extends Authenticatable{}
