@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // User Management Routes (Protected by permission)
     Route::group(['middleware' => ['can:manage users']], function () {
         Route::resource('users', UserController::class);
+    });
+
+    Route::group(['middleware' => ['can:manage roles']], function () {
+        Route::resource('roles', RoleController::class);
     });
 });
 
