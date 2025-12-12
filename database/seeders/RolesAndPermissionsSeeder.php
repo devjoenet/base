@@ -19,6 +19,7 @@ class RolesAndPermissionsSeeder extends Seeder
         // Create Permissions
         // Define your app-specific permissions here
         $permissions = [
+            'manage permissions',
             'view dashboard',
             'manage users',
             'edit profile',
@@ -39,7 +40,7 @@ class RolesAndPermissionsSeeder extends Seeder
 
         // Role: Admin
         $adminRole = Role::create(['name' => 'admin']);
-        $adminRole->givePermissionTo($permissions); // Admin gets all defined permissions
+        $adminRole->givePermissionTo(array_merge($permissions, ['manage roles'])); // Admin gets all defined permissions
 
         // Role: Super-Admin
         // This role bypasses all checks via Gate::before rule usually,

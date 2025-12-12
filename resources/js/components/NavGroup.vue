@@ -5,6 +5,7 @@
   import { Link, usePage } from "@inertiajs/vue3";
 
   defineProps<{
+    label: string;
     items: NavItem[];
   }>();
 
@@ -13,7 +14,7 @@
 
 <template>
   <SidebarGroup class="px-2 py-0">
-    <SidebarGroupLabel>Platform</SidebarGroupLabel>
+    <SidebarGroupLabel>{{ label }}</SidebarGroupLabel>
     <SidebarMenu>
       <SidebarMenuItem v-for="item in items" :key="item.title">
         <SidebarMenuButton as-child :is-active="urlIsActive(item.href, page.url)" :tooltip="item.title">

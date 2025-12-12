@@ -1,7 +1,5 @@
 <script setup lang="ts">
-  import NavFooter from "@/components/NavFooter.vue";
-  import NavPlatform from "./NavPlatform.vue";
-  import NavSystem from "./NavSystem.vue";
+  import NavGroup from "./NavGroup.vue";
   import NavUser from "@/components/NavUser.vue";
   import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
   import { dashboard } from "@/routes";
@@ -37,7 +35,7 @@
 
     if (can("manage roles")) {
       items.push({
-        title: "Roles & Permissions",
+        title: "Roles",
         href: RolesIndex(),
         icon: ShieldUser,
       });
@@ -75,8 +73,8 @@
     </SidebarHeader>
 
     <SidebarContent>
-      <NavPlatform :items="platformNavItems" />
-      <NavSystem :items="systemNavItems" />
+      <NavGroup label="Platform" :items="platformNavItems" />
+      <NavGroup label="System" :items="systemNavItems" />
     </SidebarContent>
 
     <SidebarFooter>
