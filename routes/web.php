@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Http\Controllers\Settings\PasswordController;
-use App\Http\Controllers\Settings\ProfileController;
-use App\Http\Controllers\Settings\TwoFactorAuthenticationController;
+use App\Http\Controllers\UserController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -23,23 +21,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('Dashboard');
     })->name('dashboard');
 
-    Route::redirect('/settings', '/settings/profile');
-
-    Route::prefix('settings')->group(function () {
-        Route::get('profile', [ProfileController::class, 'edit'])->name('settings.profile');
-        Route::patch('profile', [ProfileController::class, 'update'])->name('settings.profile.update');
-        Route::delete('profile', [ProfileController::class, 'destroy'])->name('settings.profile.destroy');
-
-        Route::get('password', [PasswordController::class, 'edit'])->name('settings.password');
-        Route::put('password', [PasswordController::class, 'update'])->name('settings.password.update');
-
-        Route::get('appearance', function () {
-            return Inertia::render('settings/Appearance');
-        })->name('settings.appearance');
-
-        Route::get('two-factor', [TwoFactorAuthenticationController::class, 'edit'])->name('settings.two-factor');
-        Route::post('two-factor', [TwoFactorAuthenticationController::class, 'store'])->name('settings.two-factor.store');
-        Route::delete('two-factor', [TwoFactorAuthenticationController::class, 'destroy'])->name('settings.two-factor.destroy');
+    // User Management Routes (Protected by permission)
+    Route::group(['middleware' => ['can:manage users']], function () {
+        Route::resource('users', UserController::class);
     });
 });
 

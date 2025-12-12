@@ -44,7 +44,7 @@ class RolesAndPermissionsSeeder extends Seeder
         // Role: Super-Admin
         // This role bypasses all checks via Gate::before rule usually,
         // but explicit assignment is also good for clarity.
-        $superAdminRole = Role::create(['name' => 'super-admin']);
+        Role::create(['name' => 'super-admin']);
         // Super admin gets everything implicitly or explicitly
     }
 }
