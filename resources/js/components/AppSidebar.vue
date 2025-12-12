@@ -8,7 +8,7 @@
   import { index as PermissionsIndex } from "@/routes/permissions";
   import { type NavItem } from "@/types";
   import { Link } from "@inertiajs/vue3";
-  import { BookOpen, Folder, KeyRound, LayoutGrid, ShieldUser, UserRoundCog } from "lucide-vue-next";
+  import { BookOpen, Folder, KeyRound, LayoutGrid, Shield, ShieldUser, UserRoundCog } from "lucide-vue-next";
   import { computed } from "vue";
   import AppLogo from "./AppLogo.vue";
   import { usePermissions } from "@/composables/usePermissions";
@@ -34,19 +34,19 @@
       });
     }
 
+    if (can("manage permissions")) {
+      items.push({
+        title: "Permissions",
+        href: PermissionsIndex(),
+        icon: Shield,
+      });
+    }
+
     if (can("manage roles")) {
       items.push({
         title: "Roles",
         href: RolesIndex(),
         icon: ShieldUser,
-      });
-    }
-
-    if (can("manage permissions")) {
-      items.push({
-        title: "Permissions",
-        href: PermissionsIndex(),
-        icon: KeyRound,
       });
     }
 
