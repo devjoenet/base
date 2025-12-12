@@ -23,7 +23,7 @@ class RoleController extends Controller
         $roles = Role::withCount('permissions')
             ->orderBy('name')
             ->paginate(10)
-            ->through(fn (Role $role) => [
+            ->through(fn (Role $role): array => [
                 'id' => $role->id,
                 'name' => $role->name,
                 'permissions_count' => $role->permissions_count,
@@ -77,8 +77,8 @@ class RoleController extends Controller
             $action->execute($role);
 
             return redirect()->route('roles.index')->with('success', 'Role deleted successfully.');
-        } catch (Exception $e) {
-            return back()->with('error', $e->getMessage());
+        } catch (Exception $exception) {
+            return back()->with('error', $exception->getMessage());
         }
     }
 }

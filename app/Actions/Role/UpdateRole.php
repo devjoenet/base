@@ -12,7 +12,7 @@ class UpdateRole
 {
     public function execute(Role $role, RoleDTO $data): Role
     {
-        return DB::transaction(function () use ($role, $data) {
+        return DB::transaction(function () use ($role, $data): Role {
             $role->update(['name' => $data->name]);
 
             $role->syncPermissions($data->permissions);

@@ -15,7 +15,7 @@ class CreateRole
         return DB::transaction(function () use ($data) {
             $role = Role::create(['name' => $data->name]);
 
-            if (! empty($data->permissions)) {
+            if ($data->permissions !== []) {
                 $role->syncPermissions($data->permissions);
             }
 
