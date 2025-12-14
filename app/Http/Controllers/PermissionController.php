@@ -40,9 +40,11 @@ class PermissionController extends Controller
 
     public function store(PermissionData $data): RedirectResponse
     {
-        Permission::create($data->all());
+        if (new Permission($data->toArray())->save()) {
+            return to_route('permissions.index')->with('success', 'Permission created successfully.');
+        }
 
-        return to_route('permissions.index')->with('success', 'Permission created successfully.');
+        return back()->with('error', 'Failed to create permission.');
     }
 
     public function edit(Permission $permission): Response
@@ -57,7 +59,9 @@ class PermissionController extends Controller
     {
         $permission->update($data->all());
 
-        return redirect()->route('permissions.index')->with('success', 'Permission updated successfully.');
+        return redirect()
+            ->route('permissions.index')
+            ->with('success', 'Permission updated successfully.');
     }
 
     public function destroy(Permission $permission): RedirectResponse

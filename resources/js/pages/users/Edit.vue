@@ -4,6 +4,7 @@
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
   import { Label } from "@/components/ui/label";
+  import { Spinner } from "@/components/ui/spinner";
   import InputError from "@/components/InputError.vue";
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft } from "lucide-vue-next";
@@ -20,6 +21,14 @@
     };
     roles: string[];
   }>();
+
+  const form = useForm({
+    name: props.user.name,
+    email: props.user.email,
+    role: props.user.role ?? "",
+    password: "",
+    password_confirmation: "",
+  });
 </script>
 
 <template>
@@ -37,21 +46,21 @@
         Back to Users
       </Link>
 
-      <Heading title="Edit User" :description="`Update details for ${user.name}`" class="mb-8" />
-      <Form :action="update(user.id)" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" #default="{ processing, errors }">
+      <Heading title="Edit User" :description="`Update details for ${props.user.name}`" class="mb-8" />
+      <Form :action="update(props.user.id)" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" #default="{ processing, errors }">
         <div class="grid gap-2">
-          <Input id="name" v-model="user.name" type="text" label="Name" required :error="errors.name" />
+          <Input id="name" v-model="form.name" type="text" label="Name" required :error="errors.name" />
         </div>
 
         <div class="grid gap-2">
-          <Input id="email" v-model="user.email" type="email" label="Email" required :error="errors.email" />
+          <Input id="email" v-model="form.email" type="email" label="Email" required :error="errors.email" />
         </div>
 
         <div class="grid gap-2">
           <Label for="role">Role</Label>
           <select
             id="role"
-            v-model="user.role"
+            v-model="form.role"
             class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           >
             <option value="" disabled>Select a role</option>
@@ -64,11 +73,11 @@
           <h3 class="text-sm font-medium mb-4">Change Password <span class="text-zinc-500 font-normal">(Optional)</span></h3>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="grid gap-2">
-              <Input id="password" v-model="user.password" type="password" label="New Password" :error="errors.password" />
+              <Input id="password" v-model="form.password" type="password" label="New Password" :error="errors.password" />
             </div>
 
             <div class="grid gap-2">
-              <Input id="password_confirmation" v-model="user.password_confirmation" type="password" label="Confirm Password" :error="errors.password_confirmation" />
+              <Input id="password_confirmation" v-model="form.password_confirmation" type="password" label="Confirm Password" :error="errors.password_confirmation" />
             </div>
           </div>
         </div>

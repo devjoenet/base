@@ -1,7 +1,11 @@
 declare namespace App.Data {
 export type PermissionData = {
+id: string;
 name: string;
-guardName: string;
+guard_name: string;
+roles_count: string;
+created_at: string;
+updated_at: string;
 };
 export type RoleData = {
 name: string;

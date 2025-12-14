@@ -4,13 +4,10 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Actions\User\CreateUser;
-use App\Actions\User\DeleteUser;
-use App\Actions\User\UpdateUser;
-use App\DataTransferObjects\UserDTO;
-use App\Http\Requests\User\StoreUserRequest;
-use App\Http\Requests\User\UpdateUserRequest;
+use App\Data\UserData;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 use Inertia\Response;
 use Spatie\Permission\Models\Role;
@@ -19,33 +16,32 @@ class UserController extends Controller
 {
     public function index(): Response
     {
-        $users = User::with('roles')
-            ->latest()
-            ->paginate(10)
-            ->through(fn (User $user): array => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'role' => $user->getRoleNames()->first() ?? 'user',
-                'created_at' => $user->created_at->format('M d, Y'),
-                'profile_photo_url' => $user->profile_photo_url,
-            ]);
-
         return Inertia::render('users/Index', [
-            'users' => $users,
+            'users' => User::with('roles')
+                ->latest()
+                ->paginate(10)
+                ->through(fn (User $user): array => [
+                    'id' => $user->id,
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'role' => $user->getRoleNames()->first() ?? 'user',
+                    'created_at' => $user->created_at->format('M d, Y'),
+                    'profile_photo_url' => $user->profile_photo_url,
+                ]),
         ]);
     }
 
-    public function create(): Response
+    public function store(UserData $data): RedirectResponse
     {
-        return Inertia::render('users/Create', [
-            'roles' => Role::pluck('name'),
+        $user = User::create([
+            'name' => $data->name,
+            'email' => $data->email,
+            'password' => Hash::make($data->password),
         ]);
-    }
 
-    public function store(StoreUserRequest $request, CreateUser $action)
-    {
-        $action->execute(UserDTO::fromRequest($request));
+        if ($data->role) {
+            $user->assignRole($data->role);
+        }
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
@@ -53,31 +49,37 @@ class UserController extends Controller
     public function edit(User $user): Response
     {
         return Inertia::render('users/Edit', [
-            'user' => [
-                'id' => $user->id,
-                'name' => $user->name,
-                'email' => $user->email,
-                'role' => $user->getRoleNames()->first() ?? '',
-                'profile_photo_url' => $user->profile_photo_url,
-            ],
+            'user' => UserData::from($user),
             'roles' => Role::pluck('name'),
         ]);
     }
 
-    public function update(UpdateUserRequest $request, User $user, UpdateUser $action)
+    public function update(User $user, UserData $data): RedirectResponse
     {
-        $action->execute($user, UserDTO::fromRequest($request));
+        $payload = $data->only('name', 'email')->toArray();
 
-        return redirect()->route('users.index')->with('success', 'User updated successfully.');
+        if ($data->password) {
+            $payload['password'] = Hash::make($data->password);
+        }
+
+        $user->update($payload);
+
+        if ($data->role) {
+            $user->syncRoles([$data->role]);
+        }
+
+        return redirect()
+            ->route('users.index')
+            ->with('success', 'User updated successfully.');
     }
 
-    public function destroy(User $user, DeleteUser $action)
+    public function destroy(User $user): RedirectResponse
     {
         if ($user->is(auth()->user())) {
             return back()->with('error', 'You cannot delete your own account.');
         }
 
-        $action->execute($user);
+        $user->delete();
 
         return redirect()->route('users.index')->with('success', 'User deleted successfully.');
     }

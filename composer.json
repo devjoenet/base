@@ -58,7 +58,7 @@
     ],
     "ide": [
       "@php artisan ide-helper:generate --write_mixins --helpers",
-      "@php artisan ide-helper:models --nowrite --reset --write-eloquent-helper --phpstorm-noinspections",
+      "@php artisan ide-helper:models --nowrite --reset --write-mixin --phpstorm-noinspections",
       "@php artisan ide-helper:meta"
     ],
     "setup": [

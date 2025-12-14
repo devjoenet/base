@@ -13,7 +13,7 @@ class RoleData extends Data
     public function __construct(
         public string $name,
 
-        /** @var array<int, string> */
+        /** @var list<string> */
         public array $permissions,
     ) {}
 }
