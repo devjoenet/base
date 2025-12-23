@@ -9,7 +9,7 @@
   import { index as PermissionsIndex } from "@/routes/permissions";
   import { type NavItem } from "@/types";
   import { Link } from "@inertiajs/vue3";
-  import { BookOpen, Folder, KeyRound, LayoutGrid, Shield, ShieldUser, UserRoundCog } from "lucide-vue-next";
+  import { BookOpen, Folder, LayoutGrid, Shield, ShieldUser, UserRoundCog } from "lucide-vue-next";
   import { computed } from "vue";
   import AppLogo from "./AppLogo.vue";
   import { usePermissions } from "@/composables/usePermissions";
@@ -73,7 +73,7 @@
     <SidebarHeader>
       <SidebarMenu>
         <SidebarMenuItem>
-          <SidebarMenuButton size="lg" as-child>
+          <SidebarMenuButton class="h-auto w-full" size="lg" as-child>
             <Link :href="dashboard()">
               <AppLogo />
             </Link>

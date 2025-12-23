@@ -13,3 +13,15 @@ export function urlIsActive(urlToCheck: NonNullable<InertiaLinkProps["href"]>, c
 export function toUrl(href: NonNullable<InertiaLinkProps["href"]>) {
   return typeof href === "string" ? href : href?.url;
 }
+
+export function kebabToTitle(kebabStr: string): string {
+  const words = kebabStr.split("-");
+
+  const titleCaseWords = words.map((word) => {
+    if (word.length === 0) return "";
+
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  return titleCaseWords.join(" ");
+}

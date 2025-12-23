@@ -26,6 +26,7 @@
       type: "text",
       variant: "filled",
       disabled: false,
+      placeholder: " ",
     },
   );
 

@@ -4,10 +4,14 @@ declare(strict_types=1);
 
 namespace App\Http\Requests\User;
 
+use App\Data\UserData;
 use Illuminate\Foundation\Http\FormRequest;
+use Spatie\LaravelData\WithData;
 
 class StoreUserRequest extends FormRequest
 {
+    use WithData;
+
     public function authorize(): bool
     {
         // Permission check is already handled by route middleware ('can:manage users')
@@ -22,5 +26,10 @@ class StoreUserRequest extends FormRequest
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'role' => ['required', 'string', 'exists:roles,name'],
         ];
+    }
+
+    protected function dataClass(): string
+    {
+        return UserData::class;
     }
 }

@@ -22,9 +22,7 @@ return new class extends Migration
 
         // Assign to Admin role
         $adminRole = Role::where('name', 'admin')->first();
-        if ($adminRole) {
-            $adminRole->givePermissionTo($permission);
-        }
+        $adminRole?->givePermissionTo($permission);
     }
 
     /**

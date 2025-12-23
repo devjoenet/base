@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import AppLayout from "@/layouts/AppLayout.vue";
-  import { Head, Link, useForm } from "@inertiajs/vue3";
+  import { Head, Link, Form, useForm } from "@inertiajs/vue3";
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
   import Heading from "@/components/Heading.vue";
@@ -20,10 +20,6 @@
     name: props.permission.name,
     guard_name: props.permission.guard_name || props.default_guard,
   });
-
-  const submit = () => {
-    form.put(update(props.permission.id).url);
-  };
 </script>
 
 <template>
@@ -43,9 +39,9 @@
 
       <Heading title="Edit Permission" :description="`Update ${permission.name}`" class="mb-8" />
 
-      <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
+      <Form :action="update(props.permission.id)" method="post" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" #default="{ processing, errors }">
         <div class="grid gap-2">
-          <Input id="name" v-model="form.name" type="text" label="Permission Name" required :error="form.errors.name">
+          <Input id="name" v-model="form.name" type="text" label="Permission Name" required :error="errors.name">
             <template #leading>
               <ShieldCheck class="h-5 w-5 text-muted-foreground" />
             </template>
@@ -53,13 +49,15 @@
         </div>
 
         <div class="grid gap-2">
-          <Input id="guard_name" v-model="form.guard_name" type="text" label="Guard" :error="form.errors.guard_name" />
+          <Input id="guard_name" v-model="form.guard_name" type="text" label="Guard" :error="errors.guard_name" />
         </div>
 
         <div class="flex justify-end pt-4">
-          <Button type="submit" :disabled="form.processing"> Update Permission </Button>
+          <Button type="submit" :disabled="processing">
+            {{ processing ? "Updating Permission" : "Update Permission" }}
+          </Button>
         </div>
-      </form>
+      </Form>
     </div>
   </AppLayout>
 </template>

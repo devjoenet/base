@@ -7,8 +7,9 @@
   import { Spinner } from "@/components/ui/spinner";
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft } from "lucide-vue-next";
-  import { update, index } from "@/routes/users";
+  import { index, store } from "@/routes/users";
   import { UserData } from "@/types/generated";
+  import { kebabToTitle } from "@/lib/utils";
 
   const props = defineProps<{
     user: UserData;
@@ -18,19 +19,26 @@
   const form = useForm({
     name: props.user.name,
     email: props.user.email,
-    role: props.user.role ?? "",
+    profile_photo_url: props.user.profile_photo_url,
+    email_verrified_at: props.user.email_verified_at,
     password: "",
     password_confirmation: "",
+    two_factor_secret: props.user.two_factor_secret,
+    two_factor_confirmed_at: props.user.two_factor_confirmed_at,
+    remember_token: props.user.remember_token,
+    created_at: props.user.created_at,
+    updated_at: props.user.updated_at,
+    role: props.user.role,
   });
 </script>
 
 <template>
-  <Head title="Edit User" />
+  <Head title="Create User" />
 
   <AppLayout
     :breadcrumbs="[
       { title: 'Users', href: index().url },
-      { title: 'Edit', href: '#' },
+      { title: 'Create', href: '#' },
     ]"
   >
     <div class="max-w-2xl mx-auto px-4 py-8">
@@ -39,8 +47,8 @@
         Back to Users
       </Link>
 
-      <Heading title="Edit User" :description="`Update details for ${props.user.name}`" class="mb-8" />
-      <form @submit="update(props.user.id)" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
+      <Heading title="Create User" description="Enter detials to add a new user." class="mb-8" />
+      <form @submit="store()" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
         <div class="grid gap-2">
           <Input id="name" v-model="form.name" type="text" label="Name" required :error="form.errors.name" />
         </div>
@@ -53,8 +61,8 @@
           <SelectRoot v-model="form.role" :error="form.errors.role" placeholder="Select a role">
             <SelectContent>
               <SelectItem value="" disabled>Select a role</SelectItem>
-              <SelectItem v-for="role in props.roles" :key="role" :value="role" :label="role" class="capitalize">
-                {{ role }}
+              <SelectItem v-for="role in props.roles" :key="role" :value="role" :label="kebabToTitle(role)" class="capitalize">
+                {{ kebabToTitle(role) }}
               </SelectItem>
             </SelectContent>
           </SelectRoot>

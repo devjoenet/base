@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import AppLayout from "@/layouts/AppLayout.vue";
-  import { Head, Link, router } from "@inertiajs/vue3";
+  import { Head, Link } from "@inertiajs/vue3";
   import { Button } from "@/components/ui/button";
   import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
   import { Badge } from "@/components/ui/badge";
@@ -8,7 +8,7 @@
   import { Plus, Pencil, Trash2, MoreHorizontal } from "lucide-vue-next";
   import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
   import Heading from "@/components/Heading.vue";
-  import { index, edit, create, destroy } from "@/routes/users/index";
+  import { index, edit, create, destroy } from "@/routes/users";
 
   defineProps<{
     users: {

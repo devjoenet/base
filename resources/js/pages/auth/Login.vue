@@ -4,18 +4,36 @@
   import { Checkbox } from "@/components/ui/checkbox";
   import { Input } from "@/components/ui/input";
   import { Label } from "@/components/ui/label";
-  import { Spinner } from "@/components/ui/spinner";
   import AuthBase from "@/layouts/AuthLayout.vue";
-  import { register } from "@/routes";
   import { store } from "@/routes/login";
   import { request } from "@/routes/password";
-  import { Form, Head } from "@inertiajs/vue3";
+  import { Head, useForm } from "@inertiajs/vue3";
+  import { Spinner } from "@/components/ui/spinner";
 
   defineProps<{
     status?: string;
     canResetPassword: boolean;
     canRegister: boolean;
   }>();
+
+  const form = useForm("post", store().url, {
+    email: "",
+    password: "",
+    remember: false,
+  });
+
+  function submit(e: SubmitEvent) {
+    const el = e.target as HTMLFormElement;
+
+    e.preventDefault();
+
+    if (!el.checkValidity()) {
+      el.reportValidity();
+      return;
+    }
+
+    form.post(store().url);
+  }
 </script>
 
 <template>
@@ -26,40 +44,31 @@
       {{ status }}
     </div>
 
-    <Form v-bind="store.form()" :reset-on-success="['password']" v-slot="{ errors, processing }" class="flex flex-col gap-6">
+    <form @submit="submit" class="flex flex-col gap-6">
       <div class="grid gap-6">
         <div class="grid gap-2">
-          <Input id="email" type="email" name="email" label="Email address" required autofocus :tabindex="1" autocomplete="email" placeholder="email@example.com" :error="errors.email" />
+          <Input id="email" type="email" name="email" required autocomplete="email" v-model="form.email" label="Email address" />
         </div>
-
         <div class="grid gap-2">
-          <Input id="password" type="password" name="password" label="Password" required :tabindex="2" autocomplete="current-password" placeholder="Password" :error="errors.password">
-            <template v-if="canResetPassword" #helper>
-              <div class="flex justify-between">
-                <span />
-                <TextLink :href="request()" class="text-sm" :tabindex="5"> Forgot password? </TextLink>
-              </div>
-            </template>
-          </Input>
+          <Input id="password" type="password" name="password" required autocomplete="current-password" v-model="form.password" label="Password" />
+          <template v-if="canResetPassword">
+            <div class="flex justify-between">
+              <span />
+              <TextLink :href="request()" class="text-sm" :tabindex="5"> Forgot password? </TextLink>
+            </div>
+          </template>
         </div>
-
         <div class="flex items-center justify-between">
           <Label for="remember" class="flex items-center space-x-3">
             <Checkbox id="remember" name="remember" :tabindex="3" />
             <span>Remember me</span>
           </Label>
         </div>
-
-        <Button type="submit" class="mt-4 w-full" :tabindex="4" :disabled="processing" data-test="login-button">
-          <Spinner v-if="processing" />
-          Log in
+        <Button type="submit" class="mt-4 w-full" :tabindex="4" data-test="login-button" :disabled="form.processing">
+          <Spinner v-if="form.processing" />
+          {{ form.processing ? "Log in" : "Logging in" }}
         </Button>
       </div>
-
-      <div class="text-center text-sm text-muted-foreground" v-if="canRegister">
-        Don't have an account?
-        <TextLink :href="register()" :tabindex="5">Sign up</TextLink>
-      </div>
-    </Form>
+    </form>
   </AuthBase>
 </template>

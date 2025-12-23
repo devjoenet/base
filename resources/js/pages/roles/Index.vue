@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { create, destroy, edit, index } from "@/routes/roles";
   import AppLayout from "@/layouts/AppLayout.vue";
-  import { Head, Link, router } from "@inertiajs/vue3";
+  import { Head, Link } from "@inertiajs/vue3";
   import { Button } from "@/components/ui/button";
   import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
   import { Badge } from "@/components/ui/badge";

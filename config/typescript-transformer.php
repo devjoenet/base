@@ -32,6 +32,7 @@ return [
         Spatie\LaravelTypeScriptTransformer\Transformers\SpatieStateTransformer::class,
         // Spatie\TypeScriptTransformer\Transformers\EnumTransformer::class,
         // Spatie\TypeScriptTransformer\Transformers\SpatieEnumTransformer::class,
+        Spatie\LaravelData\Support\TypeScriptTransformer\DataTypeScriptTransformer::class,
         Spatie\LaravelTypeScriptTransformer\Transformers\DtoTransformer::class,
     ],
 
@@ -60,7 +61,7 @@ return [
      * But you can also use the `ModuleWriter` or implement your own.
      */
 
-    'writer' => Spatie\TypeScriptTransformer\Writers\TypeDefinitionWriter::class,
+    'writer' => Spatie\TypeScriptTransformer\Writers\ModuleWriter::class,
 
     /*
      * The generated TypeScript file can be formatted. We ship a Prettier formatter

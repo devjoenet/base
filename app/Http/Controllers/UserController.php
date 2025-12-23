@@ -31,8 +31,17 @@ class UserController extends Controller
         ]);
     }
 
+    public function create(): Response
+    {
+        return Inertia::render('users/Create', [
+            'user' => UserData::empty(),
+            'roles' => Role::pluck('name')->toArray(),
+        ]);
+    }
+
     public function store(UserData $data): RedirectResponse
     {
+        /** @var User $user */
         $user = User::create([
             'name' => $data->name,
             'email' => $data->email,
@@ -50,7 +59,7 @@ class UserController extends Controller
     {
         return Inertia::render('users/Edit', [
             'user' => UserData::from($user),
-            'roles' => Role::pluck('name'),
+            'roles' => Role::pluck('name')->toArray(),
         ]);
     }
 

@@ -74,7 +74,7 @@ class RoleController extends Controller
         return redirect()->route('roles.index')->with('success', 'Role updated successfully.');
     }
 
-    public function destroy(Role $role)
+    public function destroy(Role $role): RedirectResponse
     {
         try {
             if (in_array($role->name, ['admin', 'user', 'super-admin'])) {

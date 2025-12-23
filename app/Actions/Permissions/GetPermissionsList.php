@@ -8,9 +8,9 @@ use App\Models\Permission;
 
 class GetPermissionsList
 {
-    /** @return list<string> */
+    /** @return string[] */
     public function __invoke(): array
     {
-        return Permission::pluck('name')->all();
+        return Permission::select('name')->orderBy('name')->pluck('name')->all();
     }
 }

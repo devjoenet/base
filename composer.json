@@ -13,6 +13,7 @@
   ],
   "license": "MIT",
   "require": {
+    "ext-pdo": "*",
     "php": "^8.4",
     "inertiajs/inertia-laravel": "^2.0",
     "laravel/fortify": "^1.30",
@@ -58,7 +59,7 @@
     ],
     "ide": [
       "@php artisan ide-helper:generate --write_mixins --helpers",
-      "@php artisan ide-helper:models --nowrite --reset --write-mixin --phpstorm-noinspections",
+      "@php artisan ide-helper:models --nowrite --reset --phpstorm-noinspections",
       "@php artisan ide-helper:meta"
     ],
     "setup": [

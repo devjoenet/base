@@ -4,8 +4,9 @@
   import { Button } from "@/components/ui/button";
   import { Input } from "@/components/ui/input";
   import Heading from "@/components/Heading.vue";
-  import { ChevronLeft, ShieldCheck } from "lucide-vue-next";
+  import { ChevronLeft } from "lucide-vue-next";
   import { index, store } from "@/routes/permissions";
+  import { Spinner } from "@/components/ui/spinner";
 
   const props = defineProps<{
     name: string;
@@ -36,46 +37,19 @@
       <Heading title="Create Permission" description="Add a new permission for access control." class="mb-8" />
 
       <Form :action="store()" method="post" #default="{ processing, errors }" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
-        <Input id="name" v-model="form.name" label="Permission Name" :error="errors.name" />
-        <Input id="guard_name" v-model="form.guard_name" label="Guard" :error="errors.guard_name" />
-        <Button type="submit" :disabled="processing">Create Permission</Button>
-      </Form>
-
-      <Form :action="store()" #default="{ processing, errors }">
         <div class="grid gap-2">
-          <Input id="name" v-model="props.name" type="text" label="Permission Name" placeholder="e.g. manage posts" required autofocus :error="errors.name">
-            <template #leading>
-              <ShieldCheck class="h-5 w-5 text-muted-foreground" />
-            </template>
-          </Input>
+          <Input id="name" v-model="form.name" label="Permission Name" :error="errors.name" />
         </div>
-
         <div class="grid gap-2">
-          <Input id="guard_name" v-model="guard_name" type="text" label="Guard" placeholder="web" :error="errors.guard_name" />
+          <Input id="guard_name" v-model="form.guard_name" label="Guard" :error="errors.guard_name" />
         </div>
-
         <div class="flex justify-end pt-4">
-          <Button type="submit" :disabled="processing"> Create Permission </Button>
+          <Button type="submit" :disabled="processing">
+            <Spinner v-if="processing" />
+            {{ processing ? "Creating Permission" : "Create Permission" }}
+          </Button>
         </div>
       </Form>
-
-      <form @submit.prevent="submit" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
-        <div class="grid gap-2">
-          <Input id="name" v-model="name" type="text" label="Permission Name" placeholder="e.g. manage posts" required autofocus :error="errors.name">
-            <template #leading>
-              <ShieldCheck class="h-5 w-5 text-muted-foreground" />
-            </template>
-          </Input>
-        </div>
-
-        <div class="grid gap-2">
-          <Input id="guard_name" v-model="guard_name" type="text" label="Guard" placeholder="web" :error="errors.guard_name" />
-        </div>
-
-        <div class="flex justify-end pt-4">
-          <Button type="submit" :disabled="processing"> Create Permission </Button>
-        </div>
-      </form>
     </div>
   </AppLayout>
 </template>
