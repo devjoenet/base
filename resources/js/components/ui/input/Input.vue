@@ -65,6 +65,8 @@
           :class="
             cn(
               'peer block w-full border-0 bg-transparent px-0 pt-4 pb-1 text-base text-foreground caret-[oklch(0.63_0.18_270)] placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:text-muted-foreground dark:caret-[oklch(0.72_0.15_260)]',
+              'autofill:[-webkit-box-shadow:0_0_0_30px_oklch(0.97_0.01_255)_inset] autofill:[-webkit-text-fill-color:var(--color-foreground)]',
+              'dark:autofill:[-webkit-box-shadow:0_0_0_30px_oklch(0.26_0.03_255)_inset]',
               props.inputClass,
             )
           "
