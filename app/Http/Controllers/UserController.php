@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\Actions\Users\StoreUserAction;
+use App\Actions\Users\UpdateUserAction;
 use App\Data\UserData;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Hash;
 use Inertia\Inertia;
 use Inertia\Response;
 use Spatie\Permission\Models\Role;
@@ -17,17 +18,9 @@ class UserController extends Controller
     public function index(): Response
     {
         return Inertia::render('users/Index', [
-            'users' => User::with('roles')
-                ->latest()
-                ->paginate(10)
-                ->through(fn (User $user): array => [
-                    'id' => $user->id,
-                    'name' => $user->name,
-                    'email' => $user->email,
-                    'role' => $user->getRoleNames()->first() ?? 'user',
-                    'created_at' => $user->created_at->format('M d, Y'),
-                    'profile_photo_url' => $user->profile_photo_url,
-                ]),
+            'users' => UserData::collect(
+                User::with('roles')->latest()->paginate(10)
+            ),
         ]);
     }
 
@@ -39,18 +32,9 @@ class UserController extends Controller
         ]);
     }
 
-    public function store(UserData $data): RedirectResponse
+    public function store(UserData $data, StoreUserAction $action): RedirectResponse
     {
-        /** @var User $user */
-        $user = User::create([
-            'name' => $data->name,
-            'email' => $data->email,
-            'password' => Hash::make($data->password),
-        ]);
-
-        if ($data->role) {
-            $user->assignRole($data->role);
-        }
+        $action->execute($data);
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
     }
@@ -63,19 +47,9 @@ class UserController extends Controller
         ]);
     }
 
-    public function update(User $user, UserData $data): RedirectResponse
+    public function update(User $user, UserData $data, UpdateUserAction $action): RedirectResponse
     {
-        $payload = $data->only('name', 'email')->toArray();
-
-        if ($data->password) {
-            $payload['password'] = Hash::make($data->password);
-        }
-
-        $user->update($payload);
-
-        if ($data->role) {
-            $user->syncRoles([$data->role]);
-        }
+        $action->execute($user, $data);
 
         return redirect()
             ->route('users.index')

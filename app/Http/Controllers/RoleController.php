@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Actions\Permissions\GetPermissionsList;
+use App\Actions\Roles\StoreRoleAction;
+use App\Actions\Roles\UpdateRoleAction;
 use App\Data\RoleData;
 use Exception;
 use Illuminate\Http\RedirectResponse;
@@ -18,15 +20,11 @@ class RoleController extends Controller
     public function index(): Response
     {
         return Inertia::render('roles/Index', [
-            'roles' => Role::withCount('permissions')
-                ->orderBy('name')
-                ->paginate(10)
-                ->through(fn (Role $role): array => [
-                    'id' => $role->id,
-                    'name' => $role->name,
-                    'permissions_count' => $role->permissions_count,
-                    'created_at' => $role->created_at->format('M d, Y'),
-                ]),
+            'roles' => RoleData::collect(
+                Role::withCount('permissions')
+                    ->orderBy('name')
+                    ->paginate(10)
+            ),
         ]);
     }
 
@@ -37,13 +35,9 @@ class RoleController extends Controller
         ]);
     }
 
-    public function store(RoleData $data): RedirectResponse
+    public function store(RoleData $data, StoreRoleAction $action): RedirectResponse
     {
-        $role = Role::create(['name' => $data->name]);
-
-        if ($data->permissions !== []) {
-            $role->syncPermissions($data->permissions);
-        }
+        $action->execute($data);
 
         return redirect()
             ->route('roles.index')
@@ -52,24 +46,17 @@ class RoleController extends Controller
 
     public function edit(Role $role): Response
     {
-        // Eager load permissions to check checkboxes
         $role->load('permissions');
 
         return Inertia::render('roles/Edit', [
-            'role' => [
-                'id' => $role->id,
-                'name' => $role->name,
-                'permissions' => $role->permissions->pluck('name'),
-            ],
+            'role' => RoleData::from($role),
             'permissions' => Permission::orderBy('name')->pluck('name'),
         ]);
     }
 
-    public function update(Role $role, RoleData $data): RedirectResponse
+    public function update(Role $role, RoleData $data, UpdateRoleAction $action): RedirectResponse
     {
-        $role->update(['name' => $data->name]);
-
-        $role->syncPermissions($data->permissions);
+        $action->execute($role, $data);
 
         return redirect()->route('roles.index')->with('success', 'Role updated successfully.');
     }

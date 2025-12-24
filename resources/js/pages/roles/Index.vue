@@ -9,14 +9,11 @@
   import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
   import Heading from "@/components/Heading.vue";
 
+  import type { RoleData } from "@/types/generated";
+
   defineProps<{
     roles: {
-      data: Array<{
-        id: number;
-        name: string;
-        permissions_count: number;
-        created_at: string;
-      }>;
+      data: RoleData[];
       links: any[];
     };
   }>();
@@ -79,14 +76,14 @@
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                    <Link :href="edit(role.id)">
+                    <Link :href="edit(role.id!)">
                       <DropdownMenuItem>
                         <Pencil class="mr-2 h-4 w-4" />
                         Edit
                       </DropdownMenuItem>
                     </Link>
                     <!-- Prevent deleting core roles -->
-                    <DropdownMenuItem v-if="!['admin', 'user', 'super-admin'].includes(role.name)" @click="deleteRole(role.id)" class="text-red-600 focus:text-red-600">
+                    <DropdownMenuItem v-if="!['admin', 'user', 'super-admin'].includes(role.name)" @click="deleteRole(role.id!)" class="text-red-600 focus:text-red-600">
                       <Trash2 class="mr-2 h-4 w-4" />
                       Delete
                     </DropdownMenuItem>

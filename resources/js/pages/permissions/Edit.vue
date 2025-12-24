@@ -6,13 +6,10 @@
   import Heading from "@/components/Heading.vue";
   import { ChevronLeft, ShieldCheck } from "lucide-vue-next";
   import { index, update } from "@/routes/permissions";
+  import type { PermissionData } from "@/types/generated";
 
   const props = defineProps<{
-    permission: {
-      id: number;
-      name: string;
-      guard_name: string;
-    };
+    permission: PermissionData;
     default_guard: string;
   }>();
 
@@ -39,7 +36,7 @@
 
       <Heading title="Edit Permission" :description="`Update ${permission.name}`" class="mb-8" />
 
-      <Form :action="update(props.permission.id)" method="post" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" #default="{ processing, errors }">
+      <Form :action="update(props.permission.id!).url" method="put" :data="form" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" v-slot="{ processing, errors }">
         <div class="grid gap-2">
           <Input id="name" v-model="form.name" type="text" label="Permission Name" required :error="errors.name">
             <template #leading>
@@ -54,7 +51,7 @@
 
         <div class="flex justify-end pt-4">
           <Button type="submit" :disabled="processing">
-            {{ processing ? "Updating Permission" : "Update Permission" }}
+            {{ processing ? "Updating..." : "Update Permission" }}
           </Button>
         </div>
       </Form>

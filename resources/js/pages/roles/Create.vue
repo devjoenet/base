@@ -24,12 +24,10 @@
   const selected = computed(() => new Set(form.permissions));
 
   function togglePermission(permission: string, checked: boolean) {
-    const idx = form.permissions.indexOf(permission);
-
     if (checked) {
-      if (idx === -1) form.permissions.push(permission);
+      form.permissions.push(permission);
     } else {
-      if (idx !== -1) form.permissions.splice(idx, 1);
+      form.permissions = form.permissions.filter((p) => p !== permission);
     }
   }
 </script>
@@ -51,7 +49,7 @@
 
       <Heading title="Create Role" description="Define a new role and assign permissions" class="mb-8" />
 
-      <Form :action="store()" v-slot="{ errors, processing }" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm">
+      <Form :action="store().url" method="post" :data="form" class="space-y-6 bg-white dark:bg-zinc-900 p-6 rounded-lg border shadow-sm" v-slot="{ processing, errors }">
         <div class="grid gap-2">
           <Input id="name" v-model="form.name" type="text" label="Role Name" required :error="errors.name" />
         </div>
@@ -61,8 +59,8 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border rounded-md p-4 max-h-100 overflow-y-auto">
             <div v-for="permission in props.permissions" :key="permission" class="flex items-center space-x-2">
-              <Checkbox :id="permission" :checked="selected.has(permission)" @change="togglePermission(permission, ($event.target as HTMLInputElement).checked)" />
-              <Label :for="permission">{{ permission }}</Label>
+              <Checkbox :id="permission" :checked="selected.has(permission)" @update:checked="togglePermission(permission, $event)" />
+              <Label :for="permission" class="cursor-pointer">{{ permission }}</Label>
             </div>
           </div>
 
@@ -72,7 +70,7 @@
         <div class="flex justify-end pt-4">
           <Button type="submit" :disabled="processing">
             <Spinner v-if="processing" />
-            Create Role
+            {{ processing ? "Creating..." : "Create Permission" }}
           </Button>
         </div>
       </Form>

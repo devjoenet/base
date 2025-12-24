@@ -10,16 +10,11 @@
   import Heading from "@/components/Heading.vue";
   import { index, edit, create, destroy } from "@/routes/users";
 
+  import type { UserData } from "@/types/generated";
+
   defineProps<{
     users: {
-      data: Array<{
-        id: number;
-        name: string;
-        email: string;
-        role: string;
-        created_at: string;
-        profile_photo_url: string;
-      }>;
+      data: UserData[];
       links: any[]; // Simple pagination for now
     };
   }>();
@@ -88,13 +83,13 @@
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                    <Link :href="edit(user.id)">
+                    <Link :href="edit(user.id!)">
                       <DropdownMenuItem>
                         <Pencil class="mr-2 h-4 w-4" />
                         Edit
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem @click="deleteUser(user.id)" class="text-red-600 focus:text-red-600">
+                    <DropdownMenuItem @click="deleteUser(user.id!)" class="text-red-600 focus:text-red-600">
                       <Trash2 class="mr-2 h-4 w-4" />
                       Delete
                     </DropdownMenuItem>

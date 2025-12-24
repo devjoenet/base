@@ -10,15 +10,11 @@
   import { KeySquare, MoreHorizontal, Pencil, Plus, Trash2 } from "lucide-vue-next";
   import { usePermissions } from "@/composables/usePermissions";
 
+  import type { PermissionData } from "@/types/generated";
+
   defineProps<{
     permissions: {
-      data: Array<{
-        id: number;
-        name: string;
-        guard_name: string;
-        roles_count: number;
-        created_at: string;
-      }>;
+      data: PermissionData[];
       links: any[];
     };
   }>();
@@ -91,13 +87,13 @@
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                    <Link :href="edit(permission.id).url">
+                    <Link :href="edit(permission.id!).url">
                       <DropdownMenuItem>
                         <Pencil class="mr-2 h-4 w-4" />
                         Edit
                       </DropdownMenuItem>
                     </Link>
-                    <DropdownMenuItem v-if="can('manage permissions')" @click="deletePermission(permission.id)" class="text-red-600 focus:text-red-600">
+                    <DropdownMenuItem v-if="can('manage permissions')" @click="deletePermission(permission.id!)" class="text-red-600 focus:text-red-600">
                       <Trash2 class="mr-2 h-4 w-4" />
                       Delete
                     </DropdownMenuItem>

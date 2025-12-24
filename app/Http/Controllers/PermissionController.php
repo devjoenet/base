@@ -15,19 +15,12 @@ class PermissionController extends Controller
 {
     public function index(): Response
     {
-        $permissions = Permission::withCount('roles')
-            ->orderBy('name')
-            ->paginate(10)
-            ->through(fn (Permission $permission): array => [
-                'id' => $permission->id,
-                'name' => $permission->name,
-                'guard_name' => $permission->guard_name,
-                'roles_count' => $permission->roles_count,
-                'created_at' => $permission->created_at->format('M d, Y'),
-            ]);
-
         return Inertia::render('permissions/Index', [
-            'permissions' => $permissions,
+            'permissions' => PermissionData::collect(
+                Permission::withCount('roles')
+                    ->orderBy('name')
+                    ->paginate(10)
+            ),
         ]);
     }
 
