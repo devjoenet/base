@@ -35,4 +35,12 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
+
+    public function withoutTwoFactor(): static
+    {
+        return $this->state(fn (array $attributes): array => [
+            'two_factor_secret' => null,
+            'two_factor_recovery_codes' => null,
+        ]);
+    }
 }

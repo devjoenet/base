@@ -48,46 +48,32 @@
 
 <template>
   <div data-slot="input-field" :class="cn('group/input flex w-full flex-col gap-1.5', props.class)">
-    <div data-slot="control" :class="cn(inputFieldVariants({ variant, invalid: Boolean(error), disabled }), 'shadow-xs px-3 py-2', props.controlClass)">
-      <span v-if="$slots.leading" class="text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0">
+    <label :class="cn('floating-label w-full', props.controlClass)">
+      <input
+        v-model="modelValue"
+        :id="inputId"
+        :type="type"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :aria-invalid="error ? 'true' : undefined"
+        :aria-errormessage="error && messageId ? messageId : undefined"
+        :aria-describedby="messageId"
+        data-slot="input"
+        :class="cn(inputFieldVariants({ variant, invalid: Boolean(error), disabled }), props.inputClass)"
+        v-bind="delegatedProps"
+      />
+      <span v-if="label">{{ label }}</span>
+
+      <div v-if="$slots.leading" class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0">
         <slot name="leading" />
-      </span>
-
-      <div class="relative flex-1">
-        <input
-          v-model="modelValue"
-          :id="inputId"
-          :disabled="disabled"
-          :aria-invalid="error ? 'true' : undefined"
-          :aria-errormessage="error && messageId ? messageId : undefined"
-          :aria-describedby="messageId"
-          data-slot="input"
-          :class="
-            cn(
-              'peer block w-full border-0 bg-transparent px-0 pt-4 pb-1 text-base text-foreground caret-[oklch(0.63_0.18_270)] placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:text-muted-foreground dark:caret-[oklch(0.72_0.15_260)]',
-              'autofill:[-webkit-box-shadow:0_0_0_30px_oklch(0.97_0.01_255)_inset] autofill:[-webkit-text-fill-color:var(--color-foreground)]',
-              'dark:autofill:[-webkit-box-shadow:0_0_0_30px_oklch(0.26_0.03_255)_inset]',
-              props.inputClass,
-            )
-          "
-          v-bind="delegatedProps"
-        />
-
-        <label
-          v-if="label"
-          :for="inputId"
-          class="pointer-events-none absolute inset-x-0 top-2 origin-top-left truncate text-sm text-muted-foreground transition-all duration-200 ease-out peer-focus-visible:-translate-y-3 peer-focus-visible:text-xs peer-focus-visible:text-primary peer-not-placeholder-shown:-translate-y-3 peer-not-placeholder-shown:text-xs peer-disabled:text-muted-foreground/70"
-        >
-          {{ label }}
-        </label>
       </div>
 
-      <span v-if="$slots.trailing" class="text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0">
+      <div v-if="$slots.trailing" class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground [&>svg]:size-5 [&>svg]:shrink-0">
         <slot name="trailing" />
-      </span>
-    </div>
+      </div>
+    </label>
 
-    <p v-if="hasMessageContent" :id="messageId" :class="cn('min-h-5 text-sm leading-snug text-muted-foreground', error ? 'text-destructive' : null)">
+    <p v-if="hasMessageContent" :id="messageId" :class="cn('min-h-5 text-sm leading-snug text-muted-foreground', error ? 'text-error' : null)">
       <slot name="message" :error="error" :helper="helper">
         <slot name="error" :error="error" :helper="helper">
           <slot name="helper" :error="error" :helper="helper">

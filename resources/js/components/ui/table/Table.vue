@@ -1,3 +1,4 @@
+// resources/js/components/ui/table/Table.vue
 <script setup lang="ts">
   import { cn } from "@/lib/utils";
   import type { HTMLAttributes } from "vue";
@@ -9,7 +10,7 @@
 
 <template>
   <div class="relative w-full overflow-auto">
-    <table :class="cn('w-full caption-bottom text-sm', props.class)">
+    <table :class="cn('table w-full', props.class)">
       <slot />
     </table>
   </div>

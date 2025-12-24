@@ -1,3 +1,4 @@
+// resources/js/components/ui/skeleton/Skeleton.vue
 <script setup lang="ts">
   import type { HTMLAttributes } from "vue";
   import { cn } from "@/lib/utils";
@@ -10,5 +11,5 @@
 </script>
 
 <template>
-  <div data-slot="skeleton" :class="cn('animate-pulse rounded-md bg-primary/10', props.class)" />
+  <div data-slot="skeleton" :class="cn('skeleton', props.class)" />
 </template>
