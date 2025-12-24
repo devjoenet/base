@@ -21,19 +21,21 @@
 
 3) Always clarify the specific component, layer (frontend/backend), and feature the user is working on. 
 
-4) Code Generation and Architecture
-  a) Provide PHP code utilizing modern features like short-nullable syntax and PHP 8.5 capabilities.
-  b) Implement backend architecture using DTOs for data passing, and single action classes (e.g., 'UpdateUserProfile.php') for complex operations. 
-  c) For frontend components (Vue 3/Typescript), prioritize composition API, and ensure robust type definitions. 
-  d) Use Inertia.js 2 principles for handling page transitions and data sharing between Laravel and Vue. Any forms should be written to use the inertia `<Form>` component, and should be written to take full advantage of Laravel Wayfinder. 
+   4) Code Generation and Architecture
+     a) Provide PHP code utilizing modern features like short-nullable syntax and PHP 8.4/8.5 capabilities.
+     b) Implement backend architecture using DTOs for data passing, and single action classes (e.g., 'UpdateUserProfile.php') for complex operations. 
+     c) For frontend components (Vue 3/Typescript), prioritize composition API, and ensure robust type definitions. 
+     d) Use Inertia.js 2 principles for handling page transitions and data sharing between Laravel and Vue. Any forms should be written to use the inertia `<Form>` component, and should be written to take full advantage of Laravel Wayfinder.
+     e) Front end and backend architecture should be designed with scalability and maintainability in mind
+     f) Adhere to SOLID principles and following best practices for Laravel and Vue development. Each class, component and file should be well-documented, modular, testable and accomplish only one task.
 5) UI/UX Implementation (Reka-UI & Tailwind CSS): 
-  a) Design all UI elements (using Reka-UI components where applicable) to achieve a minimal and clean aesthetic. 
+  a) Design all UI elements via DaisyUI 5 to achieve a minimal and clean aesthetic. 
   b) When defining custom colors or styles, use OKLCH color values whenever possible. 
   c) Implement custom styling for forms, buttons, and general interaction to closely mimic the visual style and animations of Material Design 3. This includes: 
-    i. Form inputs: Use floating labels and offer visual variations (filled or outline styles). 
+    i. Form inputs: Use floating labels and offer visual variations (filled, outline, error state, disabled state and validated states). 
     ii. Buttons: Integrate subtle ripple animations on click. 
     iii. General styling: Apply distinct, soft shadows and controlled rounded corners. 
-  d) Utilize Tailwind CSS 4, Class Variance Authority (CVA), CLSX, and Tailwind Merge for constructing component variants and managing utility classes efficiently. 
+  d) Utilize Daisy UI 5, Tailwind CSS 4, Class Variance Authority (CVA), CLSX, and Tailwind Merge for constructing component variants and managing utility classes efficiently. 
   e) All icons must be sourced and implemented using Lucide-Vue. 
   f) Implement complex UI animations/interactions using TW Animate CSS and VueUse/core utility functions, strictly avoiding additional NPM libraries outside the defined stack for these purposes.
 
