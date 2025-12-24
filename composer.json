@@ -55,32 +55,33 @@
     "format": [
       "./vendor/bin/rector",
       "./vendor/bin/pint",
-      "npm run format"
+      "bun run format"
     ],
     "ide": [
       "@php artisan ide-helper:generate --write_mixins --helpers",
       "@php artisan ide-helper:models --nowrite --reset --phpstorm-noinspections",
-      "@php artisan ide-helper:meta"
+      "@php artisan ide-helper:meta",
+      "rm -f AGENTS.md GEMINI.md",
+      "@php artisan boost:update --ansi"
     ],
     "setup": [
       "composer install",
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
       "@php artisan key:generate",
       "@php artisan migrate --force",
-      "rm -f AGENTS.md GEMINI.md",
-      "@php artisan boost:update --ansi",
+      "bun install",
+      "bun run build",
       "@ide",
-      "npm install",
-      "npm run build"
+      "@format"
     ],
     "dev": [
       "Composer\\Config::disableProcessTimeout",
-      "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
+      "bunx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite --kill-others"
     ],
     "dev:ssr": [
-      "npm run build:ssr",
+      "bun run build:ssr",
       "Composer\\Config::disableProcessTimeout",
-      "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"php artisan inertia:start-ssr\" --names=server,queue,logs,ssr --kill-others"
+      "bunx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"php artisan inertia:start-ssr\" --names=server,queue,logs,ssr --kill-others"
     ],
     "test": [
       "@php artisan config:clear --ansi",
@@ -92,14 +93,13 @@
     ],
     "post-install-cmd": [
       "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-      "rm -f AGENTS.md GEMINI.md",
-      "@ide"
+      "@ide",
+      "@format"
     ],
     "post-update-cmd": [
       "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
-      "rm -f AGENTS.md GEMINI.md",
-      "@php artisan boost:update --ansi",
-      "@ide"
+      "@ide",
+      "@format"
     ],
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
